@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { PlusJakartaSans } from '@/utils/fonts';
 import Mokcup from "@/assets/laung-harmoni/Mokcup.png";
-import bg from "@/assets/laung-harmoni/White_bg.png";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { AiOutlineCheck } from "react-icons/ai";
