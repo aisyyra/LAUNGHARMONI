@@ -13,6 +13,7 @@ export default function Home() {
     <>
       <Header />
       {/* header page */}
+      {/* header page */}
         <main className="bg-cover h-screen w-screen flex bg-[url('/assets/laung-harmoni/Header.png')]">
           <div className="w-7/12 flex items-center px-[90px] mt-[50px]">
             <Image
