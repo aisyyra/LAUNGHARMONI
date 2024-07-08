@@ -7,22 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // backgroundImage: {
-      //   "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-      //   "gradient-conic":
-      //     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      // },
+      colors: {
+        warna: "#E3457B",
+        header: "#FFFFFF",
+        abu: "#616161",
+        undangan: "#FFF2F3",
+        pricelist: '#F6F6F6',
+        bg: '#FC7B91',
+        
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        lora: ["Lora", "serif"],
+      },
     },
-    // screens: {
-    //   'tablet': '640px',
-    //   // => @media (min-width: 640px) { ... }
-
-    //   'laptop': '1024px',
-    //   // => @media (min-width: 1024px) { ... }
-
-    //   'desktop': '1280px',
-    //   // => @media (min-width: 1280px) { ... }
-    // },
   },
   plugins: [],
 };
