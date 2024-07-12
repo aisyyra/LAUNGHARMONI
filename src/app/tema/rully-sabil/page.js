@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useSearchParams } from 'next/navigation';
 import { Suspense, useMemo, useRef, useState, useEffect, useCallback } from "react";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
-import { Playfair_Display, Playfair_Display_SC, Kapakana, Arapey, CourierPrime, PlusJakartaSans } from '@/utils/fonts';
+import { Playfair_Display, Playfair_Display_SC, Kapakana, Arapey, CourierPrime, PlusJakartaSans, Playwrite_CZ, Mustard } from '@/utils/fonts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Camera, BadgeCheck } from 'lucide-react';
 import { faClock, faCopy, faLocationDot, faFaceGrinWide, faFaceSmile, faFaceFrownOpen, faFaceMeh, faFaceFrown, faFaceLaugh, faFaceMehBlank } from '@fortawesome/free-solid-svg-icons';
