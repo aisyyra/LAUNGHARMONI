@@ -120,6 +120,7 @@ const PlusJakartaSans = localFont({
   ],
 })
 
+
 const CourierPrime = localFont({
   src: [
     {
@@ -160,4 +161,24 @@ const DancingScript = localFont({
   ],
 })
 
-export { Playfair_Display, Playfair_Display_SC, Kapakana, Arapey, Charm, PlusJakartaSans, CourierPrime, DancingScript }
+const Playwrite_CZ = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Playwrite_CZ/static/PlaywriteCZ-ExtraLight.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+})
+
+const Mustard = localFont({
+  src: [
+    {
+      path: '../../public/fonts/Mustard/Mustard_Medium.otf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+})
+
+export { Playfair_Display, Playfair_Display_SC, Kapakana, Arapey, Charm, PlusJakartaSans, CourierPrime, DancingScript, Playwrite_CZ, Mustard }
