@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import Card from "@/assets/laung-harmoni/Card.png";
 import Footer from "@/components/footer";
 import Button from "@/components/button";
+import Button_WA from "@/components/button-wa"
 
 
 export default function Portofolio() {
@@ -34,6 +35,7 @@ export default function Portofolio() {
                         </div>
                     </div>
                 </div>
+                <Button_WA />
             </main>
          {/* Header Page End */}
 
