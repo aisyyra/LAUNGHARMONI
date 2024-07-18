@@ -1,0 +1,10 @@
+{
+  "/_not-found": "app/_not-found.js",
+  "/page": "app/page.js",
+  "/error/page": "app/error/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/portofolio/custom/page": "app/portofolio/custom/page.js",
+  "/portofolio/template/page": "app/portofolio/template/page.js",
+  "/tema_profile/page": "app/tema_profile/page.js",
+  "/tema/rully-sabil/page": "app/tema/rully-sabil/page.js"
+}
