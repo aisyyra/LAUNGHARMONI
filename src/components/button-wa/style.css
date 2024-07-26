@@ -1,0 +1,7 @@
+:root {
+    --Color: #000000;
+}
+.button_wa {
+    box-shadow: 1px 1px 10px rgb(from var(--Color) r g b / 15%);
+    border: none
+}
