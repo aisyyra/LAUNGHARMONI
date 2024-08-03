@@ -1,4 +1,4 @@
-// File: C:\Project_Local\Bagimomen\laungharmoni\src\app\layout.js
+// File: E:\PKL\laungharmoni\src\app\layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

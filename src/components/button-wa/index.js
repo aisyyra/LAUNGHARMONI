@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import React from "react";
 import Image from "next/image";
+import "./style.css";
 
 function Button_WA(){
     return (
     <>
-
-    <div className="fixed ml-[90%] z-50">
-         <div className="font-inter mt-[500px] group relative fixed whitespace-nowrap">
+    <div className="fixed ml-[80%] mb-5 z-50">
+         <div className="font-inter mt-[300pt] group relative fixed whitespace-nowrap">
             <Link href="https://wa.me/6285183003387">
-                <button className="flex size-6 cursor-pointer items-center justify-center rounded-full text-white flex h-16 w-16 relative overflow-hidden bg-white group transition-all duration-300">
+                <button className="button_wa flex size-6 cursor-pointer items-center justify-center rounded-full text-white flex h-16 w-16 relative overflow-hidden bg-white group transition-all duration-300 ">
                     <svg className="fill-[#25D366] relative z-10 transition-all duration-300 group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 71 72" fill="none">
                             <path
                             d="M12.5762 56.8405L15.8608 44.6381C13.2118 39.8847 12.3702 34.3378 13.4904 29.0154C14.6106 23.693 17.6176 18.952 21.9594 15.6624C26.3012 12.3729 31.6867 10.7554 37.1276 11.1068C42.5685 11.4582 47.6999 13.755 51.5802 17.5756C55.4604 21.3962 57.8292 26.4844 58.2519 31.9065C58.6746 37.3286 57.1228 42.7208 53.8813 47.0938C50.6399 51.4668 45.9261 54.5271 40.605 55.7133C35.284 56.8994 29.7125 56.1318 24.9131 53.5513L12.5762 56.8405ZM25.508 48.985L26.2709 49.4365C29.7473 51.4918 33.8076 52.3423 37.8191 51.8555C41.8306 51.3687 45.5681 49.5719 48.4489 46.7452C51.3298 43.9185 53.1923 40.2206 53.7463 36.2279C54.3002 32.2351 53.5143 28.1717 51.5113 24.6709C49.5082 21.1701 46.4003 18.4285 42.6721 16.8734C38.9438 15.3184 34.8045 15.0372 30.8993 16.0736C26.994 17.11 23.5422 19.4059 21.0817 22.6035C18.6212 25.801 17.2903 29.7206 17.2963 33.7514C17.293 37.0937 18.2197 40.3712 19.9732 43.2192L20.4516 44.0061L18.6153 50.8167L25.508 48.985Z"
@@ -21,12 +21,9 @@ function Button_WA(){
                     <div className="absolute top-full left-0 w-full h-full rounded-full bg-[#25D366] z-0 transition-all duration-500 group-hover:top-0"></div>
                 </button>
             </Link>
-                <span role="tooltip"
-                            class="pointer-events-none absolute inline-flex items-center justify-center rounded-md px-3 py-1 font-regular opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 bg-white text-black min-h-7 text-sm right-[calc(100%+0.75rem)] top-1/2 -translate-y-1/2 after:absolute after:block after:size-0 after:border-8 after:border-transparent after:border-l-white after:-right-[0.95rem] after:top-1/2 after:-translate-y-1/2">
-                            Masih Binggung? <br></br>Chat Admin sekarang
-                </span>     
+            <span role="tooltip" className="button_wa pointer-events-none absolute inline-flex items-center justify-center rounded-md px-3 py-1 font-regular opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100 bg-white text-black min-h-7 text-sm right-[calc(100%+0.75rem)] top-1/2 -translate-y-1/2 after:absolute after:block after:size-0 after:border-8 after:border-transparent after:border-l-white after:-right-[0.95rem] after:top-1/2 after:-translate-y-1/2">Masih Binggung? <br></br>Chat Admin sekarang </span>     
          </div> 
-         </div>
+    </div>
     </>
     )
 }
