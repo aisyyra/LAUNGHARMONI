@@ -6,11 +6,10 @@ import Link from 'next/link'
 
 function Footer(){
     return (
-      
         <footer className="bg-gradient-to-r from-[#303030] to-[#616161] font-inter justify-center">
-          <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 lg:pt-20 justify-center">
+          <div className="max-w-screen-xl py-16 mx-auto lg:pt-20 justify-center">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 font-inter">
-              <div>
+              <div className="">
                 <div className="flex justify-center sm:justify-start">
                 <Image
                       className=""
@@ -21,41 +20,37 @@ function Footer(){
                       priority
                     />
                 </div>  
-                <p className="max-w-md mx-auto mt-6 leading-relaxed text-regular text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
+                <p className="max-w-md mx-auto py-[40px] leading-[28px] text-regular text-[17px] text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
                   Memberi kemudahan dengan berbagai pilihan tema undangan yang menarik. Gak mau ribet? Serahkan pada Admin, lalu sebarkan undangan digitalmu melalui smartphone. Gaskeun! 😆
                 </p>
-                <p className="max-w-md mx-auto mt-6 leading-relaxed text-regular text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
+                <p className="max-w-md mx-auto leading-[28px] text-regular text-[17px] text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
                   ©2024 Laungharmoni.com | All rights reserved.
                 </p>
               </div>
               <div
-                className="grid grid-cols-1 mt-4 gap-8 sm:grid-cols-2 lg:col-span-2 md:grid-cols-4">
+                className="grid grid-cols-1 mt-5 gap-x-[92px] sm:grid-cols-2 lg:col-span-2 md:grid-cols-4">
                   {/* navigasi */}
-                  <div class="text-center sm:text-left font-inter">
-                    <p class="text-lg font-bold text-white">Navigasi</p>
-
-                    <nav class="mt-8 font-inter">
-                      <ul class="space-y-4 text-sm">
-                        <li>
-                          <a class="text-white transition hover:text-white/75" href="/">
+                  <div className="text-center sm:text-left font-inter">
+                    <p className="text-[23px] font-bold text-white">Navigasi</p>
+                    <nav className="py-[28px] font-inter">
+                      <ul className="space-y-7 text-regular">
+                        <li className=" text-[17px]">
+                          <a className="text-white transition hover:text-white/75" href="/">
                             Beranda
                           </a>
                         </li>
-
                         <li>
-                          <a class="text-white transition hover:text-white/75" href="/">
+                          <a className=" text-[17px] text-white transition hover:text-white/75" href="/">
                             Wedding Planner
                           </a>
                         </li>
-
                         <li>
-                          <a class="text-white transition hover:text-white/75" href="/">
+                          <a className=" text-[17px] text-white transition hover:text-white/75" href="/">
                             Panduan Pengguna
                           </a>
                         </li>
-
                         <li>
-                          <a class="text-white transition hover:text-white/75" href="/">
+                          <a className=" text-[17px] text-white transition hover:text-white/75" href="/">
                             Blog
                           </a>
                         </li>
@@ -64,20 +59,18 @@ function Footer(){
                   </div>
 
                   {/* undangan digital */}
-                  <div className="text-center sm:text-left font-inter">
-                    <p className="text-lg font-bold text-white">Undangan Digital</p>
-
-                    <nav className="mt-8">
-                      <ul className="space-y-4 text-sm">
+                  <div className="text-center sm:text-left font-inter ">
+                    <p className="text-[23px] font-bold text-white">Undangan Digital</p>
+                    <nav className="py-[28px] font-inter">
+                      <ul className="space-y-7">
                         <li>
-                          <Link href="../tema_profile" className="text-white transition hover:text-white/75">
+                          <Link href="../tema_profile" className="text-[17px] text-white transition hover:text-white/75">
                             Tema
                           </Link>
                         </li>
-
                         <li>
-                          <Link  href="../portofolio/template" className="text-white transition hover:text-white/75">
-                            Fortofolio
+                          <Link  href="../portofolio/template" className="text-[17px] text-white transition hover:text-white/75">
+                            Portofolio
                           </Link>
                         </li>
                       </ul>
@@ -86,27 +79,17 @@ function Footer(){
 
                   {/* lainnya */}
                   <div className="text-center sm:text-left font-inter">
-                    <p className="text-lg font-bold text-white">Lainnya</p>
-
-                    <nav className="mt-8">
-                      <ul className="space-y-4 text-sm">
+                    <p className="text-[23px] font-bold text-white">Lainnya</p>
+                    <nav className="py-[28px] ">
+                      <ul className="space-y-7 ">
                         <li>
-                          <a className="text-white transition hover:text-white/75" href="/">
+                          <a className="text-[17px] text-white transition hover:text-white/75" href="/">
                           Affiliate
                           </a>
                         </li>
-
                         <li>
-                          <a className="text-white transition hover:text-white/75" href="/">
+                          <a className="text-[17px] text-white transition hover:text-white/75" href="/">
                           Tentang Kami
-                          </a>
-                        </li>
-
-                        <li>
-                          <a
-                            className="flex group justify-center sm:justify-start gap-1.5"
-                            href="/"
-                          >
                           </a>
                         </li>
                       </ul>
@@ -115,14 +98,14 @@ function Footer(){
 
                   {/* sosmed */}
                   <div className="text-center sm:text-left">
-                    <p className="text-lg font-bold text-white">Media Sosial</p>
-                    <ul className="flex justify-center gap-2 mt-8 md:gap-4 sm:justify-start">
+                    <p className="text-[23px] font-bold text-white">Media Sosial</p>
+                    <ul className="flex justify-center gap-y-[20px] mt-8 md:gap-4 sm:justify-start">
                       <li>
                         <Link
                           href="https://wa.me/6285183003387"
                           rel="noopener noreferrer"
                           target="_blank"
-                          class="text-teal-500 transition hover:text-teal-500/75"
+                          className="text-teal-500 transition hover:text-teal-500/75"
                         >
                           <span className="sr-only">WhatsApp</span>
                           <svg  
@@ -142,7 +125,7 @@ function Footer(){
                           target="_blank"
                           className="text-teal-500 transition hover:text-teal-500/75"
                         >
-                          <span class="sr-only">Tiktok</span>
+                          <span className="sr-only">Tiktok</span>
                           <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_403_255)">
                             <path d="M23.0829 0.120117H6.91736C3.09714 0.120117 0.000244141 3.21701 0.000244141 7.03723V23.2027C0.000244141 27.023 3.09714 30.1199 6.91736 30.1199H23.0829C26.9031 30.1199 30 27.023 30 23.2027V7.03723C30 3.21701 26.9031 0.120117 23.0829 0.120117Z" fill="url(#paint0_linear_403_255)"/>
@@ -174,7 +157,7 @@ function Footer(){
                           href="https://www.tiktok.com/@laungharmoni?_t=8o47Buu0WFp&_r=1"
                           rel="noopener noreferrer"
                           target="_blank"
-                          class="text-teal-500 transition hover:text-teal-500/75"
+                          className="text-teal-500 transition hover:text-teal-500/75"
                         >
                           <span className="sr-only">Instagram</span>
                           <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -201,7 +184,7 @@ function Footer(){
                           target="_blank"
                           className="text-teal-500 transition hover:text-teal-500/75"
                         >
-                          <span class="sr-only">Gmail</span>
+                          <span className="sr-only">Gmail</span>
                           <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <rect y="0.120117" width="30" height="30" rx="5" fill="white"/>
                           <path d="M24.6714 11.5273L22.3686 12.7938L20.0659 14.9814V22.4883H23.2897C24.0529 22.4883 24.6714 21.8698 24.6714 21.1067V11.5273Z" fill="#4CAF50"/>
@@ -213,12 +196,11 @@ function Footer(){
                         </a>
                       </li>
                     </ul>
-                </div>
+                 </div>
               </div>
             </div>
           </div>
-        </footer>
-
+        </footer>   
     )
 }
 

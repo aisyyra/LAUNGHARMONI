@@ -29,7 +29,7 @@ function App() {
   
     return <motion.main className="2xl:justify-center w-screen flex my-[63px] mx-auto justify-center object-center">
            
-      <div className="flex justify-center justify-items-center mx-[150px]">
+      <div className="flex justify-center justify-items-center mx-[130px]">
         <div className="w-5/12 justify-center items-center justify-center object-center">
           <p className="font-lora text-[16px] px-9 2xl:px-11 leading-[26px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>

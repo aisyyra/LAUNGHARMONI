@@ -71,7 +71,7 @@ export default function tema() {
                         <div className="my-[100px] justify-center">
                             <p className="mb-[60px]">Artikel lain nya</p>
                             <div className="flex flex-row ">
-                                <div class="mr-[34px] max-w-[357px] rounded-[25px] overflow-hidden shadow-lg bg-white">
+                                <div className="mr-[34px] max-w-[357px] rounded-[25px] overflow-hidden shadow-lg bg-white">
                                 <Image
                                         className="w-[357px] h-[297px]"                                                          
                                         src={Artikel.src}
@@ -80,19 +80,19 @@ export default function tema() {
                                         height={200}
                                         priority
                                 />
-                                <div class="px-[25px] py-[29px]">
+                                <div className="px-[25px] py-[29px]">
                                     <button className="mb-[21px] px-[15px] py-[8px] text-[11px] text-white font-regular rounded-full bg-gradient-to-r from-[#303030] to-[#616161] ">
                                         Kamis, 18 Juli 2024
                                     </button>
                                     <Link href="/">
-                                        <div class="text-[16px] mb-[21px] leading-[26px] ">Lorem Ipsum Dolor Sit Amet Consectetur Adispiscing Elit Sed do Eiusmod</div>
+                                        <div className="text-[16px] mb-[21px] leading-[26px] ">Lorem Ipsum Dolor Sit Amet Consectetur Adispiscing Elit Sed do Eiusmod</div>
                                     </Link>
-                                    <p class="font-lora text-[12px] font-regular">
+                                    <p className="font-lora text-[12px] font-regular">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
                                     </p>
                                 </div>
                                 </div>
-                                <div class="mr-[34px] max-w-[357px] rounded-[25px] overflow-hidden shadow-lg bg-white">
+                                <div className="mr-[34px] max-w-[357px] rounded-[25px] overflow-hidden shadow-lg bg-white">
                                 <Image
                                         className="w-[357px]  h-[297px]"                                                          
                                         src={Artikel.src}
@@ -105,13 +105,13 @@ export default function tema() {
                                     <button className="mb-[21px] px-[15px] py-[8px] text-[11px] text-white font-regular rounded-full bg-gradient-to-r from-[#303030] to-[#616161] ">
                                         Kamis, 18 Juli 2024
                                     </button>
-                                    <div class="text-[16px] mb-[21px] leading-[26px]">Lorem Ipsum Dolor Sit Amet Consectetur Adispiscing Elit Sed do Eiusmod</div>
-                                    <p class="font-lora text-[12px] font-regular">
+                                    <div className="text-[16px] mb-[21px] leading-[26px]">Lorem Ipsum Dolor Sit Amet Consectetur Adispiscing Elit Sed do Eiusmod</div>
+                                    <p className="font-lora text-[12px] font-regular">
                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
                                     </p>
                                 </div>
                                 </div>
-                                <div class=" max-w-[357px] rounded-[25px] overflow-hidden shadow-lg bg-white">
+                                <div className=" max-w-[357px] rounded-[25px] overflow-hidden shadow-lg bg-white">
                                     <Image
                                             className="w-[357px] h-[297px]"                                                          
                                             src={Artikel.src}
@@ -120,12 +120,12 @@ export default function tema() {
                                             height={200}
                                             priority
                                     />
-                                    <div class="px-[25px] py-[29px]">
+                                    <div className="px-[25px] py-[29px]">
                                         <button className="mb-[21px] px-[15px] py-[8px] text-[11px] text-white font-regular rounded-full bg-gradient-to-r from-[#303030] to-[#616161] ">
                                             Kamis, 18 Juli 2024
                                         </button>
-                                        <div class="text-[16px] mb-[21px] leading-[26px]">Lorem Ipsum Dolor Sit Amet Consectetur Adispiscing Elit Sed do Eiusmod</div>
-                                        <p class="font-lora text-[12px] font-regular">
+                                        <div className="text-[16px] mb-[21px] leading-[26px]">Lorem Ipsum Dolor Sit Amet Consectetur Adispiscing Elit Sed do Eiusmod</div>
+                                        <p className="font-lora text-[12px] font-regular">
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
                                         </p>
                                     </div>
@@ -137,7 +137,6 @@ export default function tema() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </main>

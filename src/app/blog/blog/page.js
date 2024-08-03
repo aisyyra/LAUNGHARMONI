@@ -31,8 +31,8 @@ export default function tema() {
                 <div className="flex ">
                     {/* card */}
                     <div class="w-[1532] h-[300pt] xl:max-w-[1532] md:max-w-[1532] mx-auto bg-white rounded-[35px] shadow-md overflow-hidden">
-                        <div class="flex">
-                            <div class="w-3/6">
+                        <div className="flex">
+                            <div className="w-3/6">
                             <Image
                                 className="object-cover"
                                 src={Blog_1.src}
@@ -42,8 +42,8 @@ export default function tema() {
                                 priority
                             />
                             </div>
-                            <div class="py-[40px] px-[40px] w-3/6">
-                            <div class="mb-[29px] font-lora">
+                            <div className="py-[40px] px-[40px] w-3/6">
+                            <div clasName="mb-[29px] font-lora">
                             <button className="px-[17px] py-[9px] text-[12px] text-white font-medium rounded-full bg-gradient-to-r from-[#303030] to-[#616161] ">
                                  Kamis, 18 Juli 2024
                             </button>
@@ -63,9 +63,9 @@ export default function tema() {
                 {/* card 2 */}
                 <div className="flex ">
                     {/* card */}
-                    <div class="w-[1532] h-[300pt] xl:max-w-[1532] md:max-w-[1532] mx-auto bg-white rounded-[35px] shadow-md overflow-hidden">
-                        <div class="flex">
-                            <div class="w-3/6">
+                    <div className="w-[1532] h-[300pt] xl:max-w-[1532] md:max-w-[1532] mx-auto bg-white rounded-[35px] shadow-md overflow-hidden">
+                        <div className="flex">
+                            <div className="w-3/6">
                             <Image
                                 className="object-cover"
                                 src={Blog_1.src}
@@ -75,8 +75,8 @@ export default function tema() {
                                 priority
                             />
                             </div>
-                            <div class="py-[40px] px-[40px] w-3/6">
-                            <div class="mb-[29px] font-lora">
+                            <div className="py-[40px] px-[40px] w-3/6">
+                            <div className="mb-[29px] font-lora">
                             <button className="px-[17px] py-[9px] text-[12px] text-white font-medium rounded-full bg-gradient-to-r from-[#303030] to-[#616161] ">
                                  Kamis, 18 Juli 2024
                             </button>
@@ -96,9 +96,9 @@ export default function tema() {
                 {/* card 3 */}
                 <div className="flex ">
                     {/* card */}
-                    <div class="w-[1532] h-[300pt] xl:max-w-[1532] md:max-w-[1532] mx-auto bg-white rounded-[35px] shadow-md overflow-hidden">
-                        <div class="flex">
-                            <div class="w-3/6">
+                    <div className="w-[1532] h-[300pt] xl:max-w-[1532] md:max-w-[1532] mx-auto bg-white rounded-[35px] shadow-md overflow-hidden">
+                        <div className="flex">
+                            <div className="w-3/6">
                             <Image
                                 className="object-cover"
                                 src={Blog_1.src}
@@ -108,8 +108,8 @@ export default function tema() {
                                 priority
                             />
                             </div>
-                            <div class="py-[40px] px-[40px] w-3/6">
-                            <div class="mb-[29px] font-lora">
+                            <div className="py-[40px] px-[40px] w-3/6">
+                            <div className="mb-[29px] font-lora">
                             <button className="px-[17px] py-[9px] text-[12px] text-white font-medium rounded-full bg-gradient-to-r from-[#303030] to-[#616161] ">
                                  Kamis, 18 Juli 2024
                             </button>
@@ -129,7 +129,6 @@ export default function tema() {
            </div>
         </main>
          {/* Tema end */}
-            
          <Footer />
 
     </>
