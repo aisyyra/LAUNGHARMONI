@@ -1,0 +1,8 @@
+:root {
+    --myColor: #000000;
+}
+
+.kotak{
+    box-shadow: 0px 1px 35px rgb(from var(--myColor) r g b / 10%);
+    border: none
+}
