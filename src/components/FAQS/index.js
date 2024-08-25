@@ -25,11 +25,11 @@ export function AccordianItem({ children, value, trigger, ...props }) {
   const ref = useRef(null)
 
   return (
-    <li className="curor-pointer max-w-[756px] bg-white hover:bg-gradient-to-r from-[#303030] to-[#616161] hover:text-white my-[20px] rounded-[24px] py-3 px-5 shadow-md " {...props}>
+    <li className="curor-pointer sm:max-w-[756px] max-w-[300px] bg-white hover:bg-gradient-to-r from-[#303030] to-[#616161] hover:text-white sm:my-[20px] my-[15px] rounded-[18px] sm:rounded-[24px] py-2 px-4 sm:py-3 sm:px-5 shadow-md " {...props}>
       <header
         role="button"
         onClick={() => setSelected(open ? null : value)}
-        className="flex justify-between items-center p-[15px] text-[17px] font-bold font-mustard leading-[31px]"
+        className="flex justify-between items-center sm:p-[15px] sm:text-[17px] p-[10px] text-[11px] font-bold font-mustard leading-[31px]"
       >
         {trigger}
         < IoChevronDownSharp
@@ -38,10 +38,10 @@ export function AccordianItem({ children, value, trigger, ...props }) {
         />
       </header>
       <div
-        className="overflow-y-hidden transition-all font-lora font-regular text-[15px]"
+        className="overflow-y-hidden transition-all font-lora font-regular sm:text-[15px] text-[10px]"
         style={{ height: open ? ref.current?.offsetHeight || 0 : 0 }}
       >
-        <div className="pt-2 p-4" ref={ref}>
+        <div className="pt-2 px-2 pb-4" ref={ref}>
           {children}
         </div>
       </div>
