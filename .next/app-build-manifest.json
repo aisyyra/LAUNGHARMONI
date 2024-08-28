@@ -16,6 +16,18 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
+    ],
+    "/tema/choral-charm/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/tema/choral-charm/page.css",
+      "static/chunks/app/tema/choral-charm/page.js"
+    ],
+    "/tema/rully-sabil/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/tema/rully-sabil/page.css",
+      "static/chunks/app/tema/rully-sabil/page.js"
     ]
   }
 }
