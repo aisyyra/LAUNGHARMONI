@@ -54,7 +54,7 @@ function Homepage(){
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3}}
             className="xl:pt-5 lg:pt-5 md:pt-5">
-              <h1 className='flex items-center text-[29px] md:text-[35px] md:leading-[55px] lg:text-[40px] lg:leading-[65px] xl:text-[55px] leading-[41px] xl:leading-[77px] font-medium text-center md:text-left justify-center md:justify-normal '>
+              <h1 className=' flex items-center text-[29px] md:text-[35px] md:leading-[55px] lg:text-[40px] lg:leading-[65px] xl:text-[55px] leading-[41px] xl:leading-[77px] font-medium text-center md:text-left justify-center md:justify-normal '>
                 Buat Undangan Digital Untuk Momen Spesialmu
               </h1>
                 <p className="py-[32px] xl:py-[60px] lg:py-[35px] font-lora text-[11px] sm:text-[22px] leading-[19px] lg:text-[17px] lg:leading-[30px] sm:leading-[37px] font-regular">
