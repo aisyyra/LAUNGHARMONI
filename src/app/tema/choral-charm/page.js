@@ -6,13 +6,10 @@ import { Suspense, useMemo, useRef, useState, useEffect, useCallback } from "rea
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { Playfair_Display, Playfair_Display_SC, Kapakana, Arapey, CourierPrime, PlusJakartaSans, Playwrite_CZ, Mustard } from '@/utils/fonts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Camera, BadgeCheck } from 'lucide-react';
 import { faClock, faCopy, faLocationDot, faFaceGrinWide, faFaceSmile, faFaceFrownOpen, faFaceMeh, faFaceFrown, faFaceLaugh, faFaceMehBlank } from '@fortawesome/free-solid-svg-icons';
 import { helper } from '@/utils/helper';
 import http from "../../../services/api/http";
-
-
-import { io } from 'socket.io-client';
+import "./style.css";
 import pageStyle from "./index.module.css";
 
 // #region images
@@ -47,7 +44,7 @@ import pageStyle from "./index.module.css";
   import imgDecor3 from "@/assets/rully-sabil/S3_Dec2.png";
 
   import imgSolid1 from "@/assets/choral-charm/mobile/m_BG_Akad.png";
-  import imgSolid2 from "@/assets/rully-sabil/Solid2.webp";
+  import imgSolid2 from "@/assets/choral-charm/mobile/m_Galeri.png";
 // #endregion
 
 // #region mobile images
@@ -76,20 +73,20 @@ import pageStyle from "./index.module.css";
   import m_ImgS8 from "@/assets/rully-sabil/mobile/S8.png";
   import m_imgDecor1 from "@/assets/rully-sabil/mobile/S1_Dec.png";
 
-  import m_IcoBeranda from "@/assets/rully-sabil/icon/Beranda.svg";
-  import m_IcoBeranda_Box from "@/assets/rully-sabil/icon/Beranda_Box.svg";
-  import m_IcoGaleri from "@/assets/rully-sabil/icon/Galeri.svg";
-  import m_IcoGaleri_Box from "@/assets/rully-sabil/icon/Galeri_Box.svg";
-  import m_IcoHadiah from "@/assets/rully-sabil/icon/Hadiah.svg";
-  import m_IcoHadiah_Box from "@/assets/rully-sabil/icon/Hadiah_Box.svg";
-  import m_IcoLokasi from "@/assets/rully-sabil/icon/Lokasi.svg";
-  import m_IcoLokasi_Box from "@/assets/rully-sabil/icon/Lokasi_Box.svg";
-  import m_IcoMempelai from "@/assets/rully-sabil/icon/Mempelai.svg";
-  import m_IcoMempelai_Box from "@/assets/rully-sabil/icon/Mempelai_Box.svg";
-  import m_IcoUcapan from "@/assets/rully-sabil/icon/Ucapan.svg";
-  import m_IcoUcapan_Box from "@/assets/rully-sabil/icon/Ucapan_Box.svg";
-  import m_IcoWaktu from "@/assets/rully-sabil/icon/Waktu.svg";
-  import m_IcoWaktu_Box from "@/assets/rully-sabil/icon/Waktu_Box.svg";
+  import m_IcoBeranda from "@/assets/choral-charm/icon/m_Beranda.svg";
+  import m_IcoBeranda_Box from "@/assets/choral-charm/icon/m_Ucapan2.svg";
+  import m_IcoGaleri from "@/assets/choral-charm/icon/m_Galeri.svg";
+  import m_IcoGaleri_Box from "@/assets/choral-charm/icon/m_Waktu2.svg";
+  import m_IcoHadiah from "@/assets/choral-charm/icon/m_Hadiah.svg";
+  import m_IcoHadiah_Box from "@/assets/choral-charm/icon/m_Hadiah2.svg";
+  import m_IcoLokasi from "@/assets/choral-charm/icon/m_Lokasi.svg";
+  import m_IcoLokasi_Box from "@/assets/choral-charm/icon/m_Lokasi2.svg";
+  import m_IcoMempelai from "@/assets/choral-charm/icon/m_Mempelai.svg";
+  import m_IcoMempelai_Box from "@/assets/choral-charm/icon/m_Hadiah2.svg";
+  import m_IcoUcapan from "@/assets/choral-charm/icon/m_Ucapan.svg";
+  import m_IcoUcapan_Box from "@/assets/choral-charm/icon/m_Beranda2.svg";
+  import m_IcoWaktu from "@/assets/choral-charm/icon/m_Waktu.svg";
+  import m_IcoWaktu_Box from "@/assets/choral-charm/icon/m_Galeri2.svg";
 
   import m_IcoArrow from "@/assets/rully-sabil/icon/ArrowR.svg";
 
@@ -113,16 +110,54 @@ import pageStyle from "./index.module.css";
 // #endregion
 
 // #region components
-  import Countdown from "@/components/countdown/index";
-  // import Countdown from "../../../components/countdown/index";
+  import Countdown from "@/components/template_countdown/index";
+  // import Countdown from "../../../components/template_countdown/index";
   import ScrollContainer from "../../../components/scroll-container/index";
   import MobileMenu from "../../../components/mobile-menu/index";
-  import MobileImgSlider from "../../../components/mobile-img-slider/index";
+  import MobileImgSlider from "../../../components/galeri-mobile/index";
+  import GaleriScroll from "../../../components/galeri-scroll/index";
   import MobileImgSliderFull from "../../../components/mobile-img-slider-full-screen/index";
   import MobileImgGallery from "../../../components/mobile-img-galeri/index";
   import Accordion from "../../../components/accordion/index";
+  import Accordion2 from "../../../components/accordion/index2";
 // #endregion
 
+
+function show(){
+  {/* Alamat */}
+  <motion.div 
+    className='flex justify-center items-center w-full mt-[20px]'
+    variants={{
+      hidden: { opacity: 0 },
+      show: { opacity: 1, transition: {
+      delay: 0.8
+    }}
+  }}
+>
+    <div className='text-center w-full'>
+
+      <div className={Playfair_Display_SC.className + ' flex justify-center items-center w-full text-[14px]'}>
+        Alamat Paket
+      </div>
+      
+      <div className={PlusJakartaSans.className + ' justify-center items-center w-full text-[9px] mt-5 leading-[18px]'}>
+        <p>Rully Abdul Haq &nbsp; - &nbsp; 08567777766</p>
+        <p>Jl.Raya Sukabumi Gg.Al-Falah 03/01 No.20 Desa Sukamaju<br /> Kec.Cianjur, Kabupaten Cianjur, Jawa Barat</p>
+      </div>
+
+      <motion.button 
+        type='button'
+        className='bg-bottom bg-contain bg-no-repeat mt-[17px] w-full h-[27px]'
+        onClick={(e) => {
+          copyToClipboard("Rully Abdul Haq\n08567777766\nJl.Raya Sukabumi Gg.Al-Falah 03/01 No.20 Desa Sukamaju, Kec.Cianjur, Kab.Cianjur");
+        }}
+        style={{ backgroundImage: `url(${IcoCopyButton.src})` }}
+        whileTap={{ scale: 0.8 }}
+      ></motion.button>
+
+    </div>
+</motion.div>
+}
 
 function TamuName() {
   const searchParams = useSearchParams();
@@ -144,38 +179,38 @@ const Rully_Sabil_Inv = () => {
   const mobileMenuStructure = [
     {
       id: "beranda",
-      icon: m_IcoBeranda,
-      iconSelected: m_IcoBeranda_Box,
+      icon: m_IcoBeranda_Box,
+      iconSelected: m_IcoBeranda,
     },
     {
       id: "mempelai",
-      icon: m_IcoMempelai,
-      iconSelected: m_IcoMempelai_Box,
+      icon: m_IcoMempelai_Box,
+      iconSelected: m_IcoMempelai,
     },
     {
       id: "waktu",
-      icon: m_IcoWaktu,
-      iconSelected: m_IcoWaktu_Box,
+      icon: m_IcoWaktu_Box,
+      iconSelected: m_IcoWaktu,
     },
     {
       id: "lokasi",
-      icon: m_IcoLokasi,
-      iconSelected: m_IcoLokasi_Box,
+      icon: m_IcoLokasi_Box,
+      iconSelected: m_IcoLokasi,
     },
     {
       id: "galeri",
-      icon: m_IcoGaleri,
-      iconSelected: m_IcoGaleri_Box,
+      icon: m_IcoGaleri_Box,
+      iconSelected: m_IcoGaleri,
     },
     {
       id: "hadiah",
-      icon: m_IcoHadiah,
-      iconSelected: m_IcoHadiah_Box,
+      icon: m_IcoHadiah_Box,
+      iconSelected: m_IcoHadiah,
     },
     {
       id: "ucapan",
-      icon: m_IcoUcapan,
-      iconSelected: m_IcoUcapan_Box,
+      icon: m_IcoUcapan_Box,
+      iconSelected: m_IcoUcapan,
     },
   ]
 
@@ -230,9 +265,13 @@ const Rully_Sabil_Inv = () => {
     m_Gal2.src,
   ]
 
-  const [expanded, setExpanded] = useState(-1);
+  const [expanded, setExpanded] = useState(null);
   const isOpen = 0 === expanded;
 
+  const [expanded2, setExpanded2] = useState(null);
+  const isOpen2 = 0 === expanded2;
+
+  
   const accordionStructure = useMemo(
     () => [
       {
@@ -330,6 +369,54 @@ const Rully_Sabil_Inv = () => {
               </motion.div>
             </motion.div>
 
+          </motion.div>
+
+        ),
+      }
+    ]
+  );
+
+  const accordionStructure2 = useMemo(
+    () => [
+      {
+        name: "Tab_1",
+        header: () => (
+
+          <div className='flex justify-center items-center col-span-12 mt-3'>
+              <motion.a 
+                type='button'
+                target="_blank"
+                className={"flex flex-cols text-white font-inter bg-[#9D7265] hover:cursor-pointer rounded-[43px] px-[25px] py-[9px] text-center tracking-wide mt-[30px]"}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setExpanded2(isOpen2 ? false : 0)}
+              >
+                 <svg className='mr-2' width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_603_241)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.20309 4.23222C7.69128 4.22372 8.24272 4.4566 8.77392 5.04682C9.13767 5.45099 9.46246 5.99351 9.71742 6.64648H7.1835C6.86538 6.64501 6.5606 6.518 6.33555 6.29295C6.10918 6.06658 5.982 5.75955 5.982 5.43942C5.982 5.11928 6.10918 4.81226 6.33555 4.58589C6.56192 4.35952 6.86894 4.23235 7.18908 4.23235L7.20309 4.23222ZM7.18055 8.25591C7.18339 8.25592 7.18624 8.25592 7.18908 8.25592C7.19061 8.25592 7.19214 8.25592 7.19368 8.25591H10.0056V9.86534H4.3726V8.25591H7.18055ZM4.64434 6.64648C4.46707 6.27275 4.37257 5.86096 4.37257 5.43942C4.37257 4.69244 4.66931 3.97605 5.19751 3.44785C5.72404 2.92132 6.43757 2.62479 7.18199 2.62293C8.24368 2.60676 9.21114 3.12677 9.9702 3.97017C10.287 4.32215 10.5678 4.72951 10.8103 5.17915C11.0528 4.72951 11.3336 4.32215 11.6504 3.97017C12.4095 3.12677 13.3769 2.60676 14.4386 2.62293C15.183 2.62479 15.8966 2.92132 16.4231 3.44785C16.9513 3.97605 17.248 4.69244 17.248 5.43942C17.248 5.86096 17.1535 6.27275 16.9763 6.64648H17.248C18.1369 6.64648 18.8575 7.36704 18.8575 8.25591V9.86534C18.8575 10.7542 18.1369 11.4748 17.248 11.4748H17.248V16.3031C17.248 16.9433 16.9937 17.5574 16.5409 18.0101C16.0882 18.4629 15.4741 18.7172 14.8339 18.7172H6.78672C6.14645 18.7172 5.5324 18.4629 5.07966 18.0101C4.62692 17.5574 4.37257 16.9433 4.37257 16.3031V11.4748C3.48372 11.4748 2.76317 10.7542 2.76317 9.86534V8.25591C2.76317 7.36704 3.48373 6.64648 4.3726 6.64648H4.64434ZM14.4269 8.25591C14.4284 8.25592 14.43 8.25592 14.4315 8.25592C14.4344 8.25592 14.4372 8.25592 14.44 8.25591H17.248V9.86534H11.6151V8.25591H14.4269ZM14.4371 6.64648C14.7552 6.64501 15.06 6.518 15.285 6.29295C15.5114 6.06658 15.6386 5.75955 15.6386 5.43942C15.6386 5.11928 15.5114 4.81226 15.285 4.58589C15.0587 4.35952 14.7516 4.23235 14.4315 4.23235L14.4175 4.23222C13.9293 4.22372 13.3779 4.4566 12.8467 5.04682C12.4829 5.45099 12.1581 5.99351 11.9032 6.64648H14.4371ZM5.982 16.3031V11.4748H10.0056V17.1078H6.78672C6.5733 17.1078 6.36861 17.023 6.2177 16.8721C6.06679 16.7212 5.982 16.5165 5.982 16.3031ZM14.8339 17.1078H11.6151V11.4748H15.6386V16.3031C15.6386 16.5165 15.5538 16.7212 15.4029 16.8721C15.252 17.023 15.0473 17.1078 14.8339 17.1078Z" fill="white"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_603_241">
+                    <rect width="20" height="20" fill="white" transform="translate(0.810318 0.669922)"/>
+                    </clipPath>
+                    </defs>
+                </svg>                
+                <p className='mt-[2px] items-center justify-center text-[12px]'>Kirim Hadiah</p>
+              </motion.a>
+          </div>
+          
+        ),
+        item: () => (
+          
+          <motion.div
+            variants={{
+              hidden: { opacity: 0 },
+              show: {
+                opacity: 1,
+              }
+            }}
+            initial="hidden"
+            animate="show"
+          >
             {/* Alamat */}
             <motion.div 
               className='flex justify-center items-center w-full mt-[20px]'
@@ -370,6 +457,8 @@ const Rully_Sabil_Inv = () => {
       }
     ]
   );
+
+
 
   const copyToClipboard = (x) => {
     navigator.clipboard.writeText(x)
@@ -568,7 +657,7 @@ const Rully_Sabil_Inv = () => {
                         <p className={'font-inter tracking-wide text-[11px] font-regular'}>
                           Undangan Pernikahan
                         </p>
-                        <p className={'font-Dynalight text-[48px] font-bold justify-center'}>
+                        <p className={'font-Dynalight text-[48px] font-regular justify-center'}>
                           Septia & Arjuna
                         </p>
                       </div>
@@ -583,7 +672,7 @@ const Rully_Sabil_Inv = () => {
                         <Suspense>
                           <TamuName />
                         </Suspense>
-                        <p className={'font-inter tracking-wide text-[11px] mt-[16px] font-regular'}>
+                        <p className={'font-inter tracking-wide text-[11px] mt-1 font-regular'}>
                           Anda diundang untuk menghadiri acara pernikahan kami
                         </p>
                       </div>
@@ -601,10 +690,10 @@ const Rully_Sabil_Inv = () => {
                             backgroundColor: "#BB806F",
                           }}
                         >
-                          <svg className="mr-1" width="19" height="19" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <svg className="mr-2" width="19" height="19" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.76649 5.70403C3.76649 5.27178 4.1169 4.92138 4.54914 4.92138H17.0715C17.5038 4.92138 17.8542 5.27178 17.8542 5.70403V6.05667L11.2009 10.2845L11.1992 10.2856C11.0825 10.3583 10.9478 10.3968 10.8103 10.3968C10.6728 10.3968 10.5381 10.3583 10.4215 10.2856L3.76649 6.0567V5.70403ZM2.20119 6.47163C2.20102 6.48116 2.20102 6.49068 2.20119 6.50019V15.0958C2.20119 16.3926 3.2524 17.4438 4.54914 17.4438H17.0715C18.3683 17.4438 19.4195 16.3926 19.4195 15.0958V6.49613C19.4196 6.48932 19.4196 6.48251 19.4195 6.47569V5.70403C19.4195 4.40729 18.3683 3.35608 17.0715 3.35608H4.54914C3.2524 3.35608 2.20119 4.40729 2.20119 5.70403V6.47163ZM17.8542 7.91126V15.0958C17.8542 15.5281 17.5038 15.8785 17.0715 15.8785H4.54914C4.1169 15.8785 3.76649 15.5281 3.76649 15.0958V7.91131L9.58442 11.6083L9.58865 11.611C9.95483 11.8404 10.3782 11.9621 10.8103 11.9621C11.2424 11.9621 11.6658 11.8404 12.032 11.611L17.8542 7.91126Z" fill="white"/>
                           </svg>
-                          Buka Undangan
+                          <p className='mt-[1px] items-center justify-center text-[12px]'>Buka Undangan</p>
                       </motion.button>
                       </div>
                     </div>
@@ -727,7 +816,7 @@ const Rully_Sabil_Inv = () => {
                         <p className='font-Dynalight text-[36px] text-[#9D7265]'>Mempelai</p>
                       </div>
                       <div className='inline-flex items-center justify-center w-full'>
-                        <hr class="w-48 h-px bg-[#9D7265] border-0 justify-center items-center text-center"></hr>
+                        <hr class="w-36 h-px bg-[#9D7265] border-0 justify-center items-center text-center"></hr>
                     </div>
                     </div>
 
@@ -745,7 +834,7 @@ const Rully_Sabil_Inv = () => {
                         </div>
                         </div>
 
-                        <div className={'text-2xl text-black pt-10 pb-2'}>
+                        <div className={'text-2xl text-black pt-10'}>
                           <div 
                             className='justify-center items-center h-[132px] bg-contain bg-center bg-no-repeat mb-10'
                             style={{ backgroundImage: `url(${m_ImgS2_2.src})` }}
@@ -762,7 +851,7 @@ const Rully_Sabil_Inv = () => {
                         <div className='flex justify-center items-center w-full'>
                         <motion.button 
                           type='button'
-                          className={"flex flex-cols font-inter text-white bg-gradient-to-r from-[#DDB4A5] to-[#BB806F] hover:cursor-pointer ring-2 ring-[#9D7265] ring-inset rounded-[43px] text-[8px] px-[11px] py-[6px] w-auto text-center tracking-widest"}
+                          className={"shadow-md  flex flex-cols font-inter text-white bg-gradient-to-r from-[#9D7265] via-[#D9B4A9] to-[#9D7265] hover:cursor-pointer ring-1 ring-[#9D7265] ring-inset rounded-[43px] text-[8px] px-[11px] py-[6px] w-auto text-center tracking-widest"}
                           onClick={(e) => {
                             setInvActive(true);
                             togglePlay();
@@ -781,11 +870,11 @@ const Rully_Sabil_Inv = () => {
                       </motion.button>
                         </div>
 
-                        <div className={'font-Dynalight text-[50pt] text-black'}>
-                          <p>&</p>
+                        <div className={Playfair_Display_SC.className +''}>
+                          <p className='text-[50px] py-[50px] text-black'>&</p>
                         </div>
 
-                        <div className={'text-2xl text-black pt-5 pb-2'}>
+                        <div className={'text-2xl text-black pb-2'}>
                           <div 
                             className='justify-center items-center h-[132px] bg-contain bg-center bg-no-repeat mb-10'
                             style={{ backgroundImage: `url(${m_ImgS2_1.src})` }}
@@ -800,7 +889,7 @@ const Rully_Sabil_Inv = () => {
                         <div className='flex justify-center items-center w-full'>
                         <motion.button 
                           type='button'
-                          className={"flex flex-cols font-inter text-white bg-gradient-to-r from-[#DDB4A5] to-[#BB806F] hover:cursor-pointer ring-2 ring-[#9D7265] ring-inset rounded-[43px] text-[8px] px-[11px] py-[6px] w-auto text-center tracking-widest"}
+                          className={"shadow-md button flex flex-cols font-inter text-white bg-gradient-to-r from-[#9D7265] via-[#D9B4A9] to-[#9D7265] hover:cursor-pointer ring-1 ring-[#9D7265] ring-inset rounded-[43px] text-[8px] px-[11px] py-[6px] w-auto text-center tracking-widest"}
                           onClick={(e) => {
                             setInvActive(true);
                             togglePlay();
@@ -834,9 +923,9 @@ const Rully_Sabil_Inv = () => {
                     id="waktu"
                   >
                     <div 
-                      className="w-full grid grid-cols-12 px-7 py-24 pt-[70px] pb-34"
+                      className="w-full grid grid-cols-12 px-7 mb-[74px] "
                     >
-                      <div className={'flex justify-center items-center col-span-12 text-center font-Dynalight text-[36px] text-[#9D7265] text-[53px] text-[#8F907E] leading-[60px] col-span-12 text-right mt-[70px]'}>
+                      <div className={'flex justify-center items-center col-span-12 text-center font-Dynalight text-[36px] text-[#9D7265] text-[#8F907E] col-span-12 mt-[74px]'}>
                           <label className="mr-3">Waktu Acara</label> 
                         </div>
 
@@ -844,7 +933,7 @@ const Rully_Sabil_Inv = () => {
                           <hr class="w-48 h-px bg-[#9D7265] border-0 justify-center items-center text-center"></hr>
                         </div>
 
-                      <div className='flex justify-center items-center col-span-12 bg-white rounded-[62px] text-center py-[42px]'>
+                      <div className='shadow-lg flex justify-center items-center col-span-12 bg-white rounded-[62px] text-center py-[42px]'>
                         <div className='w-full'>
                           <div className='text-[12.5px] tracking-normal'>
                             <label className='leading-6'>
@@ -889,7 +978,7 @@ const Rully_Sabil_Inv = () => {
                             </svg>
                           </div>
 
-                          <div className='text-[18px] font-Suranna'>
+                          <div className='text-[18px] font-Suranna text-black'>
                             <p>di Aula Hotel Inter Continental<br></br> Bandung, Jawa Barat</p>
                           </div>
 
@@ -950,13 +1039,56 @@ const Rully_Sabil_Inv = () => {
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M7.46843 4.61264C8.22215 3.85892 9.2444 3.43549 10.3103 3.43549C11.3762 3.43549 12.3985 3.85892 13.1522 4.61264C13.9059 5.36635 14.3293 6.38861 14.3293 7.45452C14.3293 8.94555 13.3081 10.5585 12.121 11.894C11.5462 12.5406 10.969 13.082 10.5346 13.4621C10.4545 13.5323 10.3794 13.5967 10.3103 13.6551C10.2412 13.5967 10.1662 13.5323 10.0861 13.4621C9.65163 13.082 9.0744 12.5406 8.49967 11.894C7.3125 10.5585 6.29129 8.94555 6.29129 7.45452C6.29129 6.38861 6.71472 5.36635 7.46843 4.61264ZM10.3103 14.6888C9.82803 15.3318 9.82767 15.3315 9.82767 15.3315L10.3103 14.6888ZM9.82594 15.3302L9.82767 15.3315C10.1135 15.5459 10.5068 15.5462 10.7926 15.3318L10.3111 14.6898C10.7926 15.3318 10.7934 15.3312 10.7934 15.3312L10.7947 15.3302L10.7985 15.3273L10.8114 15.3176L10.8569 15.2826C10.8957 15.2525 10.9512 15.209 11.021 15.1529C11.1606 15.0407 11.3577 14.8781 11.5932 14.672C12.063 14.2609 12.6915 13.6719 13.3225 12.9621C14.5467 11.5848 15.937 9.58061 15.937 7.45452C15.937 5.96224 15.3441 4.53108 14.2889 3.47588C13.2337 2.42069 11.8026 1.82788 10.3103 1.82788C8.81804 1.82788 7.38688 2.42069 6.33168 3.47588C5.27648 4.53108 4.68368 5.96224 4.68368 7.45452C4.68368 9.58061 6.07388 11.5848 7.29813 12.9621C7.9291 13.6719 8.55758 14.2609 9.02744 14.672C9.26294 14.8781 9.46003 15.0407 9.59959 15.1529C9.6694 15.209 9.72492 15.2525 9.76376 15.2826L9.80926 15.3176L9.8221 15.3273L9.82594 15.3302ZM9.50652 7.45449C9.50652 7.01056 9.86639 6.65069 10.3103 6.65069C10.7543 6.65069 11.1141 7.01056 11.1141 7.45449C11.1141 7.89842 10.7543 8.2583 10.3103 8.2583C9.86639 8.2583 9.50652 7.89842 9.50652 7.45449ZM10.3103 5.04308C8.97854 5.04308 7.89891 6.1227 7.89891 7.45449C7.89891 8.78628 8.97854 9.86591 10.3103 9.86591C11.6421 9.86591 12.7217 8.78628 12.7217 7.45449C12.7217 6.1227 11.6421 5.04308 10.3103 5.04308Z" fill="white"/>
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M4.63995 11.4748C4.65452 11.474 4.6691 11.4736 4.68368 11.4736H7.76628C8.21021 11.4736 8.57008 11.8335 8.57008 12.2774C8.57008 12.7214 8.21021 13.0812 7.76628 13.0812H4.72703L4.72282 13.0943L3.11955 17.9041H17.5011L15.8978 13.0943L15.8936 13.0812H12.8544C12.4104 13.0812 12.0506 12.7214 12.0506 12.2774C12.0506 11.8335 12.4104 11.4736 12.8544 11.4736H15.937C15.9515 11.4736 15.9661 11.474 15.9807 11.4748C16.3078 11.4926 16.6216 11.61 16.8802 11.8111C17.1365 12.0104 17.3263 12.2826 17.4249 12.5918L18.9899 17.2867C19.154 17.549 19.1527 17.8053 19.1522 17.8929C19.1522 17.897 19.1522 17.9007 19.1522 17.9041C19.1522 18.3279 19.0074 18.7435 18.6957 19.0552C18.384 19.3669 17.9684 19.5117 17.5446 19.5117H3.07607C2.65227 19.5117 2.23664 19.3669 1.92494 19.0552C1.61324 18.7435 1.46846 18.3279 1.46846 17.9041C1.46846 17.9007 1.46844 17.897 1.46842 17.8929C1.46798 17.8053 1.46667 17.5491 1.63076 17.2867L3.19574 12.5918C3.2943 12.2826 3.48417 12.0104 3.74044 11.8111C3.99901 11.61 4.31286 11.4926 4.63995 11.4748ZM17.5442 17.8823C17.5442 17.8822 17.5443 17.8836 17.5444 17.8867L17.5442 17.8823ZM3.07641 17.8823C3.07643 17.8823 3.0764 17.8839 3.07624 17.8867L3.07641 17.8823Z" fill="white"/>
                         </svg>
-                        <p className='mt-1 items-center justify-center text-[12px]'>Lihat Petunjuk Rute</p>
+                        <p className='mt-[1px] items-center justify-center text-[12px]'>Lihat Petunjuk Rute</p>
                       </motion.a>
                     </div>
 
                   </div>
                 )}
               />
+
+              {/* Countdown*/}
+              <div 
+                    className="w-full bg-[url('/assets/choral-charm/mobile/m_Countdown.png')] bg-cover items-center justify-center grid grid-cols-12 px-7 py-16 gap-5"
+                    id="lokasi"
+                  >
+                    
+                    <div className={'font-Dynalight text-[#9D7265] flex justify-center text-center items-center col-span-12 text-[36px]'}>
+                      <p>Countdown</p>
+                    </div>
+
+                    <div className='col-span-12 inline-flex items-center justify-center w-full'>
+                      <hr class="w-36 h-px bg-[#9D7265] border-0 justify-center items-center text-center"></hr>
+                    </div>
+                   
+                   <div className='flex justify-center text-center items-center col-span-12'>
+                    <div className='shadow-lg justify-center items-center mt-3 bg-white rounded-[54px] w-[224px] h-[342px]'>
+                      <div className='justify-center items-center text-center mt-11'>
+                        <p className='text-[12px] font-inter text-center justify-center'>Hitungan mundur menuju <br></br> acara pernikahan</p>
+                        <Countdown 
+                          project = 'Rully_Sabil_Mobile' 
+                          target_date = '2024-10-25'
+                          className=''
+                        />  
+                      </div>
+                    </div>
+                   </div>
+              
+                    <div className='flex justify-center items-center col-span-12 mt-3'>
+                      <motion.a 
+                        type='button'
+                        target="_blank"
+                        className={"flex flex-cols text-white font-inter bg-[#9D7265] hover:cursor-pointer rounded-[43px] px-[25px] py-[9px] text-center tracking-wide mt-[30px]"}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <svg className="mr-2" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.06282 2.81967C8.06282 2.38612 7.71137 2.03467 7.27782 2.03467C6.84428 2.03467 6.49283 2.38612 6.49283 2.81967V3.60468H4.92283C4.29825 3.60468 3.69925 3.85279 3.2576 4.29444C2.81596 4.73608 2.56784 5.33509 2.56784 5.95967V9.09963V16.9496C2.56784 17.5742 2.81596 18.1732 3.2576 18.6149C3.69925 19.0565 4.29825 19.3046 4.92283 19.3046H11.2028C11.6364 19.3046 11.9878 18.9532 11.9878 18.5196C11.9878 18.0861 11.6364 17.7346 11.2028 17.7346H4.92283C4.71464 17.7346 4.51497 17.6519 4.36776 17.5047C4.22054 17.3575 4.13784 17.1578 4.13784 16.9496V9.88463H16.6978V11.4547C16.6978 11.8882 17.0493 12.2397 17.4828 12.2397C17.9163 12.2397 18.2678 11.8882 18.2678 11.4547V9.09963V5.95967C18.2678 5.33509 18.0197 4.73608 17.578 4.29444C17.1364 3.85279 16.5374 3.60468 15.9128 3.60468H14.3428V2.81967C14.3428 2.38612 13.9913 2.03467 13.5578 2.03467C13.1242 2.03467 12.7728 2.38612 12.7728 2.81967V3.60468H8.06282V2.81967ZM16.6978 8.31463V5.95967C16.6978 5.75148 16.6151 5.55181 16.4679 5.40459C16.3207 5.25738 16.121 5.17467 15.9128 5.17467H14.3428V5.95966C14.3428 6.3932 13.9913 6.74466 13.5578 6.74466C13.1242 6.74466 12.7728 6.3932 12.7728 5.95966V5.17467H8.06282V5.95966C8.06282 6.3932 7.71137 6.74466 7.27782 6.74466C6.84428 6.74466 6.49283 6.3932 6.49283 5.95966V5.17467H4.92283C4.71464 5.17467 4.51497 5.25738 4.36776 5.40459C4.22054 5.55181 4.13784 5.75148 4.13784 5.95967V8.31463H16.6978ZM12.7728 16.1646C12.7728 15.7311 13.1242 15.3796 13.5578 15.3796H15.1278V13.8097C15.1278 13.3761 15.4793 13.0247 15.9128 13.0247C16.3464 13.0247 16.6978 13.3761 16.6978 13.8097V15.3796H18.2678C18.7013 15.3796 19.0528 15.7311 19.0528 16.1646C19.0528 16.5981 18.7013 16.9496 18.2678 16.9496H16.6978V18.5196C16.6978 18.9532 16.3464 19.3046 15.9128 19.3046C15.4793 19.3046 15.1278 18.9532 15.1278 18.5196V16.9496H13.5578C13.1242 16.9496 12.7728 16.5981 12.7728 16.1646Z" fill="white"/>
+                        </svg>
+                        <p className='mt-[1.5px] items-center justify-center text-[12px]'>Tambah ke Kalender</p>
+                      </motion.a>
+                    </div>
+
+                  </div>
 
               {/* Notes */}
               <div className='bg-white w-full h-full'>
@@ -972,45 +1104,43 @@ const Rully_Sabil_Inv = () => {
                 content = {(
                   <div 
                     id="galeri"
-                    className="relative w-full bg-cover bg-fixed bg-center grid grid-cols-12"
+                    className="relative w-screen h-full bg-cover bg-fixed bg-center py-16 grid grid-cols-12"
                     style={{ backgroundImage: `url(${imgSolid2.src})` }}
                   >
-                    <div 
-                      className="w-4/4 h-[700px] bg-cover bg-no-repeat bg-right-top col-span-12"
-                      style={{ backgroundImage: `url(${m_ImgS6.src})` }}
-                    ></div>
+                    <div className='col-span-12'>
 
-                    <div className='col-span-12 absolute top-0 right-0 left-0 h-full'>
-                      <div className='w-full h-full inset-1/2 transform -translate-x-2/2 translate-y-1/3'>
-                        <motion.div 
-                          className={Kapakana.className + ' flex justify-start items-center w-auto text-[20px] text-white px-[75px] leading-[8px] tracking-wide opacity-75'}
-                          initial={{ marginLeft: "0px" }}
-                          animate={{ 
-                            marginLeft: ["0px", "10px", "0px"] 
-                          }}
-                          transition={{
-                            duration: 2,
-                            ease: "easeInOut",
-                            times: [0, 0.2, 0.5, 0.8, 0.9, 1],
-                            repeat: Infinity,
-                            repeatDelay: 4,
-                          }}
-                        >
-                          Geser untuk melihat 
-                          <motion.div 
-                            className="w-[25px] h-[10px] bg-contain bg-no-repeat bg-center ml-[5px]"
-                            style={{ backgroundImage: `url(${m_IcoArrow.src})` }}
-                          ></motion.div>
-                        </motion.div>
+                      <div className={'font-Dynalight text-[#9D7265] flex justify-center text-center items-center col-span-12 text-[36px]'}>
+                        <p>Galeri Mempelai</p>
+                      </div>
 
-                        <MobileImgGallery 
-                          _data={galeri_mobileSliderStructure}
-                        />
+                      <div className='mb-10 col-span-12 inline-flex items-center justify-center w-full'>
+                        <hr class="w-48 h-px bg-[#9D7265] border-0 justify-center items-center text-center"></hr>
+                      </div>
 
-                        <div className={Playfair_Display_SC.className + ' flex justify-end items-end w-full text-[20px] text-white px-[59px]'}>
-                          Galeri Mempelai
+                    {/* Galery mempelai */}
+                      <div 
+                        className="mb-7 px-7 col-span-12 inline-flex items-center justify-center w-full"
+                      >
+                        <div className="w-full grid grid-cols-12">
+                          <div className='text-white justify-center items-center col-span-12'>
+                            <MobileImgSlider
+                              _data = {up_mobileSliderStructure}
+                              _height={"h-[300pt]"}
+                              _direction={1}
+                              _scrollStiffness={250}
+                              _scrollDamping={50}
+                              _scrollInterval={4000}
+                              _scrollDuration={0.5}
+                            />
+                          </div>
                         </div>
                       </div>
+
+                      <div className='col-span-12 items-center justify-center w-full'>
+                        <GaleriScroll />
+                        <p className='mt-2 px-24 text-[#9D7265] font-inter text-[12px] items-center justify-center'>Geser dan pilih foto untuk melihat →</p>
+                      </div>
+
                     </div>
                   </div>
                 )} 
@@ -1041,26 +1171,12 @@ const Rully_Sabil_Inv = () => {
                         _isOpen={isOpen}
                         _dataStructure={accordionStructure}
                       />
-                    </div>
-                    <div className='flex justify-center items-center col-span-12 mt-3'>
-                      <motion.a 
-                        type='button'
-                        target="_blank"
-                        className={"flex flex-cols text-white font-inter bg-[#9D7265] hover:bg-[#7c7d6a] hover:cursor-pointer rounded-[43px] px-[25px] py-[9px] text-center tracking-wide mt-[30px]"}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                       <svg className='mr-2' width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_603_241)">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.20309 4.23222C7.69128 4.22372 8.24272 4.4566 8.77392 5.04682C9.13767 5.45099 9.46246 5.99351 9.71742 6.64648H7.1835C6.86538 6.64501 6.5606 6.518 6.33555 6.29295C6.10918 6.06658 5.982 5.75955 5.982 5.43942C5.982 5.11928 6.10918 4.81226 6.33555 4.58589C6.56192 4.35952 6.86894 4.23235 7.18908 4.23235L7.20309 4.23222ZM7.18055 8.25591C7.18339 8.25592 7.18624 8.25592 7.18908 8.25592C7.19061 8.25592 7.19214 8.25592 7.19368 8.25591H10.0056V9.86534H4.3726V8.25591H7.18055ZM4.64434 6.64648C4.46707 6.27275 4.37257 5.86096 4.37257 5.43942C4.37257 4.69244 4.66931 3.97605 5.19751 3.44785C5.72404 2.92132 6.43757 2.62479 7.18199 2.62293C8.24368 2.60676 9.21114 3.12677 9.9702 3.97017C10.287 4.32215 10.5678 4.72951 10.8103 5.17915C11.0528 4.72951 11.3336 4.32215 11.6504 3.97017C12.4095 3.12677 13.3769 2.60676 14.4386 2.62293C15.183 2.62479 15.8966 2.92132 16.4231 3.44785C16.9513 3.97605 17.248 4.69244 17.248 5.43942C17.248 5.86096 17.1535 6.27275 16.9763 6.64648H17.248C18.1369 6.64648 18.8575 7.36704 18.8575 8.25591V9.86534C18.8575 10.7542 18.1369 11.4748 17.248 11.4748H17.248V16.3031C17.248 16.9433 16.9937 17.5574 16.5409 18.0101C16.0882 18.4629 15.4741 18.7172 14.8339 18.7172H6.78672C6.14645 18.7172 5.5324 18.4629 5.07966 18.0101C4.62692 17.5574 4.37257 16.9433 4.37257 16.3031V11.4748C3.48372 11.4748 2.76317 10.7542 2.76317 9.86534V8.25591C2.76317 7.36704 3.48373 6.64648 4.3726 6.64648H4.64434ZM14.4269 8.25591C14.4284 8.25592 14.43 8.25592 14.4315 8.25592C14.4344 8.25592 14.4372 8.25592 14.44 8.25591H17.248V9.86534H11.6151V8.25591H14.4269ZM14.4371 6.64648C14.7552 6.64501 15.06 6.518 15.285 6.29295C15.5114 6.06658 15.6386 5.75955 15.6386 5.43942C15.6386 5.11928 15.5114 4.81226 15.285 4.58589C15.0587 4.35952 14.7516 4.23235 14.4315 4.23235L14.4175 4.23222C13.9293 4.22372 13.3779 4.4566 12.8467 5.04682C12.4829 5.45099 12.1581 5.99351 11.9032 6.64648H14.4371ZM5.982 16.3031V11.4748H10.0056V17.1078H6.78672C6.5733 17.1078 6.36861 17.023 6.2177 16.8721C6.06679 16.7212 5.982 16.5165 5.982 16.3031ZM14.8339 17.1078H11.6151V11.4748H15.6386V16.3031C15.6386 16.5165 15.5538 16.7212 15.4029 16.8721C15.252 17.023 15.0473 17.1078 14.8339 17.1078Z" fill="white"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_603_241">
-                        <rect width="20" height="20" fill="white" transform="translate(0.810318 0.669922)"/>
-                        </clipPath>
-                        </defs>
-                      </svg>
-                      <p className='mt-[2px] items-center justify-center text-[12px]'>Kirim Hadiah</p>
-                      </motion.a>
+
+                      <Accordion2
+                        _isOpen2={isOpen2}
+                        _dataStructure={accordionStructure2}
+                      />
+                       
                     </div>
           
                   </div>
@@ -1101,7 +1217,7 @@ const Rully_Sabil_Inv = () => {
                         <textarea 
                           rows="4"
                           name='message'
-                          placeholder='Ucapan ' 
+                          placeholder='Ucapan' 
                           className="w-full rounded-md py-2.5 px-4 border text-[12px] outline-[#9D7265] bg-white border-[#9D7265] mt-4" 
                           value={msgText}
                           onChange={(e) => {
@@ -1137,69 +1253,70 @@ const Rully_Sabil_Inv = () => {
                           </motion.button>
                         </div>
                     </form>
+
+                    {/* Chat List */}
+                    <ScrollContainer
+                      content = {(
+                        <div 
+                          id="ucapan"
+                          className="w-full h-[1090px]"
+                        >
+                          <div className="w-full py-24">
+
+                            {/* Message List */}
+                            <div className={'grid grid-cols-1 gap-y-3 overflow-x-auto w-full max-h-[700px] rounded-xl ' + (msgReceived.length >= 5 ? 'pr-2' : '')}>
+                              <AnimatePresence initial={false}>
+
+                                { msgReceived.length > 0 ? (
+                                  msgReceived.map((item, index) => (
+
+                                  <motion.div 
+                                    key={index} 
+                                    initial={{ opacity: 0, x: -50, scale: 0.3 }}
+                                    animate={{ opacity: .9, x: 0, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.5, transition: { duration: 2 } }}
+                                    className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-90'
+                                  >
+                                    <div className={Playfair_Display_SC.className + ' justify-center items-center w-full text-[17px] capitalize tracking-wide mb-2'}>
+                                      {item?.name || '-'}
+                                    </div>
+                                    <hr/>
+
+                                    <div className='justify-center items-center w-full text-[12.5px] pt-3 mb-2'>
+                                      <p>{item?.message || ''}</p>
+                                    </div>
+                                    <div className={Arapey.className + ' text-[#8F907E] justify-center items-center w-full text-[11px] pt-2 text-right opacity-60'}>
+                                      {/* <p><FontAwesomeIcon icon={faClock} className='text-[9px]' />&nbsp; 12 Januari 2024, pukul 20.40</p> */}
+                                      <p><FontAwesomeIcon icon={faClock} className='text-[9px]' />&nbsp; {helper.formatDate(item?.created_at, "DD MMM YYYY, pukul hh:mm") || '-'}</p>
+                                    </div>
+                                  </motion.div>
+
+                                ))) : (
+                                  <>
+                                    <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-90'>
+                                      <div className='justify-center items-center w-full text-[12.5px] pt-3 mb-2 text-center'>
+                                        <p>Jadilah yang pertama memberi ucapan dan do&apos;a untuk kedua mempelai</p>
+                                      </div>
+
+                                      <div className={Arapey.className + ' text-[#8F907E] justify-center items-center w-full text-[11px] pt-2 text-center opacity-60'}>
+                                        <p>Laungharmoni</p>
+                                      </div>
+                                    </div>
+                                    <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-50'></div>
+                                    <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-20'></div>
+                                  </>
+                                )}
+
+                              </AnimatePresence>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    />
                   </div>
                 )}
               />
 
-              {/* Chat List */}
-              <ScrollContainer
-                content = {(
-                  <div 
-                    id="ucapan"
-                    className="w-full bg-cover bg-[url('/assets/choral-charm/mobile/m_Ucapan.png')] bg-[center_top_-70px] h-[1090px]"
-                  >
-                    <div className="w-full px-7 py-24">
-
-                      {/* Message List */}
-                      <div className={'grid grid-cols-1 gap-y-3 overflow-x-auto w-full max-h-[700px] rounded-xl ' + (msgReceived.length >= 5 ? 'pr-2' : '')}>
-                        <AnimatePresence initial={false}>
-
-                          { msgReceived.length > 0 ? (
-                            msgReceived.map((item, index) => (
-
-                            <motion.div 
-                              key={index} 
-                              initial={{ opacity: 0, x: -50, scale: 0.3 }}
-                              animate={{ opacity: .9, x: 0, scale: 1 }}
-                              exit={{ opacity: 0, scale: 0.5, transition: { duration: 2 } }}
-                              className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-90'
-                            >
-                              <div className={Playfair_Display_SC.className + ' justify-center items-center w-full text-[17px] capitalize tracking-wide mb-2'}>
-                                {item?.name || '-'}
-                              </div>
-                              <hr/>
-
-                              <div className='justify-center items-center w-full text-[12.5px] pt-3 mb-2'>
-                                <p>{item?.message || ''}</p>
-                              </div>
-                              <div className={Arapey.className + ' text-[#8F907E] justify-center items-center w-full text-[11px] pt-2 text-right opacity-60'}>
-                                {/* <p><FontAwesomeIcon icon={faClock} className='text-[9px]' />&nbsp; 12 Januari 2024, pukul 20.40</p> */}
-                                <p><FontAwesomeIcon icon={faClock} className='text-[9px]' />&nbsp; {helper.formatDate(item?.created_at, "DD MMM YYYY, pukul hh:mm") || '-'}</p>
-                              </div>
-                            </motion.div>
-
-                          ))) : (
-                            <>
-                              <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-90'>
-                                <div className='justify-center items-center w-full text-[12.5px] pt-3 mb-2 text-center'>
-                                  <p>Jadilah yang pertama memberi ucapan dan do&apos;a untuk kedua mempelai</p>
-                                </div>
-
-                                <div className={Arapey.className + ' text-[#8F907E] justify-center items-center w-full text-[11px] pt-2 text-center opacity-60'}>
-                                  <p>Laungharmoni</p>
-                                </div>
-                              </div>
-                              <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-50'></div>
-                              <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-20'></div>
-                            </>
-                          )}
-
-                        </AnimatePresence>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              />
 
               {/* Thank You */}
               <ScrollContainer

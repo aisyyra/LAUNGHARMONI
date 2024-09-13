@@ -1,9 +1,7 @@
 import React from "react";
 import Image from 'next/image'
 import Link from 'next/link'
-import Header from "@/components/header";
 import Card from "@/assets/laung-harmoni/Card.png";
-import Footer from "@/components/footer";
 import Button_WA from "@/components/button-wa"
 import "./style.css";
 
@@ -11,7 +9,6 @@ import "./style.css";
 export default function tema() {
     return (
     <>
-         <Header />
          {/* Header Page */}
             <main className="justify-center bg-cover h-[80%] w-screen flex bg-[url('/assets/laung-harmoni/Header_Portofolio.png')]">
                 <div className="mt-[200px] mb-[146px] w-12/12 flex flex-row text-center">
@@ -147,7 +144,6 @@ export default function tema() {
         </main>
          {/* Tema end */}
         
-         <Footer />
 
     </>
     );

@@ -22,7 +22,7 @@ function VerticalScroll() {
         </motion.div>
       </div>
       {/* right content */}
-      <div className="hidden sm:flex max-w-2xl xl:w-7/12 flex items-center justify-center sm:px-[50px] pt-[30rem] pb-[3rem] flex overflow-y-scroll scrollbar-hide ">
+      <div className="hidden sm:flex max-w-2xl xl:w-7/12 items-center justify-center sm:px-[50px] pt-[30rem] pb-[3rem] flex overflow-y-scroll scrollbar-hide ">
         <div className="sm:pt-[100rem] pt-[145rem] animate-infinite-scroll ">
           <div className="sm:flex sm:flex-col flex-row ">
               {/* card 1 */}

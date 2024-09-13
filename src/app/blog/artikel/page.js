@@ -1,16 +1,13 @@
 import React from "react";
 import Image from 'next/image'
 import Link from 'next/link'
-import Header from "@/components/header";
 import Artikel from "@/assets/laung-harmoni/1_Blog.jpg";
-import Footer from "@/components/footer";
 import { IoIosArrowForward } from "react-icons/io";
 
 
 export default function tema() {
     return (
     <>
-         <Header />
          {/* Header Page */}
             <main className="justify-center w-screen flex bg-undangan">
                 <div className="mt-[150px] mb-[100px] w-12/12 flex flex-row">
@@ -141,7 +138,7 @@ export default function tema() {
                 </div>
             </main>
          {/* Header Page End */}
-         <Footer />
+
     </>
     );
 }

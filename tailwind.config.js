@@ -33,6 +33,8 @@ module.exports = {
         Mustard: ["var(--font-Mustard)"],
         Dynalight: ["Dynalight", "cursive"],
         Suranna: ["Suranna", "serif"],
+        Oranienbaum: ["Oranienbaum", "serif"],
+        Lateef: ["Lateef", "serif"],
       },
     },
   },
