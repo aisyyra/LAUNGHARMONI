@@ -3,13 +3,9 @@
 import Image from "next/image";
 import React from "react";
 import mockup from "@/assets/laung-harmoni/Mokcup.png"
-import pp from "@/assets/laung-harmoni/pp.png"
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import Button_WA from "@/components/button-wa"
 import { AiOutlineCheck } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
-import { IoChevronDownSharp } from "react-icons/io5";
 import Home from "@/app/page";
 import App from "@/components/counter/index"
 import VerticalScroll from "@/components/vertikal-scroll/index";
@@ -25,7 +21,6 @@ function Homepage(){
   return (
     <>
     <main className="justify-center justify-items-center content-center object-center mx-auto">
-      <Header />
       {/* header page */}
         <main className="2xl:justify-center px-[20px] pt-[100px] pb-[50px] items-center bg-cover w-screen grid grid-rows-2 sm:grid-rows-2 md:flex justify-center bg-[url('/assets/laung-harmoni/Header.png')]">
           {/* image header */}
@@ -467,9 +462,6 @@ function Homepage(){
       </div>
       {/* action end */}
 
-      {/* footer */}
-      <Footer />
-      {/* footer end */}
     </main>
    </>
   )

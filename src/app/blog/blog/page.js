@@ -1,16 +1,14 @@
 import React from "react";
 import Image from 'next/image'
 import Link from 'next/link'
-import Header from "@/components/header";
 import Blog_1 from "@/assets/laung-harmoni/1_Blog.jpg";
-import Footer from "@/components/footer";
 import Button_WA from "@/components/button-wa"
 
 
 export default function tema() {
     return (
     <>
-         <Header />
+
          {/* Header Page */}
         <main className="justify-center bg-cover h-[80%] w-screen flex bg-[url('/assets/laung-harmoni/Header_Portofolio.png')] pt-[5rem]">
                 <div className="py-[146px] w-12/12 flex flex-row text-center">
@@ -129,7 +127,6 @@ export default function tema() {
            </div>
         </main>
          {/* Tema end */}
-         <Footer />
 
     </>
     );

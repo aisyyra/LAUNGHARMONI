@@ -1,5 +1,9 @@
 import { Inter } from "next/font/google";
-import localFont from 'next/font/local'
+import localFont from 'next/font/local';
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { useRouter, usePathname } from "next/navigation";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -31,7 +35,11 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="shortcut icon" href="/favicon.svg" />
       </head>
-      <body className={Mustard.className}>{children}</body>
+      <body className={Mustard.className}>
+       <Header />
+        {children}
+       <Footer />
+      </body>
     </html>
   );
 }

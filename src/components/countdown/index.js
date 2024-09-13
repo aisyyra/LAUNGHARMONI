@@ -77,7 +77,7 @@ function Countdown(props) {
 							const end = (Object.entries(timeLeft).length - 1);
 							return (
 								<div key={label} className="flex mt-[-25px]">
-									<div className="flex-1 text-white justify-center items-center text-center">
+									<div className="flex-1 text-black justify-center items-center text-center">
 										<div className={Arapey.className + ' text-[65px] tracking-wider w-full leading-[90px]'}>
 											{value || 0}
 										</div>
@@ -85,7 +85,7 @@ function Countdown(props) {
 											{label}
 										</div>
 									</div>
-									<div className="flex-1 text-white justify-center items-center text-center">
+									<div className="flex-1 text-black justify-center items-center text-center">
 									{i != end && (
 											<div className={Arapey.className + ' text-[55px] tracking-wider w-full'}>
 												:
@@ -109,7 +109,7 @@ function Countdown(props) {
 							const end = (Object.entries(timeLeft).length - 1);
 							return (
 								<div key={label} className="flex">
-									<div className="flex-1 text-white justify-center items-center text-center">
+									<div className="flex-1 text-black justify-center items-center text-center">
 										<div className={Arapey.className + ' text-[43px] tracking-normal w-full leading-[75px]'}>
 											{value || 0}
 										</div>
