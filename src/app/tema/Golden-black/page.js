@@ -19,7 +19,7 @@ import pageStyle from "./index.module.css";
 
 // #region images
   import ImgLH_Icon from "@/assets/laung-harmoni/Icon.svg";
-  import ImgLH_IconWhite from "@/assets/choral-charm/mobile/m_Logo.png";
+  import ImgLH_IconWhite from "@/assets/Golden-black/mobile/m_Logo.png";
   import ImgLH from "@/assets/laung-harmoni/IconName.svg";
   import ImgLH_White from "@/assets/laung-harmoni/IconNameWhite.svg";
 
@@ -115,6 +115,7 @@ import pageStyle from "./index.module.css";
   import Dekor from "@/assets/Golden-black/mobile/m_Dekor.png";
   import Dekor2 from "@/assets/Golden-black/mobile/m_Dekor2.png";
   import Dekor3 from "@/assets/Golden-black/mobile/m_Dekor3.png";
+  import bg_awal from "@/assets/Golden-black/mobile/m_Bg_Awal.png";
 
 // #endregion
 
@@ -664,67 +665,102 @@ const Rully_Sabil_Inv = () => {
             {/* --- */}
             <motion.div className="lg:hidden">
               {/* Mobile */}
-              <nav className="fixed top-0 left-0 right-0 z-50">
-                <div className="relative w-full h-full">
-                  <div className={"pt-[200pt] justify-center items-center absolute text-center text-white items-center justify-center w-full transform translate-y-1/3"}>
-                    
-                    {/* Upper Logo */}
-                    <motion.button 
+              <nav className="fixed left-0 right-0 z-50">
+                <div className="relative w-full h-full grid grid-rows-2">
+                  <div className={"mt-[5rem] justify-center items-center absolute text-center text-white items-center justify-center w-full transform translate-y-[25rem]"}>
+                    <div
+                      className=" grid grid-rows flex w-4/4 h-full pt-[100px] bg-[url('/assets/Golden-black/mobile/m_Front1.png')] bg-contain bg-no-repeat bg-center justify-center items-center"
+                    >
+                      <div className='grid grid-rows justify-center bg-clip-text text-transparent bg-gradient-to-r from-[#C8A882] to-[#907658]'>
+                        <p className='font-Suranna text-[21px] '>Wedding Invitation of</p>
+                        <p className='font-Suranna text-[38px] '>Meyla & Imran</p>
+                        <p className='font-Suranna text-[17px] mt-3'>For, Guest Name</p>
+                        <hr className="w-20 mx-[65px] mt-2 h-px bg-[#907658] border-0 justify-center items-center text-center"></hr>
+                        <motion.button 
+                        className='mt-5'
                           type='button'
-                          className={"flex flex-cols justify-center items-center font-inter text-white bg-[#9D7265] hover:bg-gradient-to-r from-[#DDB4A5] to-[#BB806F] hover:cursor-pointer hover:border-[#DDB4A5] rounded-[43px] text-[12px] px-[25px] py-[9px] w-auto text-center tracking-widest"}
                           onClick={(e) => {
                             setInvActive(true);
                             togglePlay();
                           }}
                           whileTap={{ 
                             scale: 0.95,
-                            backgroundColor: "#BB806F",
                           }}
                         >
-                          <svg className="mr-2" width="19" height="19" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.76649 5.70403C3.76649 5.27178 4.1169 4.92138 4.54914 4.92138H17.0715C17.5038 4.92138 17.8542 5.27178 17.8542 5.70403V6.05667L11.2009 10.2845L11.1992 10.2856C11.0825 10.3583 10.9478 10.3968 10.8103 10.3968C10.6728 10.3968 10.5381 10.3583 10.4215 10.2856L3.76649 6.0567V5.70403ZM2.20119 6.47163C2.20102 6.48116 2.20102 6.49068 2.20119 6.50019V15.0958C2.20119 16.3926 3.2524 17.4438 4.54914 17.4438H17.0715C18.3683 17.4438 19.4195 16.3926 19.4195 15.0958V6.49613C19.4196 6.48932 19.4196 6.48251 19.4195 6.47569V5.70403C19.4195 4.40729 18.3683 3.35608 17.0715 3.35608H4.54914C3.2524 3.35608 2.20119 4.40729 2.20119 5.70403V6.47163ZM17.8542 7.91126V15.0958C17.8542 15.5281 17.5038 15.8785 17.0715 15.8785H4.54914C4.1169 15.8785 3.76649 15.5281 3.76649 15.0958V7.91131L9.58442 11.6083L9.58865 11.611C9.95483 11.8404 10.3782 11.9621 10.8103 11.9621C11.2424 11.9621 11.6658 11.8404 12.032 11.611L17.8542 7.91126Z" fill="white"/>
-                          </svg>
-                          <p className='mt-[1px] items-center justify-center text-[12px]'>Buka Undangan</p>
-                      </motion.button>
-                    <div
-                      className="grid grid-rows flex w-4/4 h-full bg-contain pt-[100px] bg-no-repeat bg-center justify-center items-center"
-                      style={{ backgroundImage: `url(${imgDecor3.src})` }}
-                    >
-                      <div className='grid grid-rows justify-center bg-clip-text text-transparent bg-gradient-to-r from-[#C8A882] to-[#907658]'>
-                        <p className='text-white font-Suranna text-[17px]'>Wedding Invitation of</p>
-                        <p className='text-white font-Suranna text-[38px] '>Meyla & Imran</p>
-                        <p className='text-white font-Suranna text-[13px] mt-3'>For, Guest Name</p>
-                        <hr className="w-20 mx-[65px] mt-2 h-px bg-[#907658] border-0 justify-center items-center text-center"></hr>
-                        <svg className='mx-12 pt-5 justify-center' width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g filter="url(#filter0_d_335_422)">
-                        <rect x="24.9509" y="24.9958" width="54" height="54" rx="27" fill="url(#paint0_linear_335_422)" shape-rendering="crispEdges"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M42.8757 45.9457C42.8757 45.3888 43.3272 44.9373 43.8841 44.9373H60.0177C60.5746 44.9373 61.0261 45.3888 61.0261 45.9457V46.4L52.4542 51.8471L52.4519 51.8485C52.3016 51.9421 52.128 51.9917 51.9509 51.9917C51.7738 51.9917 51.6002 51.9421 51.4499 51.8485L42.8757 46.4V45.9457ZM40.859 46.9376C40.8588 46.9479 40.8588 46.9581 40.859 46.9684V58.0459C40.859 59.7166 42.2134 61.071 43.8841 61.071H60.0177C61.6884 61.071 63.0428 59.7166 63.0428 58.0459V46.9697C63.043 46.9586 63.043 46.9475 63.0428 46.9363V45.9457C63.0428 44.275 61.6884 42.9206 60.0177 42.9206H43.8841C42.2134 42.9206 40.859 44.275 40.859 45.9457V46.9376ZM61.0261 48.7894V58.0459C61.0261 58.6028 60.5746 59.0543 60.0177 59.0543H43.8841C43.3272 59.0543 42.8757 58.6028 42.8757 58.0459V48.7894L50.3715 53.5527L50.377 53.5561C50.8487 53.8517 51.3942 54.0084 51.9509 54.0084C52.5076 54.0084 53.0531 53.8517 53.5249 53.5561L61.0261 48.7894Z" fill="#EEF0F2"/>
-                        </g>
-                        <defs>
-                        <filter id="filter0_d_335_422" x="0.150928" y="0.195789" width="107.6" height="107.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                        <feOffset dx="2" dy="2"/>
-                        <feGaussianBlur stdDeviation="13.4"/>
-                        <feComposite in2="hardAlpha" operator="out"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_335_422"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_335_422" result="shape"/>
-                        </filter>
-                        <linearGradient id="paint0_linear_335_422" x1="74.0659" y1="24.9958" x2="83.3355" y2="61.9229" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#C8A882"/>
-                        <stop offset="1" stop-color="#907658"/>
-                        </linearGradient>
-                        </defs>
-                        </svg>
-                      </div>
-                     
-
+                           <svg className='mx-12 pt-5 justify-center' width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_335_422)">
+                            <rect x="24.9509" y="24.9958" width="54" height="54" rx="27" fill="url(#paint0_linear_335_422)" shape-rendering="crispEdges"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M42.8757 45.9457C42.8757 45.3888 43.3272 44.9373 43.8841 44.9373H60.0177C60.5746 44.9373 61.0261 45.3888 61.0261 45.9457V46.4L52.4542 51.8471L52.4519 51.8485C52.3016 51.9421 52.128 51.9917 51.9509 51.9917C51.7738 51.9917 51.6002 51.9421 51.4499 51.8485L42.8757 46.4V45.9457ZM40.859 46.9376C40.8588 46.9479 40.8588 46.9581 40.859 46.9684V58.0459C40.859 59.7166 42.2134 61.071 43.8841 61.071H60.0177C61.6884 61.071 63.0428 59.7166 63.0428 58.0459V46.9697C63.043 46.9586 63.043 46.9475 63.0428 46.9363V45.9457C63.0428 44.275 61.6884 42.9206 60.0177 42.9206H43.8841C42.2134 42.9206 40.859 44.275 40.859 45.9457V46.9376ZM61.0261 48.7894V58.0459C61.0261 58.6028 60.5746 59.0543 60.0177 59.0543H43.8841C43.3272 59.0543 42.8757 58.6028 42.8757 58.0459V48.7894L50.3715 53.5527L50.377 53.5561C50.8487 53.8517 51.3942 54.0084 51.9509 54.0084C52.5076 54.0084 53.0531 53.8517 53.5249 53.5561L61.0261 48.7894Z" fill="#EEF0F2"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_d_335_422" x="0.150928" y="0.195789" width="107.6" height="107.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dx="2" dy="2"/>
+                            <feGaussianBlur stdDeviation="13.4"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_335_422"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_335_422" result="shape"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_335_422" x1="74.0659" y1="24.9958" x2="83.3355" y2="61.9229" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#C8A882"/>
+                            <stop offset="1" stop-color="#907658"/>
+                            </linearGradient>
+                            </defs>
+                           </svg>
+                        </motion.button>
+                      </div>    
+                    
                     </div>
-
+                  </div>
+            
+                  <div className='w-full justify-center items-center text-center transform translate-y-[40rem]'>
+                    <Image
+                    src={Dekor3}
+                    className='flex justify-center'
+                    alt="."
+                    />
+                  </div>
+                  <div className='inline-flex w-full justify-center items-center absolute text-center text-white items-center justify-center w-full transform translate-y-[43rem]'>
+                  <motion.button 
+                        className='mt-5'
+                          type='button'
+                          onClick={(e) => {
+                            setInvActive(true);
+                            togglePlay();
+                          }}
+                          whileTap={{ 
+                            scale: 0.95,
+                          }}
+                        >
+                           <svg className='mx-12 pt-5 justify-center' width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g filter="url(#filter0_d_335_422)">
+                            <rect x="24.9509" y="24.9958" width="54" height="54" rx="27" fill="url(#paint0_linear_335_422)" shape-rendering="crispEdges"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M42.8757 45.9457C42.8757 45.3888 43.3272 44.9373 43.8841 44.9373H60.0177C60.5746 44.9373 61.0261 45.3888 61.0261 45.9457V46.4L52.4542 51.8471L52.4519 51.8485C52.3016 51.9421 52.128 51.9917 51.9509 51.9917C51.7738 51.9917 51.6002 51.9421 51.4499 51.8485L42.8757 46.4V45.9457ZM40.859 46.9376C40.8588 46.9479 40.8588 46.9581 40.859 46.9684V58.0459C40.859 59.7166 42.2134 61.071 43.8841 61.071H60.0177C61.6884 61.071 63.0428 59.7166 63.0428 58.0459V46.9697C63.043 46.9586 63.043 46.9475 63.0428 46.9363V45.9457C63.0428 44.275 61.6884 42.9206 60.0177 42.9206H43.8841C42.2134 42.9206 40.859 44.275 40.859 45.9457V46.9376ZM61.0261 48.7894V58.0459C61.0261 58.6028 60.5746 59.0543 60.0177 59.0543H43.8841C43.3272 59.0543 42.8757 58.6028 42.8757 58.0459V48.7894L50.3715 53.5527L50.377 53.5561C50.8487 53.8517 51.3942 54.0084 51.9509 54.0084C52.5076 54.0084 53.0531 53.8517 53.5249 53.5561L61.0261 48.7894Z" fill="#EEF0F2"/>
+                            </g>
+                            <defs>
+                            <filter id="filter0_d_335_422" x="0.150928" y="0.195789" width="107.6" height="107.6" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feOffset dx="2" dy="2"/>
+                            <feGaussianBlur stdDeviation="13.4"/>
+                            <feComposite in2="hardAlpha" operator="out"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_335_422"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_335_422" result="shape"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_335_422" x1="74.0659" y1="24.9958" x2="83.3355" y2="61.9229" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#C8A882"/>
+                            <stop offset="1" stop-color="#907658"/>
+                            </linearGradient>
+                            </defs>
+                           </svg>
+                        </motion.button>
                   </div>
                 </div>
               </nav>
+              
               {/* Mobile Slider */}
               <MobileImgSliderFull
                 _data = {front_mobileSliderStructure}
@@ -826,35 +862,14 @@ const Rully_Sabil_Inv = () => {
 
             <div className="items-center justify-center grid grid-cols-1 w-full px-0 sm:px-24 block">
 
-              {/* Dekor */}
-              <div className="w-full bg-cover bg-[center_top_-10rem]">
-                <div className='w-full'>
-                  <Image
-                    src={Dekor3}
-                    className='transform w-full flex justify-center'
-                    alt="."
-                  />
-                </div>
-              </div> 
-
-              {/* Dekor */}
-              <div className="w-full bg-cover ">
-                <div className='w-full mt-[100px]'>
-                  <Image
-                    src={Dekor3}
-                    className='transform w-full flex justify-center'
-                    alt="."
-                  />
-                </div>
-              </div> 
-
+            
               {/* Opening */}
                 <ScrollContainer 
                 content = {(
                   <div 
-                    className="w-full grid grid-cols-12 px-7 z-50  transform -translate-y-[55rem] z-50"
-                  >
-                    <div className='bg-gradient-to-r from-[#1B2022] to-[#353B3C] rounded-[18px] py-[65px] justify-center items-center col-span-12 text-center'>
+                    className="w-full h-full bg-cover bg-no-repeat bg-contain bg-[url('/assets/Golden-black/mobile/m_Bg_Awal.png')] grid grid-cols-12 px-7 py-[250px] gap-5 bg-[center_top_-10rem]"
+                    id=""                  >
+                    <div className='bg-gradient-to-r from-[#1B2022] to-[#353B3C] rounded-[18px] -translate-y-1/4 py-[65px] justify-center items-center col-span-12 text-center'>
                       <div className='justify-center items-center col-span-12 text-center'>
                         <div className='inline-flex w-[100px] justify-center text-center'>
                           <Image
@@ -883,7 +898,7 @@ const Rully_Sabil_Inv = () => {
               <ScrollContainer 
                 content = {(
                   <div 
-                    className="w-full grid grid-cols-12 px-7 transform -translate-y-[40rem]"
+                    className="w-full grid grid-cols-12 px-7 transform -translate-y-[13rem]"
                     id="mempelai"
                   >
                     <div className='bg-gradient-to-r from-[#1B2022] to-[#353B3C] rounded-[18px] py-[52px] justify-center items-center col-span-12 text-center'>
@@ -994,17 +1009,17 @@ const Rully_Sabil_Inv = () => {
                     id="waktu"
                   >
                     <div 
-                      className="w-full grid grid-cols-12 px-7 mb-[74px] "
+                      className="w-full grid grid-cols-12 px-7 py-[100px] "
                     >
-                      <div className={'flex justify-center items-center col-span-12 text-center font-Suranna text-[25px] bg-clip-text text-transparent bg-gradient-to-r from-[#C8A882] to-[#907658] leading-[60px] col-span-12 text-right mt-[74px]'}>
+                      <div className={'flex justify-center items-center col-span-12 text-center font-Suranna text-[25px] bg-clip-text text-transparent bg-gradient-to-r from-[#C8A882] to-[#907658] leading-[60px] col-span-12 text-right'}>
                           <label className="mr-3">Waktu Acara</label> 
                         </div>
 
-                        <div className='col-span-12 inline-flex items-center justify-center w-full mb-[40px]'>
+                        <div className='col-span-12 inline-flex items-center justify-center w-full'>
                           <hr class="w-40 h-px bg-[#907658] border-0 justify-center items-center text-center"></hr>
                         </div>
 
-                      <div className='flex justify-center items-center col-span-12 text-center pt-[52px]'>
+                      <div className='flex justify-center items-center col-span-12 text-center pt-10'>
                         <div className='w-full'>
                           <div className='text-[17px] tracking-normal'>
                             <label className='leading-6 font-Suranna text-[#A2999E]'>
@@ -1081,7 +1096,7 @@ const Rully_Sabil_Inv = () => {
                       <hr class="w-40 h-px bg-[#C8A882] border-0 justify-center items-center text-center"></hr>
                     </div>
 
-                    <div className={'text-[#A2999E] mt-[65px] mb-4 font-Suranna flex justify-center text-center items-center col-span-12 mt-[52px] text-[17px]'}>
+                    <div className={'text-[#A2999E] mt-[65px] mb-4 font-Suranna flex justify-center text-center items-center col-span-12 mt-11 text-[17px]'}>
                       The Krakatau Grand Ballroom, Jl. Taman Mini Indonesia Indah Pintu 1 Tmii, Ceger, Kec. Cipayung, Jakarta, Daerah Khusus Ibukota Jakarta 13820
                     </div>
 
@@ -1131,6 +1146,11 @@ const Rully_Sabil_Inv = () => {
                       <div className='justify-center items-center text-center'>
                         <Countdown 
                           project = 'Rully_Sabil_Mobile' 
+                          target_date = '2024-10-25'
+                          className=''
+                        />  
+                         <Countdown 
+                          project = 'Rully_Sabil_Mobile2' 
                           target_date = '2024-10-25'
                           className=''
                         />  
@@ -1212,24 +1232,14 @@ const Rully_Sabil_Inv = () => {
                 )} 
               />
 
-              <div className="w-full bg-cover">
-                <div className='relative w-full'>
-                  <Image
-                    src={Dekor3}
-                    className='transform -translate-y-[150px] w-full flex justify-center'
-                    alt="."
-                  />
-                </div>
-              </div>
-
               {/* Tanda Kasih */}
               <ScrollContainer
                 content = {(
                   <div 
-                    className="w-full grid grid-cols-12 px-7 transform -translate-y-[300pt]"
+                    className="w-full grid grid-cols-12 px-7 transform bg-[url('/assets/Golden-black/mobile/m_Dekor3.png')] bg-cover bg-no-repeat bg-center py-[100px] -translate-y-[12rem]"
                     id="hadiah"
                   >
-                    <div className='col-span-12 px-7 bg-[#353B3C] rounded-[18px] py-[52px]'>
+                    <div className='col-span-12 px-7 bg-[#353B3C] rounded-[18px] py-[52px] translate-y-[10rem]'>
                       
                       <div className={'bg-clip-text text-transparent bg-gradient-to-r from-[#C8A882] to-[#907658] font-Suranna text-[25px] flex justify-center items-center w-full text-[25px]'}>
                         Tanda Kasih
@@ -1436,7 +1446,7 @@ const Rully_Sabil_Inv = () => {
               </div>
 
               {/* Footer */}
-              <footer className="bg-[#A2999E] transform -translate-y-[230px] h-auto flex flex-col justify-center items-center text-black font-inter">
+              <footer className="bg-[#A2999E] transform -translate-y-[230px] h-auto flex flex-col justify-center items-center text-white font-inter">
                 <Image
                     src={ImgLH_IconWhite}
                     className='pt-6'
@@ -1445,32 +1455,32 @@ const Rully_Sabil_Inv = () => {
                     height={69}
                   />
 
-                <div className={'flex justify-center items-center w-full text-[9.5px] pt-4 text-center font-regular tracking-wide'}>
+                <div className={'flex justify-center items-center w-full text-[9.5px] pt-[17px] text-center font-regular tracking-wide'}>
                   <p className=''>
                     Mau undangan pernikahan seperti ini?<br></br>
                     Ayo pesan sekarang juga lewat sosial media kami:
                   </p>
                 </div>
 
-                <div className={'flex justify-center items-center w-full text-[10px] pt-4 text-center font-regular tracking-wide'}>
+                <div className={'flex justify-center items-center w-full text-[10px] pt-[17px] text-center font-regular tracking-wide'}>
                   <p className='flex flex-cols'>
-                    <svg className='mr-1' width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.21047 2.00432C8.22597 1.0187 6.91675 0.475669 5.52185 0.475098C2.64774 0.475098 0.308509 2.81414 0.307387 5.68914C0.306985 6.60819 0.547099 7.50523 1.00343 8.296L0.263657 10.9981L3.02791 10.273C3.78953 10.6884 4.64705 10.9073 5.51978 10.9076H5.52189C5.52172 10.9076 5.52206 10.9076 5.52189 10.9076C8.39571 10.9076 10.7351 8.56837 10.7363 5.69331C10.7368 4.29999 10.195 2.98991 9.21047 2.00432ZM5.52187 10.027H5.52011C4.74245 10.0267 3.97967 9.81775 3.31423 9.42289L3.15599 9.32897L1.51564 9.75925L1.95349 8.15994L1.85043 7.99594C1.4166 7.30591 1.18747 6.50835 1.18781 5.68943C1.18874 3.29985 3.13303 1.35578 5.52363 1.35578C6.68123 1.35614 7.76943 1.80756 8.58771 2.62677C9.40597 3.44598 9.85635 4.5349 9.85589 5.69295C9.85491 8.08272 7.9107 10.027 5.52187 10.027Z" fill="#E3457B"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.89918 6.78115C7.7689 6.71594 7.12831 6.40079 7.00889 6.35727C6.88947 6.31379 6.8026 6.29206 6.71575 6.42248C6.62891 6.55289 6.3792 6.84639 6.30319 6.93336C6.22721 7.02027 6.15118 7.03122 6.02092 6.96594C5.89064 6.90072 5.47082 6.76316 4.97317 6.31928C4.58582 5.97377 4.32435 5.54714 4.24832 5.41667C4.17233 5.28626 4.24023 5.21575 4.30547 5.15077C4.36408 5.09237 4.43577 4.9986 4.50092 4.92251C4.56605 4.84646 4.58777 4.79206 4.6312 4.70517C4.67463 4.6182 4.65294 4.5421 4.62034 4.47691C4.58777 4.4117 4.3272 3.77039 4.21864 3.50947C4.11285 3.25545 4.00545 3.28986 3.92546 3.28582C3.84958 3.28203 3.76261 3.28125 3.67576 3.28125C3.58891 3.28125 3.44773 3.31387 3.32833 3.44428C3.20891 3.57473 2.8723 3.88996 2.8723 4.5312C2.8723 5.17253 3.33917 5.79208 3.40432 5.87901C3.46945 5.966 4.32306 7.28198 5.63005 7.84634C5.94091 7.9806 6.1836 8.06076 6.37281 8.12079C6.68494 8.21998 6.96897 8.20596 7.19346 8.17241C7.4438 8.13501 7.96433 7.85724 8.07289 7.55293C8.18148 7.24855 8.18148 6.98765 8.14888 6.93334C8.11633 6.87901 8.02946 6.84639 7.89918 6.78115Z" fill="#E3457B"/>
+                    <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.21049 2.33391C8.22599 1.34829 6.91677 0.805259 5.52187 0.804688C2.64775 0.804688 0.308524 3.14373 0.307402 6.01873C0.307 6.93778 0.547114 7.83482 1.00345 8.62559L0.263672 11.3277L3.02793 10.6026C3.78955 11.018 4.64707 11.2369 5.51979 11.2372H5.52191V11.2372C8.39572 11.2372 10.7351 8.89796 10.7364 6.0229C10.7369 4.62958 10.195 3.3195 9.21049 2.33391ZM5.52189 10.3566H5.52013C4.74247 10.3563 3.97969 10.1473 3.31425 9.75248L3.15601 9.65856L1.51566 10.0888L1.95351 8.48953L1.85045 8.32553C1.41662 7.6355 1.18749 6.83794 1.18783 6.01902C1.18876 3.62944 3.13304 1.68537 5.52364 1.68537C6.68125 1.68573 7.76944 2.13715 8.58773 2.95636C9.40599 3.77557 9.85637 4.86449 9.8559 6.02254C9.85493 8.41231 7.91071 10.3566 5.52189 10.3566Z" fill="white"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.8992 7.11025C7.76892 7.04504 7.12833 6.72989 7.00891 6.68637C6.88949 6.6429 6.80262 6.62116 6.71577 6.75159C6.62893 6.88199 6.37922 7.17549 6.30321 7.26246C6.22723 7.34937 6.1512 7.36032 6.02094 7.29504C5.89066 7.22982 5.47084 7.09226 4.97319 6.64838C4.58584 6.30287 4.32437 5.87624 4.24834 5.74577C4.17235 5.61536 4.24025 5.54485 4.30549 5.47987C4.3641 5.42147 4.43579 5.32771 4.50094 5.25161C4.56607 5.17556 4.58779 5.12116 4.63122 5.03427C4.67465 4.9473 4.65296 4.87121 4.62036 4.80601C4.58779 4.7408 4.32722 4.09949 4.21866 3.83857C4.11287 3.58455 4.00547 3.61897 3.92548 3.61492C3.8496 3.61113 3.76263 3.61035 3.67578 3.61035C3.58893 3.61035 3.44775 3.64297 3.32835 3.77338C3.20893 3.90383 2.87231 4.21906 2.87231 4.8603C2.87231 5.50163 3.33919 6.12118 3.40434 6.20811C3.46947 6.29511 4.32308 7.61108 5.63007 8.17544C5.94093 8.3097 6.18362 8.38986 6.37283 8.44989C6.68495 8.54908 6.96899 8.53507 7.19348 8.50152C7.44382 8.46411 7.96435 8.18634 8.07291 7.88203C8.1815 7.57766 8.1815 7.31676 8.1489 7.26244C8.11635 7.20811 8.02948 7.17549 7.8992 7.11025Z" fill="white"/>
                     </svg>
                   </p>
                   <p>+62 851-8300-3387</p>
                 </div>
 
-                <div className={'flex justify-center items-center w-full text-[10px] text-center font-regular tracking-wide'}>
+                <div className={'flex justify-center items-center w-full text-[10px] pt-[8px] text-center font-regular tracking-wide'}>
                   <p className='flex flex-cols'>
                     <svg className='mr-1' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_150_2279)">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0.353516C3.03056 0.353516 0.616871 2.7672 0.616871 5.73664C0.616871 8.70608 3.03056 11.1198 6 11.1198C8.96943 11.1198 11.3831 8.70608 11.3831 5.73664C11.3831 2.7672 8.96943 0.353516 6 0.353516ZM7.86308 3.5332C7.62337 2.72196 7.25394 1.9341 6.74754 1.21261C8.16327 1.44509 9.35499 2.32073 10.0162 3.5332H7.86308ZM4.01621 3.5332H1.9841C2.62638 2.36406 3.75827 1.5067 5.11217 1.24275C4.61535 1.95358 4.24761 2.72416 4.01621 3.5332ZM7.03317 3.5332H4.84651C5.08726 2.79676 5.44927 2.09857 5.93984 1.45277C6.4304 2.09857 6.79242 2.79676 7.03317 3.5332ZM1.41437 5.73664C1.41437 5.24955 1.49467 4.77043 1.63959 4.3307H3.82843C3.6627 5.24894 3.6626 6.18215 3.82049 7.1001L1.6309 7.1165C1.48662 6.67811 1.41437 6.21562 1.41437 5.73664ZM4.63548 7.09932C4.45134 6.1814 4.45136 5.24043 4.63546 4.3307H7.24422C7.42829 5.24001 7.42864 6.17283 7.26056 7.08271L4.63548 7.09932ZM8.06804 7.07336C8.22532 6.16401 8.21721 5.23973 8.05137 4.3307H10.3604C10.5053 4.77043 10.5856 5.24955 10.5856 5.73664C10.5856 6.19755 10.5138 6.64281 10.3932 7.05693L8.06804 7.07336ZM6.7486 10.2601C7.27127 9.52159 7.64882 8.71564 7.88118 7.87102L10.0607 7.85481C9.40643 9.1091 8.19014 10.0182 6.7486 10.2601ZM5.93957 10.0204C5.44009 9.36507 5.07012 8.64998 4.83653 7.89657L7.05067 7.88047C6.80929 8.63444 6.43896 9.35727 5.93957 10.0204ZM5.11192 10.2306C3.74932 9.96572 2.60889 9.09218 1.96622 7.91357L3.99901 7.89744C4.23078 8.71548 4.6065 9.50974 5.11192 10.2306Z" fill="#E3457B"/>
+                      <g clip-path="url(#clip0_347_786)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.00007 0.683594C3.03063 0.683594 0.616943 3.09728 0.616943 6.06672C0.616943 9.03616 3.03063 11.4498 6.00007 11.4498C8.96951 11.4498 11.3832 9.03616 11.3832 6.06672C11.3832 3.09728 8.96951 0.683594 6.00007 0.683594ZM7.86315 3.86328C7.62345 3.05204 7.25402 2.26418 6.74761 1.54268C8.16335 1.77516 9.35506 2.65081 10.0163 3.86328H7.86315ZM4.01629 3.86328H1.98418C2.62645 2.69414 3.75835 1.83678 5.11224 1.57283C4.61543 2.28366 4.24768 3.05424 4.01629 3.86328ZM7.03324 3.86328H4.84658C5.08733 3.12684 5.44935 2.42865 5.93991 1.78285C6.43048 2.42865 6.79249 3.12684 7.03324 3.86328ZM1.41444 6.06672C1.41444 5.57962 1.49474 5.10051 1.63966 4.66078H3.8285C3.66277 5.57901 3.66267 6.51223 3.82056 7.43018L1.63098 7.44658C1.48669 7.00819 1.41444 6.5457 1.41444 6.06672ZM4.63555 7.4294C4.45141 6.51148 4.45143 5.57051 4.63553 4.66078H7.2443C7.42836 5.57009 7.42871 6.50291 7.26063 7.41279L4.63555 7.4294ZM8.06811 7.40344C8.22539 6.49409 8.21729 5.56981 8.05144 4.66078H10.3605C10.5054 5.10051 10.5857 5.57962 10.5857 6.06672C10.5857 6.52762 10.5139 6.97289 10.3933 7.38701L8.06811 7.40344ZM6.74867 10.5901C7.27134 9.85167 7.64889 9.04572 7.88125 8.20109L10.0608 8.18489C9.4065 9.43917 8.19021 10.3483 6.74867 10.5901ZM5.93965 10.3504C5.44017 9.69515 5.07019 8.98006 4.83661 8.22665L7.05074 8.21055C6.80936 8.96451 6.43903 9.68734 5.93965 10.3504ZM5.11199 10.5607C3.74939 10.2958 2.60896 9.42225 1.9663 8.24365L3.99908 8.22752C4.23085 9.04556 4.60657 9.83982 5.11199 10.5607Z" fill="white"/>
                       </g>
                       <defs>
-                      <clipPath id="clip0_150_2279">
-                      <rect width="11" height="11" fill="white" transform="translate(0.499996 0.236816)"/>
+                      <clipPath id="clip0_347_786">
+                      <rect width="11" height="11" fill="white" transform="translate(0.5 0.566406)"/>
                       </clipPath>
                       </defs>
                     </svg>
@@ -1478,19 +1488,19 @@ const Rully_Sabil_Inv = () => {
                   <p>Laungharmoni.com</p>
                 </div>
 
-                <div className={'flex justify-center items-center w-full text-[10px] text-center font-regular tracking-wide'}>
+                <div className={'flex justify-center items-center w-full text-[10px] pt-[8px] text-center font-regular tracking-wide'}>
                   <p className='flex flex-cols'>
-                    <svg className='mr-1' width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 3.00684C4.51852 3.00684 3.291 4.21319 3.291 5.71583C3.291 7.21848 4.49735 8.42483 6 8.42483C7.50264 8.42483 8.70899 7.19731 8.70899 5.71583C8.70899 4.23435 7.48148 3.00684 6 3.00684ZM6 7.45128C5.04762 7.45128 4.26455 6.66821 4.26455 5.71583C4.26455 4.76345 5.04762 3.98038 6 3.98038C6.95238 3.98038 7.73545 4.76345 7.73545 5.71583C7.73545 6.66821 6.95238 7.45128 6 7.45128Z" fill="#E3457B"/>
-                      <path d="M8.81481 3.5571C9.15378 3.5571 9.42857 3.28231 9.42857 2.94335C9.42857 2.60438 9.15378 2.32959 8.81481 2.32959C8.47584 2.32959 8.20105 2.60438 8.20105 2.94335C8.20105 3.28231 8.47584 3.5571 8.81481 3.5571Z" fill="#E3457B"/>
-                      <path d="M10.4021 1.35601C9.85185 0.784577 9.06878 0.488281 8.17989 0.488281H3.8201C1.97883 0.488281 0.75132 1.71579 0.75132 3.55706V7.89569C0.75132 8.80574 1.04762 9.58881 1.64021 10.1602C2.21164 10.7105 2.97354 10.9856 3.84127 10.9856H8.15873C9.06878 10.9856 9.83069 10.6893 10.3809 10.1602C10.9524 9.60997 11.2487 8.82691 11.2487 7.91685V3.55706C11.2487 2.66818 10.9524 1.90627 10.4021 1.35601ZM10.3175 7.91685C10.3175 8.57294 10.0847 9.10204 9.7037 9.46183C9.32275 9.82162 8.79365 10.0121 8.15873 10.0121H3.84127C3.20635 10.0121 2.67725 9.82162 2.29629 9.46183C1.91534 9.08087 1.72486 8.55177 1.72486 7.89569V3.55706C1.72486 2.92214 1.91534 2.39304 2.29629 2.01209C2.65608 1.6523 3.20635 1.46183 3.84127 1.46183H8.20106C8.83598 1.46183 9.36508 1.6523 9.74603 2.03325C10.1058 2.41421 10.3175 2.94331 10.3175 3.55706V7.91685Z" fill="#E3457B"/>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.00001 3.33594C4.51853 3.33594 3.29102 4.54229 3.29102 6.04493C3.29102 7.54758 4.49737 8.75393 6.00001 8.75393C7.50266 8.75393 8.709 7.52641 8.709 6.04493C8.709 4.56345 7.48149 3.33594 6.00001 3.33594ZM6.00001 7.78038C5.04763 7.78038 4.26456 6.99731 4.26456 6.04493C4.26456 5.09255 5.04763 4.30948 6.00001 4.30948C6.95239 4.30948 7.73546 5.09255 7.73546 6.04493C7.73546 6.99731 6.95239 7.78038 6.00001 7.78038Z" fill="white"/>
+                      <path d="M8.81468 3.88572C9.15365 3.88572 9.42844 3.61093 9.42844 3.27196C9.42844 2.93299 9.15365 2.6582 8.81468 2.6582C8.47572 2.6582 8.20093 2.93299 8.20093 3.27196C8.20093 3.61093 8.47572 3.88572 8.81468 3.88572Z" fill="white"/>
+                      <path d="M10.402 1.68511C9.85175 1.11368 9.06868 0.817383 8.17979 0.817383H3.82C1.97873 0.817383 0.751221 2.0449 0.751221 3.88617V8.22479C0.751221 9.13484 1.04752 9.91791 1.64011 10.4893C2.21154 11.0396 2.97344 11.3147 3.84117 11.3147H8.15863C9.06868 11.3147 9.83059 11.0184 10.3809 10.4893C10.9523 9.93908 11.2486 9.15601 11.2486 8.24595V3.88617C11.2486 2.99728 10.9523 2.23537 10.402 1.68511ZM10.3174 8.24595C10.3174 8.90204 10.0846 9.43114 9.7036 9.79093C9.32265 10.1507 8.79355 10.3412 8.15863 10.3412H3.84117C3.20625 10.3412 2.67715 10.1507 2.29619 9.79093C1.91524 9.40998 1.72477 8.88087 1.72477 8.22479V3.88617C1.72477 3.25125 1.91524 2.72214 2.29619 2.34119C2.65598 1.9814 3.20625 1.79093 3.84117 1.79093H8.20096C8.83588 1.79093 9.36498 1.9814 9.74593 2.36236C10.1057 2.74331 10.3174 3.27241 10.3174 3.88617V8.24595Z" fill="white"/>
                     </svg>
                   </p>
                   <p>@laungharmoni</p>
                 </div>
 
-                <div className={'flex justify-center items-center w-full text-[9.5px] pt-4 text-center font-regular tracking-wide drop-shadow-2xl'}>
-                  <p className=''>©2024 Laungharmoni.com ❤️ All rights reserved.</p>
+                <div className={'flex justify-center items-center w-full text-[9.5px] pt-[17px] text-center font-regular tracking-wide drop-shadow-2xl'}>
+                  <p className=''>©2024 Laungharmoni.com ❤ All rights reserved.</p>
                 </div>
               </footer>
             </div>

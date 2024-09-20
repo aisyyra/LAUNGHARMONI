@@ -1,248 +1,28 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import bg from "@/assets/laung-harmoni/Logo_white.png";
 import Link from 'next/link'
 import ig from "@/assets/laung-harmoni/instagram.png";
-
+import { useRouter, usePathname } from 'next/navigation';
 
 function Footer(){
+
+  const UseRouter = useRouter();
+  const UsePathname = usePathname();
+
     return (
       <>
-        {/* Desktop ver */}
-         <footer className="hidden sm:flex xl:px-10 lg:px-10 md:px-10 bg-gradient-to-r from-[#303030] to-[#616161] font-inter justify-center">
-          <div className="max-w-screen-xl py-16 mx-auto lg:pt-20 justify-center">
-            <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 font-inter">
-              <div className="">
-                <div className="flex justify-center sm:justify-start">
-                <Image
-                      className=""
-                      src={bg.src}
-                      alt="Next.js Logo"
-                      width={240}
-                      height={69}
-                      priority
-                    />
-                </div>  
-                <p className="max-w-md mx-auto py-[40px] leading-[28px] text-regular text-[17px] text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
-                  Memberi kemudahan dengan berbagai pilihan tema undangan yang menarik. Gak mau ribet? Serahkan pada Admin, lalu sebarkan undangan digitalmu melalui smartphone. Gaskeun! 😆
-                </p>
-                <p className="max-w-md mx-auto leading-[28px] text-regular text-[17px] text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
-                  ©2024 Laungharmoni.com | All rights reserved.
-                </p>
-              </div>
-              <div
-                className="grid grid-cols-1 mt-5 gap-x-[92px] sm:grid-cols-2 lg:col-span-2 md:grid-cols-4">
-                  {/* navigasi */}
-                  <div className="text-center sm:text-left font-inter">
-                    <p className="text-[23px] font-bold text-white">Navigasi</p>
-                    <nav className="py-[28px] font-inter">
-                      <ul className="space-y-7 text-regular">
-                        <li className=" text-[17px]">
-                          <a className="text-white transition hover:text-white/75" href="/">
-                            Beranda
-                          </a>
-                        </li>
-                        <li>
-                          <a className=" text-[17px] text-white transition hover:text-white/75" href="/">
-                            Wedding Planner
-                          </a>
-                        </li>
-                        <li>
-                          <a className=" text-[17px] text-white transition hover:text-white/75" href="/">
-                            Panduan Pengguna
-                          </a>
-                        </li>
-                        <li>
-                          <a className=" text-[17px] text-white transition hover:text-white/75" href="/">
-                            Blog
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                  {/* undangan digital */}
-                  <div className="text-center sm:text-left font-inter ">
-                    <p className="text-[23px] font-bold text-white">Undangan Digital</p>
-                    <nav className="py-[28px] font-inter">
-                      <ul className="space-y-7">
-                        <li>
-                          <Link href="../tema_profile" className="text-[17px] text-white transition hover:text-white/75">
-                            Tema
-                          </Link>
-                        </li>
-                        <li>
-                          <Link  href="../portofolio/template" className="text-[17px] text-white transition hover:text-white/75">
-                            Portofolio
-                          </Link>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                  {/* lainnya */}
-                  <div className="text-center sm:text-left font-inter">
-                    <p className="text-[23px] font-bold text-white">Lainnya</p>
-                    <nav className="py-[28px] ">
-                      <ul className="space-y-7 ">
-                        <li>
-                          <a className="text-[17px] text-white transition hover:text-white/75" href="/">
-                          Affiliate
-                          </a>
-                        </li>
-                        <li>
-                          <a className="text-[17px] text-white transition hover:text-white/75" href="/">
-                          Tentang Kami
-                          </a>
-                        </li>
-                        <li>
-                          <a className="text-[17px] text-white transition hover:text-white/75" href="/">
-                          Kebijakan Privasi
-                          </a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                  {/* sosmed */}
-                  <div className="text-center sm:text-left">
-                    <p className="text-[23px] font-bold text-white">Media Sosial</p>
-                    <ul className="grid xl:grid-cols-4 lg:grid-cols-2 flex justify-center gap-y-[20px] mt-8 md:gap-2 sm:justify-start">
-                      <li>
-                        <Link
-                          href="https://wa.me/6285183003387"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          className="text-teal-500 transition hover:text-teal-500/75"
-                        >
-                          <span className="sr-only">WhatsApp</span>
-                          <svg  
-                            width="30" height="31"
-                            viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path d="M25.0123 0.174805H4.98668C2.23207 0.174805 -0.000976562 2.40785 -0.000976562 5.16246V25.1881C-0.000976562 27.9427 2.23207 30.1757 4.98668 30.1757H25.0123C27.7669 30.1757 30 27.9427 30 25.1881V5.16246C30 2.40785 27.7669 0.174805 25.0123 0.174805Z" fill="#25D366"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.9329 8.20106C20.0934 6.35945 17.6472 5.34482 15.0408 5.34375C9.67065 5.34375 5.29987 9.71417 5.29777 15.086C5.29702 16.8032 5.74567 18.4793 6.59831 19.9569L5.21606 25.0056L10.381 23.6508C11.804 24.4269 13.4063 24.8361 15.037 24.8366H15.0409C15.0406 24.8366 15.0412 24.8366 15.0409 24.8366C20.4105 24.8366 24.7817 20.4658 24.7839 15.0938C24.7849 12.4904 23.7724 10.0426 21.9329 8.20106ZM15.0409 23.1912H15.0376C13.5846 23.1906 12.1593 22.8002 10.916 22.0624L10.6203 21.8869L7.55536 22.6909L8.37347 19.7026L8.18091 19.3962C7.37031 18.1069 6.94219 16.6167 6.94282 15.0866C6.94456 10.6217 10.5774 6.98927 15.0442 6.98927C17.2071 6.98995 19.2404 7.83341 20.7693 9.36408C22.2982 10.8948 23.1397 12.9294 23.1388 15.0931C23.137 19.5584 19.5043 23.1912 15.0409 23.1912Z" fill="white"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4829 17.1264C19.2395 17.0045 18.0426 16.4157 17.8194 16.3344C17.5963 16.2531 17.434 16.2125 17.2717 16.4562C17.1094 16.6999 16.6429 17.2483 16.5009 17.4108C16.3589 17.5732 16.2168 17.5936 15.9734 17.4716C15.73 17.3498 14.9456 17.0928 14.0157 16.2634C13.292 15.6178 12.8034 14.8207 12.6614 14.5769C12.5194 14.3332 12.6463 14.2015 12.7682 14.0801C12.8777 13.9709 13.0116 13.7957 13.1334 13.6536C13.2551 13.5115 13.2956 13.4098 13.3768 13.2475C13.4579 13.085 13.4174 12.9428 13.3565 12.821C13.2956 12.6991 12.8088 11.5009 12.6059 11.0133C12.4083 10.5387 12.2076 10.603 12.0581 10.5955C11.9164 10.5884 11.7538 10.5869 11.5916 10.5869C11.4293 10.5869 11.1655 10.6479 10.9424 10.8915C10.7193 11.1353 10.0903 11.7243 10.0903 12.9224C10.0903 14.1207 10.9627 15.2783 11.0844 15.4407C11.2061 15.6033 12.801 18.0621 15.2431 19.1166C15.8239 19.3675 16.2774 19.5173 16.6309 19.6294C17.2141 19.8148 17.7448 19.7886 18.1643 19.7259C18.632 19.656 19.6046 19.137 19.8075 18.5684C20.0104 17.9997 20.0104 17.5122 19.9495 17.4107C19.8886 17.3092 19.7263 17.2483 19.4829 17.1264Z" fill="white"/>
-                          </svg>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://www.instagram.com/laungharmoni?igsh=MjhuOTh1c3FjZm9i"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          className="text-teal-500 transition hover:text-teal-500/75"
-                        >
-                          <span className="sr-only">Tiktok</span>
-                          <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_403_255)">
-                            <path d="M23.0829 0.120117H6.91736C3.09714 0.120117 0.000244141 3.21701 0.000244141 7.03723V23.2027C0.000244141 27.023 3.09714 30.1199 6.91736 30.1199H23.0829C26.9031 30.1199 30 27.023 30 23.2027V7.03723C30 3.21701 26.9031 0.120117 23.0829 0.120117Z" fill="url(#paint0_linear_403_255)"/>
-                            <path d="M19.3946 6.87168C20.4291 6.87584 21.42 7.28863 22.1515 8.02011C22.883 8.75159 23.2957 9.74249 23.2999 10.777V19.4641C23.2957 20.4985 22.883 21.4894 22.1515 22.2209C21.42 22.9524 20.4291 23.3652 19.3946 23.3693H10.6056C9.57111 23.3652 8.5802 22.9524 7.84872 22.2209C7.11724 21.4894 6.70446 20.4985 6.70029 19.4641V10.777C6.70446 9.74249 7.11724 8.75159 7.84872 8.02011C8.5802 7.28863 9.57111 6.87584 10.6056 6.87168H19.3946ZM19.3946 5.05527H10.6056C7.4585 5.05527 4.8833 7.6334 4.8833 10.7775V19.4641C4.8833 22.6111 7.46143 25.1863 10.6056 25.1863H19.3946C22.5417 25.1863 25.1169 22.6082 25.1169 19.4641V10.777C25.1169 7.62988 22.5417 5.05469 19.3946 5.05469V5.05527Z" fill="white"/>
-                            <path d="M15 11.7295C15.6706 11.7295 16.3262 11.9284 16.8838 12.3009C17.4414 12.6735 17.876 13.2031 18.1327 13.8227C18.3893 14.4423 18.4565 15.1241 18.3256 15.7818C18.1948 16.4396 17.8718 17.0438 17.3976 17.518C16.9234 17.9922 16.3192 18.3151 15.6615 18.446C15.0037 18.5768 14.3219 18.5097 13.7023 18.253C13.0828 17.9964 12.5532 17.5618 12.1806 17.0042C11.808 16.4465 11.6091 15.791 11.6091 15.1203C11.6102 14.2213 11.9678 13.3595 12.6035 12.7238C13.2391 12.0882 14.101 11.7306 15 11.7295ZM15 9.91309C13.9701 9.91309 12.9633 10.2185 12.107 10.7907C11.2506 11.3628 10.5832 12.1761 10.1891 13.1276C9.79498 14.0791 9.69186 15.1261 9.89278 16.1362C10.0937 17.1463 10.5896 18.0741 11.3179 18.8024C12.0461 19.5306 12.974 20.0266 13.9841 20.2275C14.9942 20.4284 16.0412 20.3253 16.9927 19.9312C17.9442 19.537 18.7574 18.8696 19.3296 18.0133C19.9018 17.157 20.2072 16.1502 20.2072 15.1203C20.2072 13.7393 19.6586 12.4148 18.682 11.4382C17.7055 10.4617 16.381 9.91309 15 9.91309Z" fill="white"/>
-                            <path d="M20.321 10.9193C21.0028 10.9193 21.5556 10.3666 21.5556 9.68477C21.5556 9.00293 21.0028 8.4502 20.321 8.4502C19.6392 8.4502 19.0864 9.00293 19.0864 9.68477C19.0864 10.3666 19.6392 10.9193 20.321 10.9193Z" fill="white"/>
-                            </g>
-                            <defs>
-                            <linearGradient id="paint0_linear_403_255" x1="6.51549" y1="27.8023" x2="30" y2="-3.855" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FFDB73"/>
-                            <stop offset="0.08" stop-color="#FDAD4E"/>
-                            <stop offset="0.15" stop-color="#FB832E"/>
-                            <stop offset="0.19" stop-color="#FA7321"/>
-                            <stop offset="0.23" stop-color="#F6692F"/>
-                            <stop offset="0.37" stop-color="#E84A5A"/>
-                            <stop offset="0.48" stop-color="#E03675"/>
-                            <stop offset="0.55" stop-color="#DD2F7F"/>
-                            <stop offset="0.824" stop-color="#B43D97"/>
-                            </linearGradient>
-                            <clipPath id="clip0_403_255">
-                            <rect width="30" height="30" fill="white" transform="translate(0 0.120117)"/>
-                            </clipPath>
-                            </defs>
-                          </svg>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="https://www.tiktok.com/@laungharmoni?_t=8o47Buu0WFp&_r=1"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          className="text-teal-500 transition hover:text-teal-500/75"
-                        >
-                          <span className="sr-only">Instagram</span>
-                          <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <g clip-path="url(#clip0_403_260)">
-                          <path d="M25.0123 0.174805H4.98668C2.23207 0.174805 -0.000976562 2.40785 -0.000976562 5.16246V25.1881C-0.000976562 27.9427 2.23207 30.1757 4.98668 30.1757H25.0123C27.7669 30.1757 30 27.9427 30 25.1881V5.16246C30 2.40785 27.7669 0.174805 25.0123 0.174805Z" fill="#232323"/>
-                          <path d="M22.8158 13.1236V9.77969C18.4447 9.59512 18.3041 5.62305 18.3041 5.2498V5.22168H14.9255V18.2453C14.9252 18.8081 14.7473 19.3564 14.4173 19.8123C14.0873 20.2682 13.622 20.6084 13.0875 20.7845C12.5529 20.9607 11.9765 20.9638 11.4401 20.7934C10.9037 20.623 10.4348 20.2878 10.0999 19.8355C9.76503 19.3831 9.58133 18.8367 9.57493 18.274C9.56853 17.7112 9.73976 17.1608 10.0643 16.701C10.3887 16.2412 10.85 15.8954 11.3823 15.7128C11.9147 15.5303 12.4911 15.5202 13.0294 15.6842V12.2354C12.7706 12.2021 12.5099 12.1855 12.249 12.1855C11.0505 12.1855 9.87888 12.5409 8.88235 13.2068C7.88583 13.8727 7.10913 14.8191 6.65048 15.9263C6.19183 17.0336 6.07183 18.252 6.30565 19.4275C6.53947 20.603 7.1166 21.6827 7.96408 22.5302C8.81155 23.3777 9.8913 23.9548 11.0668 24.1886C12.2423 24.4225 13.4607 24.3025 14.5679 23.8438C15.6752 23.3852 16.6216 22.6085 17.2875 21.6119C17.9533 20.6154 18.3087 19.4438 18.3087 18.2453C18.3087 18.1604 18.3087 18.076 18.3029 17.9922V11.5791C19.8585 13.0023 22.8158 13.1236 22.8158 13.1236Z" fill="#00F6EF"/>
-                          <path d="M23.8106 13.9486V10.6029C19.439 10.4184 19.2989 6.44629 19.2989 6.07305V6.04492H15.9204V19.0686C15.9202 19.6314 15.7424 20.1798 15.4125 20.6357C15.0826 21.0917 14.6173 21.432 14.0827 21.6082C13.5482 21.7845 12.9718 21.7876 12.4353 21.6173C11.8989 21.447 11.4299 21.1118 11.0949 20.6595C10.76 20.2072 10.5763 19.6608 10.5698 19.098C10.5634 18.5353 10.7346 17.9848 11.059 17.5249C11.3835 17.0651 11.8448 16.7192 12.3771 16.5367C12.9095 16.3541 13.4859 16.3441 14.0243 16.508V13.0586C13.7649 13.0261 13.5036 13.0102 13.2421 13.0111C12.0436 13.0115 10.872 13.3672 9.8757 14.0334C8.87936 14.6996 8.10294 15.6462 7.64463 16.7537C7.18632 17.8611 7.0667 19.0796 7.30091 20.255C7.53511 21.4305 8.11262 22.51 8.9604 23.3573C9.80818 24.2045 10.8881 24.7812 12.0637 25.0146C13.2393 25.2481 14.4577 25.1276 15.5649 24.6686C16.672 24.2095 17.6181 23.4324 18.2836 22.4356C18.9491 21.4388 19.3041 20.2671 19.3036 19.0686C19.3036 18.9836 19.3036 18.8992 19.2978 18.8154V12.4023C20.8534 13.8256 23.8106 13.9486 23.8106 13.9486Z" fill="white"/>
-                          <path d="M18.3879 6.04492C18.5508 6.93203 19.0266 8.31895 20.4135 9.13047C19.3536 7.8959 19.3002 6.30273 19.3002 6.07305V6.04492H18.3879Z" fill="#FF004F"/>
-                          <path d="M23.8107 13.9482V10.6025C23.4761 10.5903 23.143 10.5511 22.8146 10.4854V13.1191C22.8146 13.1191 19.8574 12.9979 18.3029 11.5746V17.9859C18.3064 18.0697 18.3088 18.1541 18.3088 18.2391C18.3086 19.3354 18.0111 20.4112 17.4478 21.3518C16.8846 22.2924 16.0767 23.0626 15.1103 23.5803C14.1438 24.098 13.0551 24.3439 11.96 24.2917C10.8649 24.2395 9.80441 23.8913 8.8916 23.284C9.73107 24.1509 10.8103 24.7475 11.991 24.9971C13.1716 25.2468 14.4 25.1382 15.5185 24.6853C16.6371 24.2324 17.595 23.4558 18.2693 22.4551C18.9437 21.4543 19.3039 20.2749 19.3037 19.0682C19.3037 18.9832 19.3037 18.8988 19.2979 18.815V12.402C20.8535 13.8252 23.8107 13.9482 23.8107 13.9482Z" fill="#FF004F"/>
-                          <path d="M13.0294 15.6786C12.3843 15.4818 11.6887 15.5358 11.0817 15.8297C10.4746 16.1237 10.0009 16.6359 9.75524 17.264C9.50955 17.8921 9.50999 18.5898 9.75646 19.2176C10.0029 19.8454 10.4773 20.357 11.0847 20.6502C10.7528 20.1968 10.5719 19.6505 10.5678 19.0886C10.5636 18.5267 10.7363 17.9778 11.0615 17.5195C11.3867 17.0612 11.8479 16.7169 12.3796 16.5353C12.9114 16.3537 13.4868 16.344 14.0243 16.5077V13.0582C13.7649 13.0257 13.5036 13.0099 13.2421 13.0108C13.17 13.0108 13.0991 13.0108 13.0277 13.0149L13.0294 15.6786Z" fill="#FF004F"/>
-                          </g>
-                          <defs>
-                          <clipPath id="clip0_403_260">
-                          <rect width="30" height="30" fill="white" transform="translate(0 0.120117)"/>
-                          </clipPath>
-                          </defs>
-                          </svg>
-                        </Link>
-                      </li>
-                      <li>
-                      <a
-                          href="/"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          className="text-teal-500 transition hover:text-teal-500/75"
-                        >
-                          <span className="sr-only">Gmail</span>
-                          <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <rect y="0.120117" width="30" height="30" rx="5" fill="white"/>
-                          <path d="M24.6714 11.5273L22.3686 12.7938L20.0659 14.9814V22.4883H23.2897C24.0529 22.4883 24.6714 21.8698 24.6714 21.1067V11.5273Z" fill="#4CAF50"/>
-                          <path d="M5.32861 11.5273L6.99303 12.3149L9.93407 14.9814V22.4883H6.71025C5.94713 22.4883 5.32861 21.8698 5.32861 21.1067V11.5273Z" fill="#1E88E5"/>
-                          <path d="M20.0659 9.22559L14.9999 13.0251L9.93393 9.22559L9.47339 11.8968L9.93393 14.9824L14.9999 18.7819L20.0659 14.9824L20.5265 11.8968L20.0659 9.22559Z" fill="#E53935"/>
-                          <path d="M5.32861 9.73138V11.5284L9.93407 14.9825V9.2257L8.49533 8.14756C8.15268 7.89058 7.73635 7.75195 7.30804 7.75195C6.2147 7.75195 5.32861 8.63804 5.32861 9.73138Z" fill="#C62828"/>
-                          <path d="M24.6714 9.73138V11.5284L20.0659 14.9825V9.2257L21.5047 8.14756C21.8473 7.89058 22.2636 7.75195 22.6919 7.75195C23.7853 7.75195 24.6714 8.63804 24.6714 9.73138Z" fill="#FBC02D"/>
-                          </svg>
-                        </a>
-                      </li>
-                    </ul>
-                 </div>
-              </div>
-            </div>
-          </div>
-         </footer> 
-
-         {/* mobile ver */}
-        <footer className="sm:hidden bg-gradient-to-r from-[#303030] to-[#616161] font-inter justify-center">
-            <div className="max-w-screen-xl py-[100px] px-10 mx-auto lg:pt-20 justify-center">
+       {UsePathname !== ('/tema/Bnw') || ('/tema/Golden-black') || ('/tema/choral-charm')  && (
+        <main>
+          {/* Desktop ver */}
+          <footer className="hidden sm:flex xl:px-10 lg:px-10 md:px-10 bg-gradient-to-r from-[#303030] to-[#616161] font-inter justify-center">
+            <div className="max-w-screen-xl py-16 mx-auto lg:pt-20 justify-center">
               <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 font-inter">
-                {/* row1  */}
                 <div className="">
-                  {/* lainnya */}
-                  <div className="text-center sm:text-left font-inter">
-                      <p className="text-[18px] font-bold text-white">Lainnya</p>
-                      <nav className="py-[28px] ">
-                        <ul className="space-y-[20px]">
-                          <li>
-                            <a className="text-[14px] text-white transition hover:text-white/75" href="/">
-                            Affiliate
-                            </a>
-                          </li>
-                          <li>
-                            <a className="text-[14px] text-white transition hover:text-white/75" href="/">
-                            Tentang Kami
-                            </a>
-                          </li>
-                          <li>
-                            <a className="text-[14px] text-white transition hover:text-white/75" href="/">
-                            Kebijakan Privasi
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                  </div>
-                </div>
-                {/* row 2 */}
-                <div
-                  className="grid grid-cols-1 mt-[30px] gap-x-[92px] sm:grid-cols-2 lg:col-span-2 md:grid-cols-4">
-                    {/* logo */}
-                    <div className="flex justify-center sm:justify-start">
-                      <Image
+                  <div className="flex justify-center sm:justify-start">
+                  <Image
                         className=""
                         src={bg.src}
                         alt="Next.js Logo"
@@ -250,13 +30,89 @@ function Footer(){
                         height={69}
                         priority
                       />
-                    </div>  
-                    <p className="max-w-md mx-auto py-[25px] leading-[21px] text-regular text-[14px] text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
-                      Memberi kemudahan dengan berbagai pilihan tema undangan yang menarik. Gak mau ribet? Serahkan pada Admin, lalu sebarkan undangan digitalmu melalui smartphone. Gaskeun! 😆
-                    </p>
+                  </div>  
+                  <p className="max-w-md mx-auto py-[40px] leading-[28px] text-regular text-[17px] text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
+                    Memberi kemudahan dengan berbagai pilihan tema undangan yang menarik. Gak mau ribet? Serahkan pada Admin, lalu sebarkan undangan digitalmu melalui smartphone. Gaskeun! 😆
+                  </p>
+                  <p className="max-w-md mx-auto leading-[28px] text-regular text-[17px] text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
+                    ©2024 Laungharmoni.com | All rights reserved.
+                  </p>
+                </div>
+                <div
+                  className="grid grid-cols-1 mt-5 gap-x-[92px] sm:grid-cols-2 lg:col-span-2 md:grid-cols-4">
+                    {/* navigasi */}
+                    <div className="text-center sm:text-left font-inter">
+                      <p className="text-[23px] font-bold text-white">Navigasi</p>
+                      <nav className="py-[28px] font-inter">
+                        <ul className="space-y-7 text-regular">
+                          <li className=" text-[17px]">
+                            <a className="text-white transition hover:text-white/75" href="/">
+                              Beranda
+                            </a>
+                          </li>
+                          <li>
+                            <a className=" text-[17px] text-white transition hover:text-white/75" href="/">
+                              Wedding Planner
+                            </a>
+                          </li>
+                          <li>
+                            <a className=" text-[17px] text-white transition hover:text-white/75" href="/">
+                              Panduan Pengguna
+                            </a>
+                          </li>
+                          <li>
+                            <a className=" text-[17px] text-white transition hover:text-white/75" href="/">
+                              Blog
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                    {/* undangan digital */}
+                    <div className="text-center sm:text-left font-inter ">
+                      <p className="text-[23px] font-bold text-white">Undangan Digital</p>
+                      <nav className="py-[28px] font-inter">
+                        <ul className="space-y-7">
+                          <li>
+                            <Link href="../tema_profile" className="text-[17px] text-white transition hover:text-white/75">
+                              Tema
+                            </Link>
+                          </li>
+                          <li>
+                            <Link  href="../portofolio/template" className="text-[17px] text-white transition hover:text-white/75">
+                              Portofolio
+                            </Link>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                    {/* lainnya */}
+                    <div className="text-center sm:text-left font-inter">
+                      <p className="text-[23px] font-bold text-white">Lainnya</p>
+                      <nav className="py-[28px] ">
+                        <ul className="space-y-7 ">
+                          <li>
+                            <a className="text-[17px] text-white transition hover:text-white/75" href="/">
+                            Affiliate
+                            </a>
+                          </li>
+                          <li>
+                            <a className="text-[17px] text-white transition hover:text-white/75" href="/">
+                            Tentang Kami
+                            </a>
+                          </li>
+                          <li>
+                            <a className="text-[17px] text-white transition hover:text-white/75" href="/">
+                            Kebijakan Privasi
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
                     {/* sosmed */}
-                    <div className="text-center sm:text-left pb-[25px]">
-                      <ul className="gap-5 flex justify-center mt-[25px] sm:justify-start">
+                    <div className="text-center sm:text-left">
+                      <p className="text-[23px] font-bold text-white">Media Sosial</p>
+                      <ul className="grid xl:grid-cols-4 lg:grid-cols-2 flex justify-center gap-y-[20px] mt-8 md:gap-2 sm:justify-start">
                         <li>
                           <Link
                             href="https://wa.me/6285183003387"
@@ -276,22 +132,38 @@ function Footer(){
                           </Link>
                         </li>
                         <li>
-                        <Link
-                          href="https://www.instagram.com/laungharmoni?igsh=MjhuOTh1c3FjZm9i"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          className="text-teal-500 transition hover:text-teal-500/75"
-                        >
-                          <span className="sr-only">Instagram</span>
-                          <Image
-                              className="w-[31px] h-[30px]"
-                              src={ig.src}
-                              alt="Next.js Logo"
-                              width={240}
-                              height={69}
-                              priority
-                    />
-                        </Link>
+                          <Link
+                            href="https://www.instagram.com/laungharmoni?igsh=MjhuOTh1c3FjZm9i"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className="text-teal-500 transition hover:text-teal-500/75"
+                          >
+                            <span className="sr-only">Tiktok</span>
+                            <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_403_255)">
+                              <path d="M23.0829 0.120117H6.91736C3.09714 0.120117 0.000244141 3.21701 0.000244141 7.03723V23.2027C0.000244141 27.023 3.09714 30.1199 6.91736 30.1199H23.0829C26.9031 30.1199 30 27.023 30 23.2027V7.03723C30 3.21701 26.9031 0.120117 23.0829 0.120117Z" fill="url(#paint0_linear_403_255)"/>
+                              <path d="M19.3946 6.87168C20.4291 6.87584 21.42 7.28863 22.1515 8.02011C22.883 8.75159 23.2957 9.74249 23.2999 10.777V19.4641C23.2957 20.4985 22.883 21.4894 22.1515 22.2209C21.42 22.9524 20.4291 23.3652 19.3946 23.3693H10.6056C9.57111 23.3652 8.5802 22.9524 7.84872 22.2209C7.11724 21.4894 6.70446 20.4985 6.70029 19.4641V10.777C6.70446 9.74249 7.11724 8.75159 7.84872 8.02011C8.5802 7.28863 9.57111 6.87584 10.6056 6.87168H19.3946ZM19.3946 5.05527H10.6056C7.4585 5.05527 4.8833 7.6334 4.8833 10.7775V19.4641C4.8833 22.6111 7.46143 25.1863 10.6056 25.1863H19.3946C22.5417 25.1863 25.1169 22.6082 25.1169 19.4641V10.777C25.1169 7.62988 22.5417 5.05469 19.3946 5.05469V5.05527Z" fill="white"/>
+                              <path d="M15 11.7295C15.6706 11.7295 16.3262 11.9284 16.8838 12.3009C17.4414 12.6735 17.876 13.2031 18.1327 13.8227C18.3893 14.4423 18.4565 15.1241 18.3256 15.7818C18.1948 16.4396 17.8718 17.0438 17.3976 17.518C16.9234 17.9922 16.3192 18.3151 15.6615 18.446C15.0037 18.5768 14.3219 18.5097 13.7023 18.253C13.0828 17.9964 12.5532 17.5618 12.1806 17.0042C11.808 16.4465 11.6091 15.791 11.6091 15.1203C11.6102 14.2213 11.9678 13.3595 12.6035 12.7238C13.2391 12.0882 14.101 11.7306 15 11.7295ZM15 9.91309C13.9701 9.91309 12.9633 10.2185 12.107 10.7907C11.2506 11.3628 10.5832 12.1761 10.1891 13.1276C9.79498 14.0791 9.69186 15.1261 9.89278 16.1362C10.0937 17.1463 10.5896 18.0741 11.3179 18.8024C12.0461 19.5306 12.974 20.0266 13.9841 20.2275C14.9942 20.4284 16.0412 20.3253 16.9927 19.9312C17.9442 19.537 18.7574 18.8696 19.3296 18.0133C19.9018 17.157 20.2072 16.1502 20.2072 15.1203C20.2072 13.7393 19.6586 12.4148 18.682 11.4382C17.7055 10.4617 16.381 9.91309 15 9.91309Z" fill="white"/>
+                              <path d="M20.321 10.9193C21.0028 10.9193 21.5556 10.3666 21.5556 9.68477C21.5556 9.00293 21.0028 8.4502 20.321 8.4502C19.6392 8.4502 19.0864 9.00293 19.0864 9.68477C19.0864 10.3666 19.6392 10.9193 20.321 10.9193Z" fill="white"/>
+                              </g>
+                              <defs>
+                              <linearGradient id="paint0_linear_403_255" x1="6.51549" y1="27.8023" x2="30" y2="-3.855" gradientUnits="userSpaceOnUse">
+                              <stop stop-color="#FFDB73"/>
+                              <stop offset="0.08" stop-color="#FDAD4E"/>
+                              <stop offset="0.15" stop-color="#FB832E"/>
+                              <stop offset="0.19" stop-color="#FA7321"/>
+                              <stop offset="0.23" stop-color="#F6692F"/>
+                              <stop offset="0.37" stop-color="#E84A5A"/>
+                              <stop offset="0.48" stop-color="#E03675"/>
+                              <stop offset="0.55" stop-color="#DD2F7F"/>
+                              <stop offset="0.824" stop-color="#B43D97"/>
+                              </linearGradient>
+                              <clipPath id="clip0_403_255">
+                              <rect width="30" height="30" fill="white" transform="translate(0 0.120117)"/>
+                              </clipPath>
+                              </defs>
+                            </svg>
+                          </Link>
                         </li>
                         <li>
                           <Link
@@ -300,7 +172,7 @@ function Footer(){
                             target="_blank"
                             className="text-teal-500 transition hover:text-teal-500/75"
                           >
-                            <span className="sr-only">Tiktok</span>
+                            <span className="sr-only">Instagram</span>
                             <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_403_260)">
                             <path d="M25.0123 0.174805H4.98668C2.23207 0.174805 -0.000976562 2.40785 -0.000976562 5.16246V25.1881C-0.000976562 27.9427 2.23207 30.1757 4.98668 30.1757H25.0123C27.7669 30.1757 30 27.9427 30 25.1881V5.16246C30 2.40785 27.7669 0.174805 25.0123 0.174805Z" fill="#232323"/>
@@ -337,17 +209,156 @@ function Footer(){
                           </a>
                         </li>
                       </ul>
-                    </div>
-                  {/* copyright */}
-                    <div>
-                    <p className="max-w-md mx-auto leading-[20px] text-regular text-[10px] text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
-                      ©2024 Laungharmoni.com | All rights reserved.
-                    </p>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-        </footer> 
+          </footer> 
+
+          {/* mobile ver */}
+          <footer className="sm:hidden bg-gradient-to-r from-[#303030] to-[#616161] font-inter justify-center">
+              <div className="max-w-screen-xl py-[100px] px-10 mx-auto lg:pt-20 justify-center">
+                <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 font-inter">
+                  {/* row1  */}
+                  <div className="">
+                    {/* lainnya */}
+                    <div className="text-center sm:text-left font-inter">
+                        <p className="text-[18px] font-bold text-white">Lainnya</p>
+                        <nav className="py-[28px] ">
+                          <ul className="space-y-[20px]">
+                            <li>
+                              <a className="text-[14px] text-white transition hover:text-white/75" href="/">
+                              Affiliate
+                              </a>
+                            </li>
+                            <li>
+                              <a className="text-[14px] text-white transition hover:text-white/75" href="/">
+                              Tentang Kami
+                              </a>
+                            </li>
+                            <li>
+                              <a className="text-[14px] text-white transition hover:text-white/75" href="/">
+                              Kebijakan Privasi
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                    </div>
+                  </div>
+                  {/* row 2 */}
+                  <div
+                    className="grid grid-cols-1 mt-[30px] gap-x-[92px] sm:grid-cols-2 lg:col-span-2 md:grid-cols-4">
+                      {/* logo */}
+                      <div className="flex justify-center sm:justify-start">
+                        <Image
+                          className=""
+                          src={bg.src}
+                          alt="Next.js Logo"
+                          width={240}
+                          height={69}
+                          priority
+                        />
+                      </div>  
+                      <p className="max-w-md mx-auto py-[25px] leading-[21px] text-regular text-[14px] text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
+                        Memberi kemudahan dengan berbagai pilihan tema undangan yang menarik. Gak mau ribet? Serahkan pada Admin, lalu sebarkan undangan digitalmu melalui smartphone. Gaskeun! 😆
+                      </p>
+                      {/* sosmed */}
+                      <div className="text-center sm:text-left pb-[25px]">
+                        <ul className="gap-5 flex justify-center mt-[25px] sm:justify-start">
+                          <li>
+                            <Link
+                              href="https://wa.me/6285183003387"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              className="text-teal-500 transition hover:text-teal-500/75"
+                            >
+                              <span className="sr-only">WhatsApp</span>
+                              <svg  
+                                width="30" height="31"
+                                viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path d="M25.0123 0.174805H4.98668C2.23207 0.174805 -0.000976562 2.40785 -0.000976562 5.16246V25.1881C-0.000976562 27.9427 2.23207 30.1757 4.98668 30.1757H25.0123C27.7669 30.1757 30 27.9427 30 25.1881V5.16246C30 2.40785 27.7669 0.174805 25.0123 0.174805Z" fill="#25D366"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M21.9329 8.20106C20.0934 6.35945 17.6472 5.34482 15.0408 5.34375C9.67065 5.34375 5.29987 9.71417 5.29777 15.086C5.29702 16.8032 5.74567 18.4793 6.59831 19.9569L5.21606 25.0056L10.381 23.6508C11.804 24.4269 13.4063 24.8361 15.037 24.8366H15.0409C15.0406 24.8366 15.0412 24.8366 15.0409 24.8366C20.4105 24.8366 24.7817 20.4658 24.7839 15.0938C24.7849 12.4904 23.7724 10.0426 21.9329 8.20106ZM15.0409 23.1912H15.0376C13.5846 23.1906 12.1593 22.8002 10.916 22.0624L10.6203 21.8869L7.55536 22.6909L8.37347 19.7026L8.18091 19.3962C7.37031 18.1069 6.94219 16.6167 6.94282 15.0866C6.94456 10.6217 10.5774 6.98927 15.0442 6.98927C17.2071 6.98995 19.2404 7.83341 20.7693 9.36408C22.2982 10.8948 23.1397 12.9294 23.1388 15.0931C23.137 19.5584 19.5043 23.1912 15.0409 23.1912Z" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4829 17.1264C19.2395 17.0045 18.0426 16.4157 17.8194 16.3344C17.5963 16.2531 17.434 16.2125 17.2717 16.4562C17.1094 16.6999 16.6429 17.2483 16.5009 17.4108C16.3589 17.5732 16.2168 17.5936 15.9734 17.4716C15.73 17.3498 14.9456 17.0928 14.0157 16.2634C13.292 15.6178 12.8034 14.8207 12.6614 14.5769C12.5194 14.3332 12.6463 14.2015 12.7682 14.0801C12.8777 13.9709 13.0116 13.7957 13.1334 13.6536C13.2551 13.5115 13.2956 13.4098 13.3768 13.2475C13.4579 13.085 13.4174 12.9428 13.3565 12.821C13.2956 12.6991 12.8088 11.5009 12.6059 11.0133C12.4083 10.5387 12.2076 10.603 12.0581 10.5955C11.9164 10.5884 11.7538 10.5869 11.5916 10.5869C11.4293 10.5869 11.1655 10.6479 10.9424 10.8915C10.7193 11.1353 10.0903 11.7243 10.0903 12.9224C10.0903 14.1207 10.9627 15.2783 11.0844 15.4407C11.2061 15.6033 12.801 18.0621 15.2431 19.1166C15.8239 19.3675 16.2774 19.5173 16.6309 19.6294C17.2141 19.8148 17.7448 19.7886 18.1643 19.7259C18.632 19.656 19.6046 19.137 19.8075 18.5684C20.0104 17.9997 20.0104 17.5122 19.9495 17.4107C19.8886 17.3092 19.7263 17.2483 19.4829 17.1264Z" fill="white"/>
+                              </svg>
+                            </Link>
+                          </li>
+                          <li>
+                          <Link
+                            href="https://www.instagram.com/laungharmoni?igsh=MjhuOTh1c3FjZm9i"
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            className="text-teal-500 transition hover:text-teal-500/75"
+                          >
+                            <span className="sr-only">Instagram</span>
+                            <Image
+                                className="w-[31px] h-[30px]"
+                                src={ig.src}
+                                alt="Next.js Logo"
+                                width={240}
+                                height={69}
+                                priority
+                      />
+                          </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="https://www.tiktok.com/@laungharmoni?_t=8o47Buu0WFp&_r=1"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              className="text-teal-500 transition hover:text-teal-500/75"
+                            >
+                              <span className="sr-only">Tiktok</span>
+                              <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_403_260)">
+                              <path d="M25.0123 0.174805H4.98668C2.23207 0.174805 -0.000976562 2.40785 -0.000976562 5.16246V25.1881C-0.000976562 27.9427 2.23207 30.1757 4.98668 30.1757H25.0123C27.7669 30.1757 30 27.9427 30 25.1881V5.16246C30 2.40785 27.7669 0.174805 25.0123 0.174805Z" fill="#232323"/>
+                              <path d="M22.8158 13.1236V9.77969C18.4447 9.59512 18.3041 5.62305 18.3041 5.2498V5.22168H14.9255V18.2453C14.9252 18.8081 14.7473 19.3564 14.4173 19.8123C14.0873 20.2682 13.622 20.6084 13.0875 20.7845C12.5529 20.9607 11.9765 20.9638 11.4401 20.7934C10.9037 20.623 10.4348 20.2878 10.0999 19.8355C9.76503 19.3831 9.58133 18.8367 9.57493 18.274C9.56853 17.7112 9.73976 17.1608 10.0643 16.701C10.3887 16.2412 10.85 15.8954 11.3823 15.7128C11.9147 15.5303 12.4911 15.5202 13.0294 15.6842V12.2354C12.7706 12.2021 12.5099 12.1855 12.249 12.1855C11.0505 12.1855 9.87888 12.5409 8.88235 13.2068C7.88583 13.8727 7.10913 14.8191 6.65048 15.9263C6.19183 17.0336 6.07183 18.252 6.30565 19.4275C6.53947 20.603 7.1166 21.6827 7.96408 22.5302C8.81155 23.3777 9.8913 23.9548 11.0668 24.1886C12.2423 24.4225 13.4607 24.3025 14.5679 23.8438C15.6752 23.3852 16.6216 22.6085 17.2875 21.6119C17.9533 20.6154 18.3087 19.4438 18.3087 18.2453C18.3087 18.1604 18.3087 18.076 18.3029 17.9922V11.5791C19.8585 13.0023 22.8158 13.1236 22.8158 13.1236Z" fill="#00F6EF"/>
+                              <path d="M23.8106 13.9486V10.6029C19.439 10.4184 19.2989 6.44629 19.2989 6.07305V6.04492H15.9204V19.0686C15.9202 19.6314 15.7424 20.1798 15.4125 20.6357C15.0826 21.0917 14.6173 21.432 14.0827 21.6082C13.5482 21.7845 12.9718 21.7876 12.4353 21.6173C11.8989 21.447 11.4299 21.1118 11.0949 20.6595C10.76 20.2072 10.5763 19.6608 10.5698 19.098C10.5634 18.5353 10.7346 17.9848 11.059 17.5249C11.3835 17.0651 11.8448 16.7192 12.3771 16.5367C12.9095 16.3541 13.4859 16.3441 14.0243 16.508V13.0586C13.7649 13.0261 13.5036 13.0102 13.2421 13.0111C12.0436 13.0115 10.872 13.3672 9.8757 14.0334C8.87936 14.6996 8.10294 15.6462 7.64463 16.7537C7.18632 17.8611 7.0667 19.0796 7.30091 20.255C7.53511 21.4305 8.11262 22.51 8.9604 23.3573C9.80818 24.2045 10.8881 24.7812 12.0637 25.0146C13.2393 25.2481 14.4577 25.1276 15.5649 24.6686C16.672 24.2095 17.6181 23.4324 18.2836 22.4356C18.9491 21.4388 19.3041 20.2671 19.3036 19.0686C19.3036 18.9836 19.3036 18.8992 19.2978 18.8154V12.4023C20.8534 13.8256 23.8106 13.9486 23.8106 13.9486Z" fill="white"/>
+                              <path d="M18.3879 6.04492C18.5508 6.93203 19.0266 8.31895 20.4135 9.13047C19.3536 7.8959 19.3002 6.30273 19.3002 6.07305V6.04492H18.3879Z" fill="#FF004F"/>
+                              <path d="M23.8107 13.9482V10.6025C23.4761 10.5903 23.143 10.5511 22.8146 10.4854V13.1191C22.8146 13.1191 19.8574 12.9979 18.3029 11.5746V17.9859C18.3064 18.0697 18.3088 18.1541 18.3088 18.2391C18.3086 19.3354 18.0111 20.4112 17.4478 21.3518C16.8846 22.2924 16.0767 23.0626 15.1103 23.5803C14.1438 24.098 13.0551 24.3439 11.96 24.2917C10.8649 24.2395 9.80441 23.8913 8.8916 23.284C9.73107 24.1509 10.8103 24.7475 11.991 24.9971C13.1716 25.2468 14.4 25.1382 15.5185 24.6853C16.6371 24.2324 17.595 23.4558 18.2693 22.4551C18.9437 21.4543 19.3039 20.2749 19.3037 19.0682C19.3037 18.9832 19.3037 18.8988 19.2979 18.815V12.402C20.8535 13.8252 23.8107 13.9482 23.8107 13.9482Z" fill="#FF004F"/>
+                              <path d="M13.0294 15.6786C12.3843 15.4818 11.6887 15.5358 11.0817 15.8297C10.4746 16.1237 10.0009 16.6359 9.75524 17.264C9.50955 17.8921 9.50999 18.5898 9.75646 19.2176C10.0029 19.8454 10.4773 20.357 11.0847 20.6502C10.7528 20.1968 10.5719 19.6505 10.5678 19.0886C10.5636 18.5267 10.7363 17.9778 11.0615 17.5195C11.3867 17.0612 11.8479 16.7169 12.3796 16.5353C12.9114 16.3537 13.4868 16.344 14.0243 16.5077V13.0582C13.7649 13.0257 13.5036 13.0099 13.2421 13.0108C13.17 13.0108 13.0991 13.0108 13.0277 13.0149L13.0294 15.6786Z" fill="#FF004F"/>
+                              </g>
+                              <defs>
+                              <clipPath id="clip0_403_260">
+                              <rect width="30" height="30" fill="white" transform="translate(0 0.120117)"/>
+                              </clipPath>
+                              </defs>
+                              </svg>
+                            </Link>
+                          </li>
+                          <li>
+                          <a
+                              href="/"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                              className="text-teal-500 transition hover:text-teal-500/75"
+                            >
+                              <span className="sr-only">Gmail</span>
+                              <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect y="0.120117" width="30" height="30" rx="5" fill="white"/>
+                              <path d="M24.6714 11.5273L22.3686 12.7938L20.0659 14.9814V22.4883H23.2897C24.0529 22.4883 24.6714 21.8698 24.6714 21.1067V11.5273Z" fill="#4CAF50"/>
+                              <path d="M5.32861 11.5273L6.99303 12.3149L9.93407 14.9814V22.4883H6.71025C5.94713 22.4883 5.32861 21.8698 5.32861 21.1067V11.5273Z" fill="#1E88E5"/>
+                              <path d="M20.0659 9.22559L14.9999 13.0251L9.93393 9.22559L9.47339 11.8968L9.93393 14.9824L14.9999 18.7819L20.0659 14.9824L20.5265 11.8968L20.0659 9.22559Z" fill="#E53935"/>
+                              <path d="M5.32861 9.73138V11.5284L9.93407 14.9825V9.2257L8.49533 8.14756C8.15268 7.89058 7.73635 7.75195 7.30804 7.75195C6.2147 7.75195 5.32861 8.63804 5.32861 9.73138Z" fill="#C62828"/>
+                              <path d="M24.6714 9.73138V11.5284L20.0659 14.9825V9.2257L21.5047 8.14756C21.8473 7.89058 22.2636 7.75195 22.6919 7.75195C23.7853 7.75195 24.6714 8.63804 24.6714 9.73138Z" fill="#FBC02D"/>
+                              </svg>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    {/* copyright */}
+                      <div>
+                      <p className="max-w-md mx-auto leading-[20px] text-regular text-[10px] text-center text-white sm:max-w-xs sm:mx-0 sm:text-left">
+                        ©2024 Laungharmoni.com | All rights reserved.
+                      </p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </footer> 
+        </main>
+        )}
+        
       </>
     )
 }

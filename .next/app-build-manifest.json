@@ -17,23 +17,11 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/tema/Golden-black/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/tema/Golden-black/page.css",
-      "static/chunks/app/tema/Golden-black/page.js"
-    ],
     "/tema/choral-charm/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/tema/choral-charm/page.css",
       "static/chunks/app/tema/choral-charm/page.js"
-    ],
-    "/tema/Bnw/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/tema/Bnw/page.css",
-      "static/chunks/app/tema/Bnw/page.js"
     ]
   }
 }

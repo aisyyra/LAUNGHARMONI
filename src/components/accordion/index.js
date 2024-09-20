@@ -3,6 +3,8 @@ import * as React from "react";
 import { memo, useMemo, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+
+
 function AccordionItem ({ isOpen, content }) {
 
   // By using `AnimatePresence` to mount and unmount the contents, we can animate

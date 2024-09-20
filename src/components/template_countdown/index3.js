@@ -6,30 +6,44 @@ import { Playfair_Display, Playfair_Display_SC, Kapakana, Arapey } from '@/utils
 function Countdown(props) {
 
 	const {
-		project,		// custom by projects name
+		project,	// custom by projects name
 		target_date,
+		target_date2,
 	} = props;  
 
 	const COUNTDOWN_TARGET = new Date(target_date);
+	const COUNTDOWN_TARGET2 = new Date(target_date);
 
 	const getTimeLeft = () => {
 		const totalTimeLeft = COUNTDOWN_TARGET - new Date();
 
 		let days = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
 		let hours = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
-		let minutes = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
-		let seconds = Math.floor((totalTimeLeft / 1000) % 60);
+
 
 		// Check single digit
 		if (days < 10) days = '0' + days;
 		if (hours < 10) hours = '0' + hours;
-		if (minutes < 10) minutes = '0' + minutes;
-		if (seconds < 10) seconds = '0' + seconds;
-
-		return { days, hours, minutes, seconds };
+		
+		return { days, hours};
 	};
 
+	const getTimeLeft2 = () => {
+		const totalTimeLeft2 = COUNTDOWN_TARGET2 - new Date();
+
+		let menit = Math.floor((totalTimeLeft2 / (1000 * 60)) % 60);
+		let seconds = Math.floor((totalTimeLeft2 / 1000) % 60);
+
+		// Check single digit
+		if (menit < 10) menit = '0' + menit;
+		if (seconds < 10) seconds = '0' + seconds;
+
+		return { menit, seconds };
+	};
+
+
 	const [timeLeft, setTimeLeft] = useState(() => getTimeLeft());
+	const [timeLeft2, setTimeLeft2] = useState(() => getTimeLeft2());
 
 	useEffect(() => {
 
@@ -37,11 +51,18 @@ function Countdown(props) {
 			setTimeLeft(getTimeLeft());
 		}, 1000);
 
+		const timer2 = setInterval(() => {
+			setTimeLeft2(getTimeLeft2());
+		}, 1000);
+
 		return () => {
 			clearInterval(timer);
+			clearInterval(timer2);
 		};
+	
 	}, []);
 
+	
 	return (
 		<div className='countdown'>
 
@@ -108,7 +129,37 @@ function Countdown(props) {
 							const end = (Object.entries(timeLeft).length - 1);
 							return (
 								<div key={label} className="justify-center items-center">
-									<div className="text-black justify-center items-center text-center bg-[#EEF0F2] shadow-lg py-[30px]">
+									<div className="text-black justify-center items-center text-center bg-[#EEF0F2] shadow-xl py-[30px]">
+										<div className={'text-[40px] font-Suranna tracking-normal w-full leading-[75px] text-[#353B3C]'}>
+											{value || 0}
+										</div>
+										<div className={"text-[15px] text-[#353B3C] font-inter capitalize tracking-wider"}>
+											{label}
+										</div>
+									</div>
+								</div>
+							);
+						})}
+					</div>
+				</>
+			)}
+
+				{/* Rully Sabil Mobile ke dua*/}
+				{project == 'Rully_Sabil_Mobile2' && (
+				<>
+					<div className='justify-center items-center text-[12.5px] grid grid-cols-1'>
+						<div className="justify-center items-center bg-gradient-to-r from-[#A2999E] to-[#828282] py-[30px]">
+							<p className="font-Suranna text-[40px] leading-[42px] text-[#EEF0F2]">
+								Hitung<br></br>Mundur
+							</p>
+						</div>
+						{Object.entries(timeLeft2).map((el, i) => {
+							const label = el[0];
+							const value = el[1];
+							const end = (Object.entries(timeLeft2).length - 1);
+							return (
+								<div key={label} className="justify-center items-center">
+									<div className="text-black justify-center items-center text-center bg-[#EEF0F2] shadow-xl py-[30px]">
 										<div className={'text-[40px] font-Suranna tracking-normal w-full leading-[75px] text-[#353B3C]'}>
 											{value || 0}
 										</div>
