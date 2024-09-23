@@ -626,6 +626,15 @@ video {
 .top-full{
   top: 100%;
 }
+.top-\[100px\]{
+  top: 100px;
+}
+.top-\[150px\]{
+  top: 150px;
+}
+.top-\[200px\]{
+  top: 200px;
+}
 .z-0{
   z-index: 0;
 }
@@ -1229,6 +1238,9 @@ video {
 .h-screen{
   height: 100vh;
 }
+.h-\[800px\]{
+  height: 800px;
+}
 .max-h-\[700px\]{
   max-height: 700px;
 }
@@ -1543,6 +1555,9 @@ video {
 }
 .grid-rows-4{
   grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+.grid-rows-12{
+  grid-template-rows: repeat(12, minmax(0, 1fr));
 }
 .flex-row{
   flex-direction: row;

@@ -657,12 +657,12 @@ const Rully_Sabil_Inv = () => {
             {/* --- */}
             <motion.div className="lg:hidden">
               {/* Mobile */}
-              <nav className="fixed top-[120px] left-0 right-0 z-50 block">
+              <nav className="fixed top-[200px] fixed w-full h-[110px] left-0 right-0 z-50 ">
                 <div className="relative w-full h-screen">
                   <div className={"absolute text-center text-white items-center justify-center w-full"}>
                     
                     {/* User */}
-                    <div className="h-[128px] text-black bg-contain bg-no-repeat bg-center justify-center items-center translate-y-[25rem]">
+                    <div className="h-full w-full text-black bg-contain bg-no-repeat bg-center justify-center items-center translate-y-[25rem]">
                       {/* top */}
                       <div>
                         <p className={'font-Oranienbaum text-[38px] font-regular text-left px-7'}>

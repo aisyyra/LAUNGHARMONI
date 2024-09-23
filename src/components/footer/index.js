@@ -5,16 +5,10 @@ import Image from "next/image";
 import bg from "@/assets/laung-harmoni/Logo_white.png";
 import Link from 'next/link'
 import ig from "@/assets/laung-harmoni/instagram.png";
-import { useRouter, usePathname } from 'next/navigation';
 
 function Footer(){
-
-  const UseRouter = useRouter();
-  const UsePathname = usePathname();
-
     return (
       <>
-       {UsePathname !== ('/tema/Bnw') || ('/tema/Golden-black') || ('/tema/choral-charm')  && (
         <main>
           {/* Desktop ver */}
           <footer className="hidden sm:flex xl:px-10 lg:px-10 md:px-10 bg-gradient-to-r from-[#303030] to-[#616161] font-inter justify-center">
@@ -357,8 +351,6 @@ function Footer(){
               </div>
           </footer> 
         </main>
-        )}
-        
       </>
     )
 }
