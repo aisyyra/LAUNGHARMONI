@@ -1,5 +1,7 @@
 {
-  "/tema/Golden-black/page": "app/tema/Golden-black/page.js",
+  "/page": "app/page.js",
+  "/tema/rully-sabil/page": "app/tema/rully-sabil/page.js",
+  "/tema/choral-charm/page": "app/tema/choral-charm/page.js",
   "/tema/Bnw/page": "app/tema/Bnw/page.js",
-  "/tema/choral-charm/page": "app/tema/choral-charm/page.js"
+  "/tema/Golden-black/page": "app/tema/Golden-black/page.js"
 }

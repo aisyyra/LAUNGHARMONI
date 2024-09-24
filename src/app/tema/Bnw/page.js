@@ -47,6 +47,7 @@ import pageStyle from "./index.module.css";
   import text4 from "@/assets/Bnw/mobile/m_Teks4.png";
   import text3 from "@/assets/Bnw/mobile/m_Teks3.png";
 
+  import imgDecor from "@/assets/Bnw/mobile/m_Dekor.png";
   import imgDecor1 from "@/assets/Bnw/mobile/m_Dekor1.png";
   import imgDecor2 from "@/assets/Bnw/mobile/m_Dekor2.png";
   import imgDecor3 from "@/assets/Bnw/mobile/m_Bg_Note.png";
@@ -58,9 +59,8 @@ import pageStyle from "./index.module.css";
 // #endregion
 
 // #region mobile images
-  import m_Front1 from "@/assets/rully-sabil/mobile/Front1.png";
-  import m_Front2 from "@/assets/choral-charm/mobile/m_BG.png";
-  import m_Front3 from "@/assets/rully-sabil/mobile/Front3.png";
+  import m_Front2 from "@/assets/Bnw/mobile/m_Bg_Awal.png";
+
   
   import m_Name from "@/assets/choral-charm/mobile/m_Name.png";
   
@@ -657,25 +657,22 @@ const Rully_Sabil_Inv = () => {
             {/* --- */}
             <motion.div className="lg:hidden">
               {/* Mobile */}
-              <nav className="fixed top-[120px] left-0 right-0 z-50">
+              <nav className="fixed top-[200px] fixed w-full h-[110px] left-0 right-0 z-50 ">
                 <div className="relative w-full h-screen">
-                  <div className={"absolute text-center text-white items-center justify-center w-full transform translate-y-1/3"}>
+                  <div className={"absolute text-center text-white items-center justify-center w-full"}>
                     
                     {/* User */}
-                    <div className="h-[128px] text-black bg-contain bg-no-repeat bg-center justify-center items-center">
+                    <div className="h-full w-full text-black bg-contain bg-no-repeat bg-center justify-center items-center translate-y-[25rem]">
                       {/* top */}
                       <div>
-                        <p className={'font-inter tracking-wide text-[11px] font-regular'}>
-                          Undangan Pernikahan
-                        </p>
-                        <p className={'font-Dynalight text-[48px] font-regular justify-center'}>
-                          Maya & Rahardian
+                        <p className={'font-Oranienbaum text-[38px] font-regular text-left px-7'}>
+                          Maya & <br></br>Rahardian
                         </p>
                       </div>
                       {/* text */}
                       <div className="mt-7">
-                        <p className={'font-inter tracking-wide text-[14px] font-regular'}>
-                        Dear, <b>Nama Tamu Undangan</b>
+                        <p className={'font-Oranienbaum tracking-wide text-[12px] font-regular text-left px-7'}>
+                          Teruntuk,
                         </p>
                         {/* <p className={Playfair_Display_SC.className + ' text-[24px] capitalize'}>
                           {to || ""}
@@ -683,15 +680,15 @@ const Rully_Sabil_Inv = () => {
                         <Suspense>
                           <TamuName />
                         </Suspense>
-                        <p className={'font-inter tracking-wide text-[11px] mt-1 font-regular'}>
-                          Anda diundang untuk menghadiri acara pernikahan kami
+                        <p className={'font-Oranienbaum tracking-wide text-[20px] mt-1 font-regular text-left px-7'}>
+                          Nama Tamu Undangan
                         </p>
                       </div>
                       {/* button */}
-                      <div className='flex justify-center items-center w-full mt-10'>
+                      <div className='flex justify-center items-center w-full h-full bottom-0'>
                         <motion.button 
                           type='button'
-                          className={"flex flex-cols font-inter text-white bg-[#9D7265] hover:bg-gradient-to-r from-[#DDB4A5] to-[#BB806F] hover:cursor-pointer hover:border-[#DDB4A5] rounded-[43px] text-[12px] px-[25px] py-[9px] w-auto text-center tracking-widest"}
+                          className={"flex flex-cols font-inter text-white bg-[#474747] hover:cursor-pointer text-[12px] px-[16px] py-[36px] w-full text-center tracking-widest"}
                           onClick={(e) => {
                             setInvActive(true);
                             togglePlay();
@@ -1083,13 +1080,13 @@ const Rully_Sabil_Inv = () => {
                     className="w-full bg-[url('/assets/Bnw/mobile/m_Bg_Countdown.png')] bg-cover bg-center items-center justify-center grid grid-cols-12 px-7 pt-[150px] pb-[180px] gap-5"
                     id="lokasi"
                   >
-                    
+                  
                    <div className='flex justify-center text-center items-center col-span-12'>
                     <div className='justify-center items-center mt-3'>
                       <div className='justify-center items-center text-center mt-11'>
                         <Countdown 
                           project = 'Rully_Sabil_Mobile' 
-                          target_date = '2024-12-31'
+                          target_date = '2024-10-10'
                           className=''
                         />  
                       </div>
@@ -1232,67 +1229,67 @@ const Rully_Sabil_Inv = () => {
                         </div>
                     </form>
 
+                    {/* Chat List */}
+                    <ScrollContainer
+                      content = {(
+                        <div 
+                          id="ucapan"
+                          className="w-full h-[1090px]"
+                        >
+                          <div className="w-full px-7 py-24">
 
-                  </div>
-                )}
-              />
+                            {/* Message List */}
+                            <div className={'grid grid-cols-1 gap-y-3 overflow-x-auto w-full max-h-[700px] rounded-xl ' + (msgReceived.length >= 5 ? 'pr-2' : '')}>
+                              <AnimatePresence initial={false}>
 
-              {/* Chat List */}
-              <ScrollContainer
-                content = {(
-                  <div 
-                    id="ucapan"
-                    className="w-full bg-cover bg-[url('/assets/Bnw/mobile/m_Bg_Ucapan.png')] bg-[center_top_-250px] h-[1090px]"
-                  >
-                    <div className="w-full px-7 py-24">
+                                { msgReceived.length > 0 ? (
+                                  msgReceived.map((item, index) => (
 
-                      {/* Message List */}
-                      <div className={'grid grid-cols-1 gap-y-3 overflow-x-auto w-full max-h-[700px] rounded-xl ' + (msgReceived.length >= 5 ? 'pr-2' : '')}>
-                        <AnimatePresence initial={false}>
+                                  <motion.div 
+                                    key={index} 
+                                    initial={{ opacity: 0, x: -50, scale: 0.3 }}
+                                    animate={{ opacity: .9, x: 0, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 0.5, transition: { duration: 2 } }}
+                                    className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-90'
+                                  >
+                                    <div className={Playfair_Display_SC.className + ' justify-center items-center w-full text-[17px] capitalize tracking-wide mb-2'}>
+                                      {item?.name || '-'}
+                                    </div>
+                                    <hr/>
 
-                          { msgReceived.length > 0 ? (
-                            msgReceived.map((item, index) => (
+                                    <div className='justify-center items-center w-full text-[12.5px] pt-3 mb-2'>
+                                      <p>{item?.message || ''}</p>
+                                    </div>
+                                    <div className={Arapey.className + ' text-[#8F907E] justify-center items-center w-full text-[11px] pt-2 text-right opacity-60'}>
+                                      {/* <p><FontAwesomeIcon icon={faClock} className='text-[9px]' />&nbsp; 12 Januari 2024, pukul 20.40</p> */}
+                                      <p><FontAwesomeIcon icon={faClock} className='text-[9px]' />&nbsp; {helper.formatDate(item?.created_at, "DD MMM YYYY, pukul hh:mm") || '-'}</p>
+                                    </div>
+                                  </motion.div>
 
-                            <motion.div 
-                              key={index} 
-                              initial={{ opacity: 0, x: -50, scale: 0.3 }}
-                              animate={{ opacity: .9, x: 0, scale: 1 }}
-                              exit={{ opacity: 0, scale: 0.5, transition: { duration: 2 } }}
-                              className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-90'
-                            >
-                              <div className={Playfair_Display_SC.className + ' justify-center items-center w-full text-[17px] capitalize tracking-wide mb-2'}>
-                                {item?.name || '-'}
-                              </div>
-                              <hr/>
+                                ))) : (
+                                  <>
+                                    <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-90'>
+                                      <div className='justify-center items-center w-full text-[12.5px] pt-3 mb-2 text-center'>
+                                        <p>Jadilah yang pertama memberi ucapan dan do&apos;a untuk kedua mempelai</p>
+                                      </div>
 
-                              <div className='justify-center items-center w-full text-[12.5px] pt-3 mb-2'>
-                                <p>{item?.message || ''}</p>
-                              </div>
-                              <div className={Arapey.className + ' text-[#8F907E] justify-center items-center w-full text-[11px] pt-2 text-right opacity-60'}>
-                                {/* <p><FontAwesomeIcon icon={faClock} className='text-[9px]' />&nbsp; 12 Januari 2024, pukul 20.40</p> */}
-                                <p><FontAwesomeIcon icon={faClock} className='text-[9px]' />&nbsp; {helper.formatDate(item?.created_at, "DD MMM YYYY, pukul hh:mm") || '-'}</p>
-                              </div>
-                            </motion.div>
+                                      <div className={Arapey.className + ' text-[#8F907E] justify-center items-center w-full text-[11px] pt-2 text-center opacity-60'}>
+                                        <p>Laungharmoni</p>
+                                      </div>
+                                    </div>
+                                    <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-50'></div>
+                                    <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-20'></div>
+                                  </>
+                                )}
 
-                          ))) : (
-                            <>
-                              <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-90'>
-                                <div className='justify-center items-center w-full text-[12.5px] pt-3 mb-2 text-center'>
-                                  <p>Jadilah yang pertama memberi ucapan dan do&apos;a untuk kedua mempelai</p>
-                                </div>
+                              </AnimatePresence>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    />
 
-                                <div className={Arapey.className + ' text-[#8F907E] justify-center items-center w-full text-[11px] pt-2 text-center opacity-60'}>
-                                  <p>Laungharmoni</p>
-                                </div>
-                              </div>
-                              <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-50'></div>
-                              <div className='justify-center items-center border bg-white rounded-xl py-4 px-7 opacity-20'></div>
-                            </>
-                          )}
 
-                        </AnimatePresence>
-                      </div>
-                    </div>
                   </div>
                 )}
               />

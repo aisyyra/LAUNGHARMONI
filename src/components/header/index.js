@@ -11,7 +11,6 @@ import { IoClose } from "react-icons/io5";
 import "./style.css";
 import { useRouter, usePathname } from 'next/navigation';
 
-
 function Header() {
 
   const UseRouter = useRouter();
@@ -19,7 +18,7 @@ function Header() {
 
   return(
     <>
-       {UsePathname !== ('/tema/Bnw') || ('/tema/Golden-black') || ('/tema/choral-charm')  && (
+       {UsePathname !== ('/tema/Bnw')  && (
          <main className="items-center justify-center mx-auto">
            {/* top nav */}
            <header className="fixed w-full h-[110px] flex justify-between items-center drop-shadow-lg bg-white z-20 xl:px-0 lg:px-10">
@@ -144,7 +143,7 @@ function Header() {
            </div>
          </main>
        )}
-
+    
     </>
   )
 
