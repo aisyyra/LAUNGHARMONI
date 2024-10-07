@@ -1,4 +1,5 @@
 'use client'
+
 import Image from 'next/image'
 import { useRouter } from 'next/router';
 import { useSearchParams } from 'next/navigation';
@@ -113,7 +114,6 @@ import Accordian, { AccordianItem} from "@/components/Accordion_button/index";
 
 // #region components
   import Countdown from "@/components/template_countdown/index";
-  // import Countdown from "../../../components/template_countdown/index";
   import ScrollContainer from "../../../components/scroll-container/index";
   import MobileMenu from "../../../components/mobile-menu/index";
   import MobileImgSlider from "../../../components/galeri-mobile/index";
@@ -126,7 +126,7 @@ import Accordian, { AccordianItem} from "@/components/Accordion_button/index";
 
 
 function show(){
-  {/* Alamat */}
+  {/* Nampilin Alamat i button kirim hadiah*/}
   <motion.div 
     className='flex justify-center items-center w-full mt-[20px]'
     variants={{
@@ -158,7 +158,7 @@ function show(){
       ></motion.button>
 
     </div>
-</motion.div>
+  </motion.div>
 }
 
 function TamuName() {
@@ -167,6 +167,7 @@ function TamuName() {
  
   return <p className={Playfair_Display_SC.className + ' text-[24px] capitalize'}>{to || ""}</p>
 }
+
 
 const Rully_Sabil_Inv = () => {
 
@@ -226,12 +227,6 @@ const Rully_Sabil_Inv = () => {
     // m_Front1.src,
     m_Front2.src,
     // m_Front3.src,
-  ]
-
-  const up_SliderStructure = [
-    ImgS1_Slider1.src,
-    ImgS1_Slider2.src,
-    ImgS1_Slider3.src,
   ]
 
   const up_mobileSliderStructure = [
@@ -459,7 +454,6 @@ const Rully_Sabil_Inv = () => {
       }
     ]
   );
-
 
 
   const copyToClipboard = (x) => {
@@ -1422,114 +1416,99 @@ const Rully_Sabil_Inv = () => {
 
             <div className="items-center justify-center grid grid-cols-1 w-full px-0 md:px-16 xl:px-60">
 
-              {/* Slider Top */}
-              <div className="w-full h-auto">
-                <MobileImgSlider
-                  _data = {up_SliderStructure}
-                  _height={"h-[506px]"}
-                  _direction={1}
-                  _scrollStiffness={250}
-                  _scrollDamping={50}
-                  _scrollInterval={4000}
-                  _scrollDuration={0.5}
-                />  
-              </div>
-
-              {/* Header Decor */}
-              <ScrollContainer
-                content = {(
-                  <div className="w-full bg-white grid grid-cols-12 px-24 py-5">
-                    <div className='justify-center items-center col-span-6'>
-                      <div className='relative w-full h-full flex justify-center items-start'>
-                        <div 
-                          className='absolute -bottom-14 -left-8 w-[389.3px] h-[254px] bg-cover drop-shadow-[3px_1.5px_rgba(0,0,0,0.05)] flex justify-center z-[20]'
-                          style={{ backgroundImage: `url(${imgDecor1.src})` }}
-                        >
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className='flex justify-center items-end col-span-6'>
-                      <Image
-                        src={imgDecor2}
-                        alt="."
-                      />
-                    </div>
-                  </div>
-                )}
-              />
-
-              {/* Countdown */}
-              <div className="h-auto flex flex-col justify-center items-center shadow-[0px_-5px_5px_0px_rgba(0,0,0,0.1)] bg-transparent backdrop-blur-sm px-24 pt-14 pb-10">
-                  <div className="w-full grid grid-cols-12">
-                    
-                    <div className='text-white justify-center items-center col-span-6'>
-                      <div className={Playfair_Display_SC.className + ' text-xs tracking-wider'}>
-                        Undangan Pernikahan
-                      </div>
-                      <div className={Playfair_Display_SC.className + ' text-[42px] tracking-normal drop-shadow-[1.5px_1.5px_rgba(0,0,0,0.25)] mt-[-7px]'}>
-                        Sabil <label className='text-[#D8D8D8]'>&</label> Rully
-                      </div>
-                    </div>
-
-                    <div className='col-span-6'>
-                      <Countdown 
-                        project = 'Rully_Sabil' 
-                        target_date = '2024-05-12'
-                      />  
-                    </div>
-
-                  </div>
-              </div>
-              
               {/* Opening Name */}
               <ScrollContainer 
                 content = {(
-                  <div className="w-full bg-white grid grid-cols-12 p-24">
-                    <div className='flex justify-start items-end col-span-7'>
-                      <div>
-                        <div className='text-[12.5px] tracking-normal pt-16'>
-                          <label className='drop-shadow-[1.5px_1.5px_rgba(0,0,0,0.25)] leading-6'>
-                            <label className='italic tracking-wide'>Assalamu’alaikum warahmatullahi wabarakatuh.</label> Dengan memohon rahmat <br />
-                            dan ridho Allah SWT, izinkan kami mengundang Bapak/Ibu/Saudara/i <br />
-                            untuk menghadiri pernikahan kami: <br />
-                          </label>
-                        </div>
+                  <div className='flex justify-start items-end col-span-12 text-center'>
+                    <div className='w-full'>
 
-                        <div className={Playfair_Display_SC.className + ' text-2xl text-[#8F8C7B] pt-10 pb-2'}>
-                          <label className='leading-6'>
-                            Salsabila Rifdah, S.E.
-                          </label>
-                        </div>
-                        <div className='text-sm pb-5'>
-                          Anak pertama dari Bapak Japar, S.Pd., M.Ak. dan Ibu E. Juniarti, S.Pd.
-                        </div>
-
-                        <div className={Kapakana.className + ' text-2xl text-[#8F8C7B]'}>
-                          dengan
-                        </div>
-
-                        <div className={Playfair_Display_SC.className + ' text-2xl text-[#8F8C7B] pt-5 pb-2'}>
-                          <label className='leading-6'>
-                            Rully Abdul Haq, S.Pt.
-                          </label>
-                        </div>
-                        <div className='text-sm pb-16'>
-                          Anak kedua dari Bapak Misbahudin dan Ibu Wiwin Widiawati
-                        </div>
+                      <div className='mt-[40px] flex justify-start items-end col-span-12 text-center'>
+                      <div className="w-full">
+                        <p className='font-inter text-[10px] italic mb-3'>
+                          Assalamu’alaikum warahmatullahi wabarakatuh,
+                        </p>
+                        <p className='font-inter text-[11px]'>
+                          Dengan memohon rahmat dan ridho Allah SWT,<br></br> izinkan kami mengundang Bapak/Ibu/Saudara/i <br></br> untuk menghadiri pernikahan kami:
+                        </p>
                       </div>
-                    </div>
+                      </div>
 
-                    <div className='justify-center items-center col-span-5'>
-                      <div className='relative w-full h-full'>
+                      <div className={'text-2xl text-black pt-10'}>
                         <div 
-                          className='absolute w-[400px] h-full -left-10 bg-contain bg-no-repeat flex justify-center'
-                          style={{ backgroundImage: `url(${ImgS2.src})` }}
-                        >
-                        </div>
+                          className='justify-center items-center h-[132px] bg-contain bg-center bg-no-repeat mb-10'
+                          style={{ backgroundImage: `url(${m_ImgS2_2.src})` }}
+                        ></div>
+
+                        <label className='text-[29px] font-Dynalight leading-6'>
+                          Septia Maharani, S.Kom.
+                        </label>
+                      </div>
+                      <div className='text-[10px] pb-5 leading-6 font-inter'>
+                        Anak kedua dari Bapak Ahmad Yasin dan Ibu Maemunah
+                      </div>
+                      {/* button */}
+                      <div className='flex justify-center items-center w-full'>
+                      <motion.button 
+                        type='button'
+                        className={"shadow-md  flex flex-cols font-inter text-white bg-gradient-to-r from-[#9D7265] via-[#D9B4A9] to-[#9D7265] hover:cursor-pointer ring-1 ring-[#9D7265] ring-inset rounded-[43px] text-[8px] px-[11px] py-[6px] w-auto text-center tracking-widest"}
+                        onClick={(e) => {
+                          setInvActive(true);
+                          togglePlay();
+                        }}
+                        whileTap={{ 
+                          scale: 0.95,
+                          backgroundColor: "#BB806F",
+                        }}
+                      >
+                        <svg className='mr-1' width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.09869 2.9082C3.8317 2.9082 2.78191 3.93989 2.78191 5.22498C2.78191 6.51007 3.8136 7.54176 5.09869 7.54176C6.38378 7.54176 7.41547 6.49197 7.41547 5.22498C7.41547 3.95799 6.36568 2.9082 5.09869 2.9082ZM5.09869 6.70917C4.2842 6.70917 3.6145 6.03947 3.6145 5.22498C3.6145 4.41049 4.2842 3.7408 5.09869 3.7408C5.91318 3.7408 6.58287 4.41049 6.58287 5.22498C6.58287 6.03947 5.91318 6.70917 5.09869 6.70917Z" fill="white"/>
+                          <path d="M7.50595 3.37883C7.79584 3.37883 8.03085 3.14383 8.03085 2.85394C8.03085 2.56404 7.79584 2.32904 7.50595 2.32904C7.21606 2.32904 6.98106 2.56404 6.98106 2.85394C6.98106 3.14383 7.21606 3.37883 7.50595 3.37883Z" fill="white"/>
+                          <path d="M8.86346 1.49643C8.39287 1.00773 7.72317 0.754333 6.96298 0.754333H3.23442C1.65973 0.754333 0.60994 1.80412 0.60994 3.37881V7.08927C0.60994 7.86757 0.863337 8.53726 1.37013 9.02596C1.85883 9.49655 2.51042 9.73185 3.25252 9.73185H6.94488C7.72317 9.73185 8.37477 9.47845 8.84536 9.02596C9.33406 8.55536 9.58746 7.88567 9.58746 7.10738V3.37881C9.58746 2.61862 9.33406 1.96702 8.86346 1.49643ZM8.79106 7.10738C8.79106 7.66847 8.59196 8.12097 8.26617 8.42866C7.94037 8.73636 7.48788 8.89926 6.94488 8.89926H3.25252C2.70952 8.89926 2.25702 8.73636 1.93123 8.42866C1.60543 8.10287 1.44253 7.65037 1.44253 7.08927V3.37881C1.44253 2.83581 1.60543 2.38332 1.93123 2.05752C2.23892 1.74982 2.70952 1.58693 3.25252 1.58693H6.98108C7.52407 1.58693 7.97657 1.74982 8.30237 2.07562C8.61006 2.40142 8.79106 2.85391 8.79106 3.37881V7.10738Z" fill="white"/>
+                        </svg>
+                        @laungharmoni
+                    </motion.button>
+                      </div>
+
+                      <div className={Playfair_Display_SC.className +''}>
+                        <p className='text-[50px] py-[50px] text-black'>&</p>
+                      </div>
+
+                      <div className={'text-2xl text-black pb-2'}>
+                        <div 
+                          className='justify-center items-center h-[132px] bg-contain bg-center bg-no-repeat mb-10'
+                          style={{ backgroundImage: `url(${m_ImgS2_1.src})` }}
+                        ></div>
+                        <label className='text-[29px] font-Dynalight leading-6'>
+                          Arjuna Kertanegara, M.Si.
+                        </label>
+                      </div>
+                      <div className='text-[10px] pb-5 leading-6 font-inter'>
+                        Anak pertama dari Bapak Agung Kertanegara dan Ibu Sri Rahayu
+                      </div>
+                      <div className='flex justify-center items-center w-full'>
+                      <motion.button 
+                        type='button'
+                        className={"shadow-md button flex flex-cols font-inter text-white bg-gradient-to-r from-[#9D7265] via-[#D9B4A9] to-[#9D7265] hover:cursor-pointer ring-1 ring-[#9D7265] ring-inset rounded-[43px] text-[8px] px-[11px] py-[6px] w-auto text-center tracking-widest"}
+                        onClick={(e) => {
+                          setInvActive(true);
+                          togglePlay();
+                        }}
+                        whileTap={{ 
+                          scale: 0.95,
+                          backgroundColor: "#BB806F",
+                        }}
+                      >
+                        <svg className='mr-1' width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M5.09869 2.9082C3.8317 2.9082 2.78191 3.93989 2.78191 5.22498C2.78191 6.51007 3.8136 7.54176 5.09869 7.54176C6.38378 7.54176 7.41547 6.49197 7.41547 5.22498C7.41547 3.95799 6.36568 2.9082 5.09869 2.9082ZM5.09869 6.70917C4.2842 6.70917 3.6145 6.03947 3.6145 5.22498C3.6145 4.41049 4.2842 3.7408 5.09869 3.7408C5.91318 3.7408 6.58287 4.41049 6.58287 5.22498C6.58287 6.03947 5.91318 6.70917 5.09869 6.70917Z" fill="white"/>
+                          <path d="M7.50595 3.37883C7.79584 3.37883 8.03085 3.14383 8.03085 2.85394C8.03085 2.56404 7.79584 2.32904 7.50595 2.32904C7.21606 2.32904 6.98106 2.56404 6.98106 2.85394C6.98106 3.14383 7.21606 3.37883 7.50595 3.37883Z" fill="white"/>
+                          <path d="M8.86346 1.49643C8.39287 1.00773 7.72317 0.754333 6.96298 0.754333H3.23442C1.65973 0.754333 0.60994 1.80412 0.60994 3.37881V7.08927C0.60994 7.86757 0.863337 8.53726 1.37013 9.02596C1.85883 9.49655 2.51042 9.73185 3.25252 9.73185H6.94488C7.72317 9.73185 8.37477 9.47845 8.84536 9.02596C9.33406 8.55536 9.58746 7.88567 9.58746 7.10738V3.37881C9.58746 2.61862 9.33406 1.96702 8.86346 1.49643ZM8.79106 7.10738C8.79106 7.66847 8.59196 8.12097 8.26617 8.42866C7.94037 8.73636 7.48788 8.89926 6.94488 8.89926H3.25252C2.70952 8.89926 2.25702 8.73636 1.93123 8.42866C1.60543 8.10287 1.44253 7.65037 1.44253 7.08927V3.37881C1.44253 2.83581 1.60543 2.38332 1.93123 2.05752C2.23892 1.74982 2.70952 1.58693 3.25252 1.58693H6.98108C7.52407 1.58693 7.97657 1.74982 8.30237 2.07562C8.61006 2.40142 8.79106 2.85391 8.79106 3.37881V7.10738Z" fill="white"/>
+                        </svg>
+                        @laungharmoni
+                    </motion.button>
                       </div>
                     </div>
-                  </div>
+                      
+                </div>
                 )}
               />
 
@@ -2068,6 +2047,7 @@ const Rully_Sabil_Inv = () => {
                    <p className='drop-shadow-[0_1px_1px_rgba(0,0,0,0.25)]'>© 2024 <a className='' href='http://laungharmoni.com' target='_blank'>Laungharmoni</a> &nbsp;|&nbsp; All rights reserved.</p>
                 </div>
               </footer>
+              
             </div>
 
           </section>
