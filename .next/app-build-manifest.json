@@ -1,10 +1,10 @@
 {
   "pages": {
-    "/page": [
+    "/blog/blog/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+      "static/css/app/blog/blog/page.css",
+      "static/chunks/app/blog/blog/page.js"
     ],
     "/not-found": [
       "static/chunks/webpack.js",
@@ -16,45 +16,6 @@
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-    ],
-    "/tema/choral-charm/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/tema/choral-charm/page.css",
-      "static/chunks/app/tema/choral-charm/page.js"
-    ],
-    "/tema/rully-sabil/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/tema/rully-sabil/page.css",
-      "static/chunks/app/tema/rully-sabil/page.js"
-    ],
-    "/tema/Golden-black/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tema/Golden-black/layout.js"
-    ],
-    "/tema/Golden-black/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/tema/Golden-black/page.css",
-      "static/chunks/app/tema/Golden-black/page.js"
-    ],
-    "/tema/choral-charm/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tema/choral-charm/layout.js"
-    ],
-    "/tema/Bnw/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/tema/Bnw/page.css",
-      "static/chunks/app/tema/Bnw/page.js"
-    ],
-    "/tema/Bnw/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tema/Bnw/layout.js"
     ]
   }
 }

@@ -4,7 +4,7 @@ import "./style.css";
 function button() {
     return (
     <>
-        <div className="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+        <div className="grid min-h-[140px] w-full place-items-center rounded-lg p-6 lg:overflow-visible">
             <div className="flex w-full divide-x divide-gray-800 row">
                <a href="/portofolio/template" className="button transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-[15px] py-[18px] px-[32px] rounded-[50px] bg-gradient-to-r from-[#E3457B] to-[#EF90A0] text-white focus:opacity-[0.5] focus:shadow-none active:opacity-[0.85] block w-full rounded-r-none border-r-0">
                     <button>

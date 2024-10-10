@@ -6,10 +6,49 @@ import Link from 'next/link'
 import bg from "@/assets/laung-harmoni/IconName.svg";
 import { IoChevronDownSharp } from "react-icons/io5";
 import { RxHamburgerMenu } from "react-icons/rx";
-// import { Popover } from "@headlessui/react";
 import { IoClose } from "react-icons/io5";
 import "./style.css";
 import { useRouter, usePathname } from 'next/navigation';
+
+// import mobile menu
+import m_Beranda from "@/assets/laung-harmoni/icon/m_Beranda.svg";
+import m_Beranda_active from "@/assets/laung-harmoni/icon/m_Beranda2.svg";
+import m_Blog from "@/assets/laung-harmoni/icon/m_Blog.svg";
+import m_Blog_active from "@/assets/laung-harmoni/icon/m_Blog2.svg";
+import m_Panduan from "@/assets/laung-harmoni/icon/m_Panduan.svg";
+import m_Panduan_active from "@/assets/laung-harmoni/icon/m_Panduan2.svg";
+import m_Portofolio from "@/assets/laung-harmoni/icon/m_Portofolio.svg";
+import m_Portofolio_active from "@/assets/laung-harmoni/icon/m_Portofolio2.svg";
+import m_Tema from "@/assets/laung-harmoni/icon/m_Tema.svg";
+import m_Tema_active from "@/assets/laung-harmoni/icon/m_Tema2.svg";
+
+const mobileMenuStructure = [
+  {
+    id: "beranda",
+    icon: m_Beranda ,
+    iconSelected: m_Beranda_active,
+  },
+  {
+    id: "blog",
+    icon: m_Blog,
+    iconSelected:m_Blog_active,
+  },
+  {
+    id: "tema",
+    icon: m_Tema,
+    iconSelected: m_Tema_active,
+  },
+  {
+    id: "panduan",
+    icon: m_Panduan,
+    iconSelected: m_Panduan_active,
+  },
+  {
+    id: "portofolio",
+    icon: m_Portofolio,
+    iconSelected: m_Portofolio_active,
+  },
+]
 
 function Header() {
 
@@ -75,6 +114,7 @@ function Header() {
              </div>
            </header>
            {/* bottom nav */}
+         {/* bottom nav */}
            <div className="shadow-lg bottomNav fixed bottom-0 w-full z-20">
              <nav className="lg:hidden bottom-0 w-full py-4 bg-white text-xs shadow-lg rounded-t-[30px]">
                <ul className="flex justify-around items-center text-white text-center opacity-75">
@@ -141,6 +181,7 @@ function Header() {
                </ul>
              </nav>
            </div>
+         
          </main>
        )}
     

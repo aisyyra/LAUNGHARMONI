@@ -12,7 +12,7 @@ export default function tema() {
             <main className="justify-center w-screen flex bg-undangan">
                 <div className="mt-[150px] mb-[100px] w-12/12 flex flex-row">
                     <div className="flex flex-col justify-center px-[146px]">
-                        <div class="rounded-[35px] overflow-hidden shadow-lg max-w-7xl  bg-white ">
+                        <div class="rounded-[35px] overflow-hidden shadow-lg max-w-7xl bg-white ">
                             <Image
                                 className="object-cover w-[100%] h-[536px]"
                                     src={Artikel.src}
@@ -50,8 +50,8 @@ export default function tema() {
 
                                 </div>
                             </div>
-                            <div class="px-[120px] font-lora pb-[60px]">
-                                <button className="mr-[19px] px-[23px] py-[12px]  font-thin text-black rounded-full bg-white border border-black ">
+                            <div class="px-[80px] xl:px-[120px] font-lora pb-[60px] grid grid-cols-4">
+                                <button className="mr-[10px] xl:mr-[19px] xl:px-[23px] xl:py-[12px] px-[17px] py-[9px] font-thin text-black rounded-full bg-white border border-black ">
                                     Keyword
                                 </button>
                                 <button className="px-[23px] py-[12px] text-[17px] font-thin text-white rounded-full bg-gradient-to-r from-[#E3457B] to-[#EF90A0] ">

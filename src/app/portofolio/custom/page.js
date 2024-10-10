@@ -15,12 +15,12 @@ export default function Portofolio() {
          {/* Header Page */}
             <main className="bg-cover h-[50%] w-screen flex bg-[url('/assets/laung-harmoni/Header_Portofolio.png')] justify-center">
                 <div className="mt-[200px] mb-[146px] w-12/12 flex flex-row">
-                    <div className=" text-center justify-center px-[194px]">
+                    <div className=" text-center justify-center">
                         <h1 className="font-medium text-[55px] leading-[77px] mb-[60px]">Portofolio Laungharmoni</h1>
                         <p className="mb-[70px] font-regular font-lora text-[22px] leading-[37px]">
                         Lihat undangan para klien yang telah kami kerjakan dan jadikan sebagai referensimu. Berminat dengan tema yang ada? Chat Admin ya~</p>
                         {/* button */}
-                        <div className="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+                        <div className="grid min-h-[140px] w-full place-items-center rounded-lg p-6 lg:overflow-visible">
                             <div className="flex w-full divide-x divide-gray-800 row">
                             <a href="/portofolio/template" className="button transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-[15px] py-[18px] px-[32px] rounded-[50px] bg-gradient-to-r from-[#E3457B] to-[#EF90A0] text-white focus:opacity-[0.5] focus:shadow-none active:opacity-[0.85] block w-full rounded-r-none border-r-0">
                                     <button>

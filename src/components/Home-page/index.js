@@ -402,6 +402,7 @@ function Homepage(){
             </button>
           </div>
         </div>
+        
         {/* right konten */}
         <div className="hidden sm:w-6/12 2xl:w-3/12 flex flex-row items-center ">
         </div>
