@@ -13,9 +13,9 @@ export default function tema() {
         <main className="justify-center bg-cover h-[80%] w-screen flex bg-[url('/assets/laung-harmoni/Header_Portofolio.png')] pt-[5rem]">
                 <div className="py-[146px] w-12/12 flex flex-row text-center">
                     <div className=" text-center justify-center gap-[60px] "> 
-                        <h1 className="font-medium text-[55px]">Blog Laungharmoni</h1>
-                        <p className="leading-[37px] font-regular text-[22px] font-lora mt-[60px]">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore<br></br> magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+                        <h1 className="font-medium xl:text-[55px] text-[29px] xl:leading-[77px] leading-[55px]">Blog Laungharmoni</h1>
+                        <p className="leading-[37px] font-regular font-lora xl:leading-[37px] xl:text-[22px] leading-[36px] text-[22px]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
                         </p>
                     </div>
                 </div>

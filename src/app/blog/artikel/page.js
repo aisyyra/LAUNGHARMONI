@@ -11,7 +11,7 @@ export default function tema() {
          {/* Header Page */}
             <main className="justify-center w-screen flex bg-undangan">
                 <div className="mt-[150px] mb-[100px] w-12/12 flex flex-row">
-                    <div className="flex flex-col justify-center px-[146px]">
+                    <div className="flex flex-col justify-center px-[100px] lg:px-[146px]">
                         <div class="rounded-[35px] overflow-hidden shadow-lg max-w-7xl bg-white ">
                             <Image
                                 className="object-cover w-[100%] h-[536px]"
