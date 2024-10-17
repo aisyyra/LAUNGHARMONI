@@ -107,8 +107,8 @@ function Countdown(props) {
 							const value = el[1];
 							const end = (Object.entries(timeLeft).length - 1);
 							return (
-								<div key={label} className=" justify-center items-center mt-5">
-									<div className="text-white justify-center items-center text-center mx-7 mb-[100px]">
+								<div key={label} className=" justify-center items-center mt-7">
+									<div className="text-white justify-center items-center text-center mx-7 mb-[60px]">
                                         <div className="px-[25px] py-[20px] bg-[#474747] rounded-[11px]">
                                             <div className={'text-[48px] font-Oranienbaum tracking-normal w-full leading-[75px] '}>
                                                 {value || 0}

@@ -11,13 +11,12 @@ import "./style.css";
 export default function Portofolio() {
     return (
     <>
-         <Header />
          {/* Header Page */}
             <main className="bg-cover h-[50%] w-screen flex bg-[url('/assets/laung-harmoni/Header_Portofolio.png')] justify-center">
                 <div className="mt-[200px] mb-[146px] w-12/12 flex flex-row">
                     <div className=" text-center justify-center">
-                        <h1 className="font-medium text-[55px] leading-[77px] mb-[60px]">Portofolio Laungharmoni</h1>
-                        <p className="mb-[70px] font-regular font-lora text-[22px] leading-[37px]">
+                        <h1 className="font-medium xl:text-[55px] text-[29px] xl:leading-[77px] leading-[55px] mb-[60px]">Portofolio Laungharmoni</h1>
+                        <p className="mb-[70px] font-regular font-lora xl:leading-[37px] xl:text-[22px] leading-[36px] text-[22px]">
                         Lihat undangan para klien yang telah kami kerjakan dan jadikan sebagai referensimu. Berminat dengan tema yang ada? Chat Admin ya~</p>
                         {/* button */}
                         <div className="grid min-h-[140px] w-full place-items-center rounded-lg p-6 lg:overflow-visible">
@@ -44,9 +43,7 @@ export default function Portofolio() {
         <main className="bg-undangan h-sreen w-screen flex items-center justify-center ">
           <p className="mb-[146px]">Hiks, data belum tersedia..</p>
         </main>
-         {/* Portofolio end */}
-         <Footer />
-
+  
     </>
     );
 }
