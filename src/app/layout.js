@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
       <body className={Mustard.className}>
        <Header />
         {children}
-
+      <Footer />
       </body>
     </html>
   );

@@ -78,7 +78,7 @@ function Homepage(){
             <div className="text-center object-center items-center pb-[528px] px-[20px]">
               <h1 className="flex items-center font-medium text-[29px] sm:text-[55px] leading-[41px] sm:leading-[77px] justify-center object-center text-center mt-[80px] ">Tema Sesuai Kebutuhan</h1>
                 <p className="my-[32px] sm:my-[60px] font-lora font-regular text-[12px] sm:text-[29px] leading-[19px] sm:leading-[37px]">
-                Kami menyediakan beberapa pilihan tema, sehingga kamu bisa menyesuaikannya dengan selera, budget, dan kebutuhanmu.
+                Kami menyediakan beberapa pilihan tema, sehingga kamu bisa menyesuaikannya <br></br>dengan selera, budget, dan kebutuhanmu.
                 </p>
                 <button className="button_2 mt-[20px] bg-gradient-to-r from-[#303030] to-[#616161] px-[22px] py-[19px] sm:x-[32px] sm:py-[18px] text-[10px] sm:text-[15px] text-white font-thin rounded-[35px] sm:rounded-[50px] hover:bg-abu hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
                   <p className="text">Lihat Tema Undangan</p>
@@ -417,9 +417,8 @@ function Homepage(){
             <div className="mt-[40rem]">
               <Accordian className="max-w-lg">
                 <AccordianItem value="1" trigger="Berapa lama proses pembuatan undangan?">
-                  Yakni jangka waktu di mana kamu dan orang-orang dapat mengakses link undangan. 
-                  Adapun ‘Masa Aktif Selamanya’ tidak mengandung makna selama-lamanya, namun lebih 
-                  kepada masa aktif selama server Laungharmoni tetap berjalan.
+                  Proses pembuatan undangan digital kami biasanya memakan waktu antara 3 hingga 5 hari kerja 
+                  setelah semua detail acara diterima dari customer.
                 </AccordianItem>
                 <AccordianItem value="2" trigger="Apa yang dimaksud dengan Masa Aktif Undangan?">
                   Yakni jangka waktu di mana kamu dan orang-orang dapat mengakses link undangan. 
@@ -427,13 +426,15 @@ function Homepage(){
                   kepada masa aktif selama server Laungharmoni tetap berjalan.
                 </AccordianItem>
                 <AccordianItem value="3" trigger="Apakah customer bisa meminta fitur tambahan?">
-                  Lorem pimusijdhwebnmcmnaeifqehbacbbjc cantik
+                  Ya, tentu saja! Kami dengan senang hati menerima permintaan fitur tambahan sesuai kebutuhan Anda,
+                  Anda dapat berdiskusi dengan tim kami untuk menyesuaikan undangan sesuai preferensi Anda.
                 </AccordianItem>
                 <AccordianItem value="4" trigger="Apakah customer boleh mengganti desain undangan?">
-                  Lorem pimusijdhwebnmcmnaeifqehbacbbjc cantik
+                  customer bisa melakukan perubahan pada desain undangan sebelum undangan selesai dipublikasikan
                 </AccordianItem>
                 <AccordianItem value="5" trigger="Bagaimana dengan proses pembayarannya?">
-                  Lorem pimusijdhwebnmcmnaeifqehbacbbjc cantik
+                  customer diminta untuk melakukan pembayaran DP sebesar 50% dari total biaya. Sisa pembayaran dapat diselesaikan setelah undangan selesai dan sebelum undangan dipublikasikan. 
+                  Kami menerima pembayaran melalui transfer bank dan e-wallet yang tersedia,
                 </AccordianItem>
               </Accordian>
             </div>

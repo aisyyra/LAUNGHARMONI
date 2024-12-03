@@ -3,6 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from "@/components/header";
 import Card from "@/assets/laung-harmoni/Card.png";
+import foto1 from "@/assets/laung-harmoni/tema1.png"
+import template1 from "@/assets/rully-sabil/mobile/S1_Slider_2A.png"
+import template2 from "@/assets/laung-harmoni/template2.jpg"
+import template3 from "@/assets/laung-harmoni/template3.jpg"
+import template4 from "@/assets/laung-harmoni/template4.jpg"
+import template5 from "@/assets/laung-harmoni/template5.jpg"
+import template6 from "@/assets/laung-harmoni/template6.jpg"
 import Footer from "@/components/footer";
 import Button from "@/components/button";
 import Button_WA from "@/components/button-wa"
@@ -21,7 +28,7 @@ export default function Portofolio() {
                         <Button />
                     </div>
                 </div>
-                <Button_WA />
+             <Button_WA />
             </main>
          {/* Header Page End */}
 
@@ -35,8 +42,8 @@ export default function Portofolio() {
                         <div className="">
                             <div className="relative m-0 overflow-hidden bg-transparent rounded-none shadow-none">
                             <Image
-                                className="object-fill w-[357px] h-[480px]"
-                                src={Card.src}
+                                className="object-cover w-[357px] h-[480px]"
+                                src={template1.src}
                                 alt="Next.js Logo"
                                 width={600}
                                 height={200}
@@ -45,10 +52,10 @@ export default function Portofolio() {
                             </div>
                             <div className="py-[34px] text-center items-center">
                                 <h4 className="block text-[22px] font-medium tracking-normal">
-                                Alexander & Bella
+                                Rully & Sabil
                                 </h4>
                                 <p className="pt-4 block text-[13px]">
-                                09 OKTOBER 2024
+                                12 Mei 2024
                                 </p>
                             </div>
                         </div>
@@ -59,7 +66,7 @@ export default function Portofolio() {
                             <div className="relative m-0 overflow-hidden bg-transparent rounded-none shadow-none">
                             <Image
                                 className="object-fill w-[357px] h-[480px]"
-                                src={Card.src}
+                                src={template2.src}
                                 alt="Next.js Logo"
                                 width={600}
                                 height={200}
@@ -68,10 +75,10 @@ export default function Portofolio() {
                             </div>
                             <div className="py-[34px] text-center items-center">
                                 <h4 className="block text-[22px] font-medium tracking-normal">
-                                Alexander & Bella
+                                 Akhmad & Sintya
                                 </h4>
                                 <p className="pt-4 block text-[13px]">
-                                09 OKTOBER 2024
+                                 15 Juli 2024
                                 </p>
                             </div>
                         </div>
@@ -82,7 +89,7 @@ export default function Portofolio() {
                             <div className="relative m-0 overflow-hidden bg-transparent rounded-none shadow-none">
                             <Image
                                 className="object-fill w-[357px] h-[480px]"
-                                src={Card.src}
+                                src={template3.src}
                                 alt="Next.js Logo"
                                 width={600}
                                 height={200}
@@ -91,10 +98,10 @@ export default function Portofolio() {
                             </div>
                             <div className="py-[34px] text-center items-center">
                                 <h4 className="block text-[22px] font-medium tracking-normal">
-                                Alexander & Bella
+                                Septian & Hannah
                                 </h4>
                                 <p className="pt-4 block text-[13px]">
-                                09 OKTOBER 2024
+                                09 September 2024
                                 </p>
                             </div>
                         </div>
@@ -105,7 +112,7 @@ export default function Portofolio() {
                             <div className="relative m-0 overflow-hidden bg-transparent rounded-none shadow-none">
                             <Image
                                 className="object-fill w-[357px] h-[480px]"
-                                src={Card.src}
+                                src={template4.src}
                                 alt="Next.js Logo"
                                 width={600}
                                 height={200}
@@ -114,10 +121,10 @@ export default function Portofolio() {
                             </div>
                             <div className="py-[34px] text-center items-center">
                                 <h4 className="block text-[22px] font-medium tracking-normal">
-                                Alexander & Bella
+                                 Abidzar & Kanaya
                                 </h4>
                                 <p className="pt-4 block text-[13px]">
-                                09 OKTOBER 2024
+                                20 Agustus 2024
                                 </p>
                             </div>
                         </div>
@@ -128,7 +135,7 @@ export default function Portofolio() {
                             <div className="relative m-0 overflow-hidden bg-transparent rounded-none shadow-none">
                             <Image
                                 className="object-fill w-[357px] h-[480px]"
-                                src={Card.src}
+                                src={template5.src}
                                 alt="Next.js Logo"
                                 width={600}
                                 height={200}
@@ -137,10 +144,10 @@ export default function Portofolio() {
                             </div>
                             <div className="py-[34px] text-center items-center">
                                 <h4 className="block text-[22px] font-medium tracking-normal">
-                                Alexander & Bella
+                                 Alfian & Salsabila
                                 </h4>
                                 <p className="pt-4 block text-[13px]">
-                                09 OKTOBER 2024
+                                18 Juni 2024
                                 </p>
                             </div>
                         </div>
@@ -151,7 +158,7 @@ export default function Portofolio() {
                             <div className="relative m-0 overflow-hidden bg-transparent rounded-none shadow-none">
                             <Image
                                 className="object-fill w-[357px] h-[480px]"
-                                src={Card.src}
+                                src={template6.src}
                                 alt="Next.js Logo"
                                 width={600}
                                 height={200}
@@ -160,10 +167,10 @@ export default function Portofolio() {
                             </div>
                             <div className="py-[34px] text-center items-center">
                                 <h4 className="block text-[22px] font-medium tracking-normal">
-                                Alexander & Bella
+                                 Erick & Tania
                                 </h4>
                                 <p className="pt-4 block text-[13px]">
-                                09 OKTOBER 2024
+                                28 April 2024
                                 </p>
                             </div>
                         </div>

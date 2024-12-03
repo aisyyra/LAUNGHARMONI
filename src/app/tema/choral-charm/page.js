@@ -15,7 +15,7 @@ import pageStyle from "./index.module.css";
 
 import Accordian, { AccordianItem} from "@/components/Accordion_button/index";
 
-// #region images
+// #import image dari folder assets
   import ImgLH_Icon from "@/assets/laung-harmoni/Icon.svg";
   import ImgLH_IconWhite from "@/assets/choral-charm/mobile/m_Logo.png";
   import ImgLH from "@/assets/laung-harmoni/IconName.svg";
@@ -112,7 +112,7 @@ import Accordian, { AccordianItem} from "@/components/Accordion_button/index";
 
 // #endregion
 
-// #region components
+// #import component
   import Countdown from "@/components/template_countdown/index";
   import ScrollContainer from "../../../components/scroll-container/index";
   import MobileMenu from "../../../components/mobile-menu/index";
@@ -122,8 +122,6 @@ import Accordian, { AccordianItem} from "@/components/Accordion_button/index";
   import MobileImgGallery from "../../../components/mobile-img-galeri/index";
   import Accordion from "../../../components/accordion/index";
   import Accordion2 from "../../../components/accordion/index2";
-// #endregion
-
 
 function show(){
   {/* Nampilin Alamat i button kirim hadiah*/}
@@ -268,7 +266,7 @@ const Rully_Sabil_Inv = () => {
   const [expanded2, setExpanded2] = useState(null);
   const isOpen2 = 0 === expanded2;
 
-  
+  // untuk kirim amplop
   const accordionStructure = useMemo(
     () => [
       {
@@ -373,6 +371,7 @@ const Rully_Sabil_Inv = () => {
     ]
   );
 
+  // untuk kirim ke alamat
   const accordionStructure2 = useMemo(
     () => [
       {
@@ -425,16 +424,13 @@ const Rully_Sabil_Inv = () => {
               }}
             >
               <div className='text-center w-full'>
-
                 <div className={Playfair_Display_SC.className + ' flex justify-center items-center w-full text-[14px]'}>
                   Alamat Paket
                 </div>
-                
                 <div className={PlusJakartaSans.className + ' justify-center items-center w-full text-[9px] mt-5 leading-[18px]'}>
                   <p>Rully Abdul Haq &nbsp; - &nbsp; 08567777766</p>
                   <p>Jl.Raya Sukabumi Gg.Al-Falah 03/01 No.20 Desa Sukamaju<br /> Kec.Cianjur, Kabupaten Cianjur, Jawa Barat</p>
                 </div>
-
                 <motion.button 
                   type='button'
                   className='bg-bottom bg-contain bg-no-repeat mt-[17px] w-full h-[27px]'
@@ -645,7 +641,6 @@ const Rully_Sabil_Inv = () => {
               <nav className="fixed top-[120px] left-0 right-0 z-50">
                 <div className="relative w-full h-screen">
                   <div className={"absolute text-center text-white items-center justify-center w-full transform translate-y-1/3"}>
-                    
                     {/* User */}
                     <div className="h-[128px] text-black bg-contain bg-no-repeat bg-center justify-center items-center">
                       {/* top */}
@@ -796,9 +791,7 @@ const Rully_Sabil_Inv = () => {
           <section 
             className="bg-white flex flex-col w-4/4 h-4/4 bg-cover bg-no-repeat bg-fixed bg-right justify-center items-center lg:hidden"
           >
-
             <div className="items-center justify-center grid grid-cols-1 w-full px-0 sm:px-24 block">
-              
               {/* Opening Name */}
               <ScrollContainer 
                 content = {(
@@ -806,7 +799,6 @@ const Rully_Sabil_Inv = () => {
                     className="w-full bg-white grid grid-cols-12 px-7 pt-[45px] pb-[82px]"
                     id="mempelai"
                   >
-                    
                     <div className='justify-center items-center col-span-12 text-center'>
                       <div className={'tracking-normal drop-shadow-[1.5px_1.5px_rgba(0,0,0,0.07)] mt-[-7px]'}>
                         <p className='font-Dynalight text-[36px] text-[#9D7265]'>Mempelai</p>
@@ -815,10 +807,8 @@ const Rully_Sabil_Inv = () => {
                         <hr class="w-36 h-px bg-[#9D7265] border-0 justify-center items-center text-center"></hr>
                     </div>
                     </div>
-
                     <div className='flex justify-start items-end col-span-12 text-center'>
                       <div className='w-full'>
-
                         <div className='mt-[40px] flex justify-start items-end col-span-12 text-center'>
                         <div className="w-full">
                           <p className='font-inter text-[10px] italic mb-3'>
@@ -990,7 +980,8 @@ const Rully_Sabil_Inv = () => {
               <ScrollContainer 
                 content = {(
                   <div 
-                    className="w-full bg-[url('/assets/choral-charm/mobile/m_PetunjukLokasi.png')] bg-cover grid grid-cols-12 px-7 py-16 gap-5"
+                    className="w-full bg-[url('/assets/choral-charm/mobile/m_PetunjukLokasi.png')] bg-cover grid grid-cols-12 px-7 
+                    py-16 gap-5"
                     id="lokasi"
                   >
                     
@@ -1019,7 +1010,8 @@ const Rully_Sabil_Inv = () => {
                           </div>
                       </div>
                       <div className='font-Suranna text-black justify-end items-end text-center mt-8'>
-                        <p className='text-[12px]'>Jalan Resor Dago Pakar Raya 2B Resor<br></br> Dago Pakar, Mekarsaluyu, Kec. Cimenyan,<br></br> Kota Bandung, Jawa Barat 40198 </p>
+                        <p className='text-[12px]'>Jalan Resor Dago Pakar Raya 2B Resor<br></br> 
+                        Dago Pakar, Mekarsaluyu, Kec. Cimenyan,<br></br> Kota Bandung, Jawa Barat 40198 </p>
                       </div>
                   </div>
               
@@ -1063,7 +1055,7 @@ const Rully_Sabil_Inv = () => {
                         <p className='text-[12px] font-inter text-center justify-center'>Hitungan mundur menuju <br></br> acara pernikahan</p>
                         <Countdown 
                           project = 'Rully_Sabil_Mobile' 
-                          target_date = '2024-10-25'
+                          target_date = '2024-12-31'
                           className=''
                         />  
                       </div>
@@ -1134,7 +1126,9 @@ const Rully_Sabil_Inv = () => {
 
                       <div className='col-span-12 items-center justify-center w-full'>
                         <GaleriScroll />
-                        <p className='mt-2 px-24 text-[#9D7265] font-inter text-[12px] items-center justify-center'>Geser dan pilih foto untuk melihat →</p>
+                        <p className='mt-2 px-24 text-[#9D7265] font-inter text-[12px] items-center justify-center'>
+                          Geser dan pilih foto untuk melihat →
+                        </p>
                       </div>
 
                     </div>
@@ -1167,7 +1161,6 @@ const Rully_Sabil_Inv = () => {
                         _isOpen={isOpen}
                         _dataStructure={accordionStructure}
                       />
-
                       <Accordion2
                         _isOpen2={isOpen2}
                         _dataStructure={accordionStructure2}
@@ -1221,7 +1214,6 @@ const Rully_Sabil_Inv = () => {
                           }}
                         >
                         </textarea>
-
                         <div className='flex justify-center items-center col-span-12 mt-3'>
                           <motion.button
                             type='button'

@@ -7,7 +7,7 @@ function Button_WA(){
     return (
     <>
     <div className="fixed ml-[80%] mb-5 z-50">
-         <div className="font-inter mt-[300pt] group relative fixed whitespace-nowrap">
+         <div className="font-inter mt-[350pt] group relative fixed whitespace-nowrap">
             <Link href="https://wa.me/6285183003387">
                 <button className="button_wa flex size-6 cursor-pointer items-center justify-center rounded-full text-white flex h-16 w-16 relative overflow-hidden bg-white group transition-all duration-300 ">
                     <svg className="fill-[#25D366] relative z-10 transition-all duration-300 group-hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 71 72" fill="none">

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Artikel from "@/assets/laung-harmoni/1_Blog.jpg";
 import { IoIosArrowForward } from "react-icons/io";
+import Artikel2 from "@/assets/laung-harmoni/blog.jpg";
 
 
 export default function tema() {
@@ -14,39 +15,45 @@ export default function tema() {
                     <div className="flex flex-col justify-center px-[100px] lg:px-[146px]">
                         <div class="rounded-[35px] overflow-hidden shadow-lg max-w-7xl bg-white ">
                             <Image
-                                className="object-cover w-[100%] h-[536px]"
-                                    src={Artikel.src}
+                                className="w-[100%] h-[536px]"
+                                    src={Artikel2.src}
                                     alt="Next.js Logo"
                                     width={100}
                                     height={100}
                                     priority
                             />
                             <div class="px-[120px] py-[60px]">
-                                <div class="leading-[62px] font-bold text-md text-[40px] font-medium">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing Elit Sed Do Eiusmod Exercitation Ullamco Laboris</div>
+                                <div class="leading-[62px] font-bold text-md text-[40px] font-medium">Keuntungan Menggunakan Undangan Digital untuk Momen Spesial Anda</div>
                                 <button className="my-[60px] px-[28px] py-[15px] text-[22px] text-white font-medium rounded-full font-lora bg-gradient-to-r from-[#303030] to-[#616161] ">
-                                    Kamis, 18 Juli 2024
+                                    Minggu, 20 Oktober 2024
                                 </button>
                                 <div className="font-lora text-[22px] leading-[36px]">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    <p className="my-5">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium volupta tum de leniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                                    <p>Mengatur acara spesial seperti pernikahan atau ulang tahun membutuhkan banyak persiapan. Salah satu hal penting yang perlu dipersiapkan adalah undangan. Di era digital seperti sekarang, undangan digital menjadi pilihan yang semakin populer. Bukan hanya karena kemudahannya, tapi juga karena beberapa keuntungan yang tidak bisa didapat dari undangan cetak. Berikut adalah beberapa alasan mengapa undangan digital dari Laungharmoni bisa menjadi solusi sempurna untuk acara Anda.</p>
                                     <div>
-                                        <h3 className="font-bold text-[30px] my-7">1. Et harum quidem</h3>
-                                        <p className="my-3">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                                        <h3 className="font-bold text-[30px] my-7">1. Hemat Waktu dan Biaya</h3>
+                                        <p className="my-3">Tidak perlu lagi mencetak dan mendistribusikan undangan satu per satu. Dengan undangan digital, Anda bisa menyebarkan undangan hanya dalam hitungan detik melalui pesan atau media sosial. Ini berarti Anda tidak hanya menghemat waktu, 
+                                            tetapi juga biaya cetak dan pengiriman.
                                         </p>
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-[30px] my-7">2. Distinctio</h3>
-                                        <p className="my-3">Etiusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occa ecati cupi ditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                                        <h3 className="font-bold text-[30px] my-7">2. Ramah Lingkungan</h3>
+                                        <p className="my-3">Dengan undangan digital, Anda berkontribusi dalam mengurangi penggunaan kertas dan tinta yang berdampak pada lingkungan. Pilihan ini sangat cocok untuk Anda yang ingin 
+                                            merayakan momen spesial secara lebih berkelanjutan.
                                         </p>
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-[30px] my-7">3. Nam libero tempore</h3>
-                                        <p className="my-3">Um soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis.
+                                        <h3 className="font-bold text-[30px] my-7">3. Mudah Disesuaikan dan Dipersonalisasi</h3>
+                                        <p className="my-3">Setiap undangan di Laungharmoni bisa disesuaikan dengan tema acara dan gaya pribadi Anda. Anda bisa memilih tema, warna, dan elemen desain yang sesuai dengan kepribadian Anda, 
+                                            sehingga undangan terasa lebih spesial.
                                         </p>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-                                        <p className="my-3">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occa ecati cupi ditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibu sdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-                                        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis</p>
                                     </div>
+                                    <div>
+                                        <h3 className="font-bold text-[30px] my-7">4. Aksesibilitas untuk Semua Tamu</h3>
+                                        <p className="my-3">Undangan digital dapat diakses kapan saja dan dari mana saja, selama tamu memiliki akses ke internet. Ini sangat membantu terutama bagi tamu yang tinggal di luar kota atau luar negeri, 
+                                            karena undangan dapat langsung diterima dan disimpan di perangkat mereka.
+                                        </p>
+                                    </div>
+                                    
 
                                 </div>
                             </div>
@@ -55,13 +62,10 @@ export default function tema() {
                                     Keyword
                                 </button>
                                 <button className="px-[23px] py-[12px] text-[17px] font-thin text-white rounded-full bg-gradient-to-r from-[#E3457B] to-[#EF90A0] ">
-                                Pernikahan
+                                undangan digital
                                 </button>
                                 <button className="mx-[19px] px-[23px] py-[12px] text-[17px] font-thin text-white rounded-full bg-gradient-to-r from-[#E3457B] to-[#EF90A0] ">
-                                    Islam
-                                </button>
-                                <button className="px-[23px] py-[12px] text-[17px] font-thin text-white rounded-full bg-gradient-to-r from-[#E3457B] to-[#EF90A0] ">
-                                    Budaya
+                                  Pernikahan
                                 </button>
                             </div>
                         </div>

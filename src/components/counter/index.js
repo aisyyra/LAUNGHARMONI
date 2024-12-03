@@ -41,7 +41,10 @@ function App() {
     className="container hidden md:flex 2xl:justify-center w-screen flex py-[63px] mx-auto justify-center object-center">
       <div className="flex justify-center justify-items-center mx-[130px] lg:mx-[50px] md:mx-0">
         <div className="w-5/12 justify-center items-center justify-center object-center">
-          <p className="font-lora text-[16px] px-9 2xl:px-11 leading-[26px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className="font-lora text-[16px] px-9 2xl:px-11 leading-[26px]">Nikmati kemudahan membuat undangan digital yang 
+            elegan dan sesuai gaya Anda. Temukan tema yang sempurna untuk acara Anda dan biarkan kami membantu menyempurnakan 
+            momen bahagia Anda.
+          </p>
         </div>
 
         <p className="sm:ml-4 sm:pl-4 sm:border-l sm:border-[#E3E3E3] sm:mt-0"></p>

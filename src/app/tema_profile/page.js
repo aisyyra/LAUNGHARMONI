@@ -2,7 +2,10 @@ import React from "react";
 import Image from 'next/image'
 import Link from 'next/link'
 import Card from "@/assets/laung-harmoni/Card.png";
-import Button_WA from "@/components/button-wa"
+import foto1 from "@/assets/laung-harmoni/tema1.png";
+import foto2 from "@/assets/laung-harmoni/tema2.png";
+import foto3 from "@/assets/laung-harmoni/tema3.png";
+import Button_WA from "@/components/button-wa";
 import "./style.css";
 
 
@@ -18,7 +21,7 @@ export default function tema() {
                         Berisi template yang telah kami buat dan dapat langsung diisi dengan informasi acaramu. Memakai template <br></br>akan menghemat banyak waktu karena proses pembuatan lebih cepat dibanding Desain Custom.</p>
                     </div>
                 </div>
-                <Button_WA />
+      
             </main>
             
          {/* Header Page End */}
@@ -32,8 +35,8 @@ export default function tema() {
                         <div className="max-w-[340px] lg:max-w-[448px] w-[448px] h-[507px] flex-col overflow-hidden rounded-[35px] bg-white text-gray-700 shadow-md">
                             <div className="m-0 bg-transparent rounded-none shadow-none bg-clip-border">
                             <Image
-                                className="object-cover w-[448px] h-[360px]"
-                                src={Card.src}
+                                className="w-[448px] h-[360px]"
+                                src={foto1.src}
                                 alt="Next.js Logo"
                                 width={600}
                                 height={200}
@@ -42,7 +45,7 @@ export default function tema() {
                             </div>
                             <div className="py-[34px] text-center">
                                         <h4 className=" block text-[17px] lg:text-[22px] font-bold antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
-                                        Coral Charming
+                                        Coral Charm
                                         </h4>
                                         <p className="block mt-3 text-[9px] lg:text-[13px] antialiased font-regular leading-relaxed text-gray-700">
                                         KODE TEMA #2139
@@ -59,8 +62,8 @@ export default function tema() {
                         <div className="max-w-[340px] lg:max-w-[448px] w-[448px] h-[507px] flex-col overflow-hidden rounded-[35px] bg-white text-gray-700 shadow-md">
                             <div className="m-0 bg-transparent rounded-none shadow-none bg-clip-border">
                             <Image
-                                className="object-cover w-[448px] h-[360px]"
-                                src={Card.src}
+                                className="w-[448px] h-[360px]"
+                                src={foto2.src}
                                 alt="Next.js Logo"
                                 width={600}
                                 height={200}
@@ -69,10 +72,10 @@ export default function tema() {
                             </div>
                             <div className="py-[34px] text-center">
                                         <h4 className=" block text-[17px] lg:text-[22px] font-bold antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
-                                        Coral Charming
+                                         Bnw
                                         </h4>
                                         <p className="block mt-3 text-[9px] lg:text-[13px] antialiased font-regular leading-relaxed text-gray-700">
-                                        KODE TEMA #2139
+                                        KODE TEMA #2130
                                         </p>
                             </div>
                         </div> 
@@ -86,8 +89,8 @@ export default function tema() {
                         <div className="max-w-[340px] lg:max-w-[448px] w-[448px] h-[507px] flex-col overflow-hidden rounded-[35px] bg-white text-gray-700 shadow-md">
                             <div className="m-0 bg-transparent rounded-none shadow-none bg-clip-border">
                             <Image
-                                className="object-cover w-[448px] h-[360px]"
-                                src={Card.src}
+                                className="w-[448px] h-[360px]"
+                                src={foto3.src}
                                 alt="Next.js Logo"
                                 width={600}
                                 height={200}
@@ -96,10 +99,10 @@ export default function tema() {
                             </div>
                             <div className="py-[34px] text-center">
                                         <h4 className=" block text-[17px] lg:text-[22px] font-bold antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
-                                        Coral Charming
+                                        Golden Black
                                         </h4>
                                         <p className="block mt-3 text-[9px] lg:text-[13px] antialiased font-regular leading-relaxed text-gray-700">
-                                        KODE TEMA #2139
+                                        KODE TEMA #2131
                                         </p>
                             </div>
                         </div> 

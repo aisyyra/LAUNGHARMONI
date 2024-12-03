@@ -35,7 +35,7 @@ export default function Portofolio() {
                         </div>
                     </div>
                 </div>
-                <Button_WA />
+
             </main>
          {/* Header Page End */}
 
